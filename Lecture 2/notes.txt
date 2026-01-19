@@ -1,0 +1,7 @@
+Two types of tags
+     Inline : adjusts eg : span, strong, em etc
+     Block : takes full space eg : div, h, p etc
+Attribute : Extra Infromation Given to the brower is called attribute
+
+Div is a generic Container that can contain any element inside it.
+
