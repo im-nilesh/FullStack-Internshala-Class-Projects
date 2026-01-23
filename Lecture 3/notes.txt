@@ -1,3 +1,11 @@
 1. If you use fieldset attribut we get a box covering the area, to give some name to this box we can use legend.
+
 2. Use Pre to show the text as it is written genreally used to show the code which is written as it is.
-3. Use Escape charcters like &lt iostream &gt for output like <iostream> other examples for these escape charcter is &copy &amp
+
+3. Use Escape charcters like &lt iostream &gt for output like <iostream> other examples for these escape charcter is &copy &amp &heart &nbsp
+
+4. Follow MDN Documentation for HTML resourcs
+
+5. Use no break space for spaces &nbsp
+
+6. 
