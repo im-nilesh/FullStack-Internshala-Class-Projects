@@ -8,4 +8,15 @@
 
 5. Use no break space for spaces &nbsp
 
-6. 
+Media Elements
+
+1. absolute path = from the internet
+    relative path = local on the device
+
+2. Use img tag for image, 
+    Use Controls to make the audio visible
+    audio tag for audio 
+
+    You can Loop, use muted ffor mute the song,  autoplay to autoplay the song.
+
+3. Use iframes for embedding videos or websites into the site, just click share and and select the iframe tag and copy paste into the code.
