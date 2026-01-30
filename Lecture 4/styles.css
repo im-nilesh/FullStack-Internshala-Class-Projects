@@ -1,12 +1,16 @@
+h1,
+h2,
+p {
+  text-align: center;
+}
 h1 {
-  color: aqua;
+  color: orange;
 }
-
 h2 {
-  color: coral;
+  color: green;
 }
-
 p {
   font-size: 18px;
-  color: darkslategray;
+
+  color: hotpink;
 }
