@@ -1,0 +1,7 @@
+Inline Css :
+    Styling defined inside the tag.
+Internal Css:
+    Styling defined inside the html file.
+Extrenal Css:
+    Styling defined inside a seperate css file.
+
