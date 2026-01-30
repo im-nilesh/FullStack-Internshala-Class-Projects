@@ -19,3 +19,5 @@ content border and padding will occupy the element area.
 
 box model properties do not work with the inline elements
 you need to convert inline elements into block elements.
+
+You can use display : inline-block property in order to make inline elements make them behave them like block elements.
