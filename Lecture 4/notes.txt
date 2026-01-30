@@ -5,3 +5,14 @@ Internal Css:
 Extrenal Css:
     Styling defined inside a seperate css file.
 
+---------------------------------------------------------
+
+Every HTML is considered as a part of box model.
+
+#properties 4:
+padding : area beyween content and border
+margin : area between two boxes
+border : border of the entire box
+content (width & height) : where the main content lies
+
+content border and padding will occupy the element area.
