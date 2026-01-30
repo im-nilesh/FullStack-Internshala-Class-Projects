@@ -21,3 +21,28 @@ box model properties do not work with the inline elements
 you need to convert inline elements into block elements.
 
 You can use display : inline-block property in order to make inline elements make them behave them like block elements.
+
+if both the classes are in the tag, the one written in the end will be executed ie the one written latest.
+-----------------------------------------------------------
+
+
+
+Position properties:
+
+5 Position properties
+
+1. Static (by default)
+2. Relative 
+3. Absolute
+4. Fixed
+5. Sticky
+
+
+id = unique and should only be gioven to one element
+class = common and can be given to a lot of element
+
+
+
+
+
+
