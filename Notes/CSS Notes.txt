@@ -26,4 +26,9 @@
 
 8. Margin is the value between 2 borders.
 
-9. 
+9. Margin collapse in CSS is a behavior where the top and bottom margins of adjacent block-level elements are combined into a single margin, 
+   rather than being added together. The resulting single margin is equal to the largest of the individual margins involved. 
+
+10. Box Sizing property is basically a property that is used universally in order to remove the default values that is given by the elements
+
+    For Example : the question that i asked to samarth in class ii.e it takes some height difference because there is some default padding exisitng there.
