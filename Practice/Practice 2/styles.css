@@ -1,0 +1,22 @@
+div {
+  border: 2px solid greenyellow;
+  padding: 30px;
+  background-color: rgb(211, 173, 179);
+}
+h1 {
+  color: teal;
+  text-align: center;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+h2 {
+  color: rgb(246, 46, 46);
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  color: aquamarine;
+  font-family: sans-serif;
+  text-align: center;
+}
