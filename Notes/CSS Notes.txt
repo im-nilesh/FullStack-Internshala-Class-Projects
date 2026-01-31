@@ -1,0 +1,29 @@
+1. Text align is useed to align the text.
+
+2. Text decoration is used to decorate the line such as underline overline or line through.
+
+3. Font family = styling such as arial, sans serif etc,
+   Font weight = boldness
+   Font Style =  itlacis etc
+
+4. Border Radius property to make the borders curve.
+
+5. Width and height properties can be used to define the width and height of any content, it can be border/paragraph anything BUT IT DOESNT WORK ON INLINE ELEMENTS.
+
+6. TO make things easier...
+
+    WIDTH = --------------------------
+     
+                 |||
+                 |||
+                 |||
+    Height =     |||
+                 |||
+                 |||
+                 |||
+
+7. Padding is the value between content and border.
+
+8. Margin is the value between 2 borders.
+
+9. 

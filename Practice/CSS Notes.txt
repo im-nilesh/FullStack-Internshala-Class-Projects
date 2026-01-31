@@ -1,5 +1,0 @@
-1. Text align is useed to align the text.
-2. Text decoration is used to decorate the line such as underline overline or line through.
-3. Font family = styling such as arial, sans serif etc,
-   Font weight = boldness
-   Font Style =  itlacis etc
