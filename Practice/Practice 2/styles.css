@@ -19,4 +19,18 @@ p {
   color: aquamarine;
   font-family: sans-serif;
   text-align: center;
+  font-style: italic;
+}
+
+ul {
+  display: inline-block;
+  margin: auto;
+  color: teal;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
 }
