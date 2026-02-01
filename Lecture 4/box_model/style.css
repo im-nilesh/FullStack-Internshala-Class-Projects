@@ -14,16 +14,8 @@ span {
 
 .s1 {
   position: relative;
-  display: inline-block;
+  display: flex;
   left: 210px;
   bottom: 100px;
-}
-
-.s2 {
-  margin-right: 10px;
-  position: relative;
-  left: 30px;
-  display: inline-block;
-  left: 200px;
-  bottom: 100px;
+  background-color: transparent;
 }
