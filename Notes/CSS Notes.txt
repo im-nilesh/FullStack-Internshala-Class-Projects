@@ -32,3 +32,23 @@
 10. Box Sizing property is basically a property that is used universally in order to remove the default values that is given by the elements
 
     For Example : the question that i asked to samarth in class ii.e it takes some height difference because there is some default padding exisitng there.
+
+11. If I choose display : none, the element will be hidden, but if i choose visibility : hidden the element will be hidden but there will be a void left on the screen of that element.
+
+------------------------------------------------------
+
+
+CSS POSITIONING
+
+There are 5 ways in which we can position an element
+
+1. Static : No change, the element is present where it was situated before.
+
+2. Absolute : We can set the position attribute as position : absolute left :300px the element will move 300 px from the left
+
+3. Relative : The element will lose it original space and other elements will take the space of the element that was present before the element was move,
+   It will moves towards its closets realtive ancestor. 
+
+4. Sticky : The element remains to be sticked even while scrolling. It scrolls but stops once the value that is given to it is reached.
+
+5. Fixed : The element is fixed at a place, even after scrolling it reamins to be fixed 
