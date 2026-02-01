@@ -46,9 +46,19 @@ There are 5 ways in which we can position an element
 
 2. Absolute : We can set the position attribute as position : absolute left :300px the element will move 300 px from the left
 
-3. Relative : The element will lose it original space and other elements will take the space of the element that was present before the element was move,
-   It will moves towards its closets realtive ancestor. 
+3. Relative : The element will lose it original space and other elements will take the space of the element that was present before
+ the element was move, It will moves towards its closets realtive ancestor. 
 
 4. Sticky : The element remains to be sticked even while scrolling. It scrolls but stops once the value that is given to it is reached.
 
 5. Fixed : The element is fixed at a place, even after scrolling it reamins to be fixed 
+
+
+
+------------------------------------------------------------
+
+FLEX 
+
+1. Flex is basically a easier way to do things which i was doing in the wrong way, trying to alaign everything as i was giving padding etc,
+If i use FLEX property on the parent class, the elements inside the parent become flex elements and
+they show up in a row in a grid type manner
