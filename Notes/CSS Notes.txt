@@ -76,3 +76,4 @@ order to get the optimal screen size and the layout doesnt get broken.
 
 6. Flex is short hand property for flex grow, flex shrink and flex basis, 
 It takes 3 value i.e flex grow, flex shrink, flex basis at the end.
+
