@@ -62,3 +62,17 @@ FLEX
 1. Flex is basically a easier way to do things which i was doing in the wrong way, trying to alaign everything as i was giving padding etc,
 If i use FLEX property on the parent class, the elements inside the parent become flex elements and
 they show up in a row in a grid type manner
+
+2. Flex Wrap element is basically used to Wrap the flex items in order  to control the overflow of these items.
+
+3. Flex Grow property is used to occupy the extra spacing that is left out if the width and height of a flex item is previously fixed
+
+for Example: flex-grow : 1
+
+4. Flex Shrink property is used to adjust the screen size, i.e if there is a flex element greater than that of the screen size the flex shrink will shrink the item in 
+order to get the optimal screen size and the layout doesnt get broken.
+
+5. Flex Basis is used to set the initial width of the flex element.
+
+6. Flex is short hand property for flex grow, flex shrink and flex basis, 
+It takes 3 value i.e flex grow, flex shrink, flex basis at the end.

@@ -1,6 +1,7 @@
 section {
   background-color: lightcoral;
   display: flex;
+  flex-wrap: wrap;
 }
 
 article {
@@ -9,3 +10,12 @@ article {
   background-color: lightpink;
   margin: 15px;
 }
+
+/* article:nth-child(2) {
+  border: 2px solid black;
+  padding: 10px;
+  background-color: lightpink;
+  margin: 15px;
+  flex-basis: 200px;
+  flex-shrink: 1;
+} */
