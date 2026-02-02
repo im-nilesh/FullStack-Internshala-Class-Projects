@@ -3,6 +3,12 @@ section {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  /* flex-basis: 100px; */
 }
 
 article {
@@ -10,13 +16,6 @@ article {
   padding: 10px;
   background-color: lightpink;
   margin: 15px;
+  height: 400px;
+  width: 200px;
 }
-
-/* article:nth-child(2) {
-  border: 2px solid black;
-  padding: 10px;
-  background-color: lightpink;
-  margin: 15px;
-  flex-basis: 200px;
-  flex-shrink: 1;
-} */

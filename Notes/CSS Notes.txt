@@ -77,3 +77,9 @@ order to get the optimal screen size and the layout doesnt get broken.
 6. Flex is short hand property for flex grow, flex shrink and flex basis, 
 It takes 3 value i.e flex grow, flex shrink, flex basis at the end.
 
+7. Justify content acts on the main axis of the flex container, it allows us to put the content at end center or start based on a row or a column.
+
+8. Space Around = x space in between and x\2 at the start and end.
+   Space Between = start and end has no space and all the space is divided between
+   Space Evenly = Evenly Spaces everything.
+   Align Items works on the cross axis.
