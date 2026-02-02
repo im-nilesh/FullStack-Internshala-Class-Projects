@@ -123,3 +123,8 @@ ANIMATIONS:
 animation: 
 name-of-the-animation animation-duration animation-timing-function(linear,easyin etc) animation-delay aniamtion-iteration-count animation-direction(forward,alternate);
 
+4. Animations are used for complex movements, and tranistion are used for simple, start to final movements without complex movements.
+
+5. Pseudo classes are the attributes in which and element can go through 
+for example hover/click etc
+
