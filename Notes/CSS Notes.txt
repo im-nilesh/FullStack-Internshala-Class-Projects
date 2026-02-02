@@ -89,9 +89,37 @@ It takes 3 value i.e flex grow, flex shrink, flex basis at the end.
 
 BOX SHADOW:
 
-1.Box Shadow basically is used for adding a shoadow to the Box
+1. Box Shadow basically is used for adding a shoadow to the Box
 
-  it takes total of 4 values i.e
+   it takes total of 4 values i.e
 
-  x asis shadow, y axis shadow, amount of blurness, amount of spread, color of the shadow.
+   x asis shadow, y axis shadow, amount of blurness, amount of spread, color of the shadow.
+
+2. Same for Text shadow
+
+
+-------------------------------------------------------------------
+
+
+ANIMATIONS:
+
+1. In order to add animations :
+    - First we need to give animation-name : something
+    Then define the propertiesof the this animation in 
+    @keyframes animation-name(something in our example) {
+        from{
+            body
+        }
+        to{
+            body
+        }
+    }
+
+    This is how we animate something
+2. We need to define the duration for how long the animation is going to be working.
+
+3. Short Hand property of aniimation handler is:
+
+animation: 
+name-of-the-animation animation-duration animation-timing-function(linear,easyin etc) animation-delay aniamtion-iteration-count animation-direction(forward,alternate);
 
