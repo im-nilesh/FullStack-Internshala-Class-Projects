@@ -83,3 +83,15 @@ It takes 3 value i.e flex grow, flex shrink, flex basis at the end.
    Space Between = start and end has no space and all the space is divided between
    Space Evenly = Evenly Spaces everything.
    Align Items works on the cross axis.
+
+-----------------------------------------------------------------
+
+
+BOX SHADOW:
+
+1.Box Shadow basically is used for adding a shoadow to the Box
+
+  it takes total of 4 values i.e
+
+  x asis shadow, y axis shadow, amount of blurness, amount of spread, color of the shadow.
+
