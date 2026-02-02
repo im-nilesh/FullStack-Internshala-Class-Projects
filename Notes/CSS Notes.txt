@@ -128,3 +128,5 @@ name-of-the-animation animation-duration animation-timing-function(linear,easyin
 5. Pseudo classes are the attributes in which and element can go through 
 for example hover/click etc
 
+5. We first need to define the tranistion property then add anything or everything that we want.
+
