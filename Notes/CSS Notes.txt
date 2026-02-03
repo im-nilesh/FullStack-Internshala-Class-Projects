@@ -130,3 +130,15 @@ for example hover/click etc
 
 5. We first need to define the tranistion property then add anything or everything that we want.
 
+
+-----------------------------------------------------------------======
+
+
+TRANSFORMS:
+
+1. CSS transforms is used to transfrom any element or make lesser transformations such as, tilt the element, rotate the element, or skew(enlarge or skrink) the elements.
+
+2. It works same as animations where we have to define the keyword transfrom: and its values.
+
+
+
