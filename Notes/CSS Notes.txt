@@ -152,3 +152,35 @@ TRANSFORMS:
 6. In order to make translation on z axis we need to add prespective property so that we can see the translation on the z axis.
 
 7. Scaling is the amount of size that we want to increase or dedcrese of an element.
+
+
+-------------------------------------------------------------------------
+
+
+GRID:
+
+1. Like Flex, gird is a displlay property that can be used to align the elemetns into a grid format.
+
+2. We can use display : gird for gird and the content of the gird will not overflow
+
+3. we use grid-template-columns: to define the number of columns that we want in a gird.
+
+4. we can define custom height for each column or 1fr i.e 1 fraction of the available space can be measuring unit for the columns.
+
+5. we can use reapeat(3, 1fr) for 3 columns of 1fr unit dimnesions
+
+6. grid-column-start	Specifies where to start the grid item
+
+7. grid-column-end	Specifies where to end the grid item
+
+8. grid-column	A shorthand property for the grid-column-start and the grid-column-end properties
+
+9. Same for rows.
+
+10. grid-template	A shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties
+
+11. grid-template-areas	Specifies how to display columns and rows, using named grid items
+
+12. grid-template-columns	Specifies the size of the columns, and how many columns in a grid layout
+
+13. grid-template-rows	Specifies the size of the rows in a grid layout
