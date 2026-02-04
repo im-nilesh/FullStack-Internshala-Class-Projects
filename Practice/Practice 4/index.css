@@ -1,0 +1,16 @@
+.conatiner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  height: 2000px;
+  background-color: brown;
+}
+
+.box {
+  background-color: lightblue;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  justify-content: center;
+  align-items: center;
+}

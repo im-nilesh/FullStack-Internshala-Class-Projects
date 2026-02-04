@@ -131,7 +131,7 @@ for example hover/click etc
 5. We first need to define the tranistion property then add anything or everything that we want.
 
 
------------------------------------------------------------------======
+-------------------------------------------------------------------
 
 
 TRANSFORMS:
@@ -140,5 +140,15 @@ TRANSFORMS:
 
 2. It works same as animations where we have to define the keyword transfrom: and its values.
 
+3. We can use transform : function() to transform the element,
+   We use tranistion effect to add some visual effects so that we can see 
+   what exactly the transform is doing.
 
+4. transform : rotate3D(0, 0, 0, 'angle') 
+   rotate3D takes 4 values, the x, y, z and angle values to make a 3d effect.
 
+5. The translate property moves an element on x or y or z or in 3d axis.
+
+6. In order to make translation on z axis we need to add prespective property so that we can see the translation on the z axis.
+
+7. Scaling is the amount of size that we want to increase or dedcrese of an element.
