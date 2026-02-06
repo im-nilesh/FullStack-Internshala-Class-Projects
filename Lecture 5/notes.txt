@@ -43,3 +43,48 @@ Grid : 2D Representation
 - Flex container is the place where the contents are present,
   Flex Item are the elements
 
+inline-block (child) : need to apply css on child div : inline-block
+
+Flex(parent) : neeed to apply css on the parent display:flex
+
+Grid(parent) : neeed to apply css on the parent display:grid.
+
+FLEX :
+
+1. We use flex for responsive layout, it is basically a easier way to use inline-block but with more functionality.
+
+2. We use flex-wrap in order to avoid the elements from getting overlapped.
+
+3. There is only one axis that is main axis, we can change it by using the flex directions
+
+    flex-direction = main axis = row
+    flex-direction = main axis = column
+
+4. justify content - works with main axis
+    align items - works with cross axis (prependicular to the main is cross axis).
+
+    CROSS AXIS IS PREPENDICULAR to main axis 
+    for ex: fd = row, ma = row, ca = column
+
+5. space-between = no space in corner
+    space-evenly = even space
+    space-around = end will be half of the space that is in between the elements
+
+6. align-content = aligns the content (when we define a new row(remeber the class))
+
+7. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ use this for docs
+
+8. we can target single elements using the id/class selectors and apply:
+    flex-grow = 1,2,3.... (it is the ratio) 
+    All the chocolates to number of people present, (ratio concept)
+
+    remeber the chocolates exmaples, less chocolates if there are more people.
+    simmilarly we can use flex-shrink(reduction from original position)
+
+    by default flex shrink is 1, 
+
+    if we give value 2, when the size of viewport is reduces the element with flex-shrink 2 will shrink 2 times faster
+
+    can use align-self to target single flex elements.
+
+
