@@ -1,0 +1,45 @@
+Positions:
+
+1. Static Pos : Will not move ie it will not accept offsets(directions).
+
+2. Relative Pos: Will accept values for its offset, and the element moves as perr the values given for the offset.
+
+3. Absoulte Pos: Applying the absolute without any value, element is going to get overlapped.
+    
+    -When you givr offset it takes position according to the parent.
+    It takes position frfom recently served parent.(posistioned parent).
+
+    -If there is no parent then the absolute will target the parent.
+
+    -It will adapt the  offset accoring to the recently positioned parent.
+
+    -If i dont want it to take from the body we need to give a parent.
+
+    -We need to provide relative position to the parent in orderr to provide absolute position to the child.
+
+    -Absoulte reaches 1 level up like the building structure, 
+    now if you want to make the offset there are 2 cases
+    
+    - The parent of that particular div it should be relative/given some position,
+    then if not then it goes to the parent (body) -> by default the brower gives the body a position.
+
+    - if there is some position give the offset wiill be taken from the absoulte main div
+
+    - If we need to use absoulte, we must have the parent in realtive and the absoulte will take the offset values from the parent.
+
+
+4. Fixed Pos: Same as absoulte but it always takes offset from the body(HTML).
+
+5. Sticky Pos: Mixture of both relative and fixed. For this to work the parent must have some space.
+
+-----------------------------------------------------------------
+
+Flex and Grid:
+
+Flex : 1D Representation
+
+Grid : 2D Representation
+
+- Flex container is the place where the contents are present,
+  Flex Item are the elements
+
