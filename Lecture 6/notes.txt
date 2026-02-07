@@ -29,4 +29,13 @@ we can make the rows/columns expand into other rows/columns using the above prop
 
 we need to mention the LINE that the row/columns start and end in order to make them expand.
 
+we can use grid template area to:
+    when we give grid-area: name
+
+    we can define like 
+
+    grid-template-areas : "header header header"
+                          "nav1 main nav3"
+                          "nav2 main nav3"
+                          "footer footer footer"
 
