@@ -1,12 +1,20 @@
-.container {
+.conatiner {
   border: 2px solid black;
   display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-rows: 200px 200px;
-  height: 1000px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 4fr 4fr 1fr;
+  height: 800px;
+  width: 800px;
 }
 
 div {
   background-color: aqua;
   border: 2px solid black;
+}
+
+.div1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
