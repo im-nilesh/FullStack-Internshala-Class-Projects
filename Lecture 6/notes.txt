@@ -72,3 +72,60 @@ for multiple media query maxmimum number should bw on the top.
 
 same for min width keep the min numbber onthe top.
 
+can even do media query on basis on orientation (potrait, landscape)
+
+@media screen and (orientation: potrait)
+{
+    element{
+        description
+    }
+}
+
+----------------------------------------------------
+
+
+Css variables:
+
+:root{
+    --variable: css value;
+}
+
+
+
+---------------------------------------------------
+
+
+imp topic to know in html/css
+
+inline vs block with eg
+iframe
+semantics
+media elements (img etc)
+
+box model
+flex
+grid
+display
+media query
+css variables
+position(absolute, fixed, relative)
+
+animation, transfrom, trnaslate(visit atleast once)
+
+
+
+properties:
+margin padding
+h w 
+border
+font size
+scroll
+background properties
+colors
+units (rem em px vh vw %)
+z index
+
+
+---------------------------------------------------
+
+
