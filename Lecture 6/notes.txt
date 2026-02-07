@@ -39,3 +39,36 @@ we can use grid template area to:
                           "nav2 main nav3"
                           "footer footer footer"
 
+---------------------------------------------------------------------------------
+
+
+MEDIA QUERY:
+
+used to make scrreen responsive according to the screen size.
+
+within max to max 4 media query we must make the web responsive
+
+1200
+992
+768
+576
+
+are the break points
+
+when the width is less than 768
+
+we write 
+
+@media screen and (max-width:768px){
+    element{
+        description
+    }
+}
+
+max-width:768 mtlb 0-767 tak 
+min-wiidth mtlb neeche se upar minimum 5 bande chahiye, 50 chalnge 6 chalnge kuch bhi but minimum 5.
+
+for multiple media query maxmimum number should bw on the top.
+
+same for min width keep the min numbber onthe top.
+
