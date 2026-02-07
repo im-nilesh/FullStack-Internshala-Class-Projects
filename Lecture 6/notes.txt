@@ -1,0 +1,20 @@
+GRID :
+
+2D In nature and responsive
+
+In Grid unlike the flex we can define the rows and columns styling.
+
+By default the gird works in row, but because it is 2D we talk about the area, if we initially dont have any parameter, it will go into vertical display
+
+To see grid working we need to define rows and column 
+
+we use grid-template-columns to define number of columns that we need
+for ex : grid-template-columns 100px 100px 100px (column will always have width).
+         grid-template-rows 100px 100px 100px (3 rows making heights)
+
+         we have gird-flow here just as flex direction.
+
+         when we dont define the rows, they are automaticallly managed, we can use grid-auto-rows property to give the height for the rows that are automatically managed.
+
+
+
