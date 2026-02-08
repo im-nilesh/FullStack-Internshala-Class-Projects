@@ -2,7 +2,7 @@ GRID :
 
 2D In nature and responsive
 
-In Grid unlike the flex we can define the rows and columns styling.
+In Grid unlike the flex we can define the rows and columns.
 
 By default the gird works in row, but because it is 2D we talk about the area, if we initially dont have any parameter, it will go into vertical display
 
