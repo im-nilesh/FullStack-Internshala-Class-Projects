@@ -10,3 +10,7 @@ git branch: cmd is used to know the number of branches active in the repo.
 
 git checkout main: allows us to move the the main branch, we can just give the name of the branch that we want to go to.
 
+To push the code in feature1 branch, we use git push origin feature1
+
+to get the changes on the local machine we use, git pull origin main, 
+    this cmd pulls the changes from the github to the local machine
