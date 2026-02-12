@@ -1,0 +1,2 @@
+git clone : for cloning the code from github (remote) to local machine (git).
+
