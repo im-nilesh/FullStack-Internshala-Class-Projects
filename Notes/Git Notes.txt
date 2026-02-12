@@ -5,3 +5,8 @@ git status : gives the status of the repo.
 git push origin main cmd for pushing to the main branch
 
 git checkout -b "feature1" : This cmd creates a new branch called as feature1.
+
+git branch: cmd is used to know the number of branches active in the repo.
+
+git checkout main: allows us to move the the main branch, we can just give the name of the branch that we want to go to.
+
