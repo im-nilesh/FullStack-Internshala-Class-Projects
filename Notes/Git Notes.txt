@@ -1,2 +1,7 @@
 git clone : for cloning the code from github (remote) to local machine (git).
 
+git status : gives the status of the repo.
+
+git push origin main cmd for pushing to the main branch
+
+git checkout -b "feature1" : This cmd creates a new branch called as feature1.
