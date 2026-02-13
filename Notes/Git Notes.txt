@@ -18,3 +18,10 @@ to get the changes on the local machine we use, git pull origin main,
 git merge branchname, it merges the branchname into the current branch that we are on.
 
 we need to resolve the merge conflicts manually, if they appear in the code.
+
+we can use git reset filename, if  we dont want to commit the changes. (remove after adding but  before commiting)
+
+we can use git reset HEAD~1, to remove the most  recent change after commiting. (remove the first  file after commiting but before pushing)
+
+if we want to remove multiple changes, we can use git reset id, this cmd will remove all the commits that are done upto the id that is entered.
+
