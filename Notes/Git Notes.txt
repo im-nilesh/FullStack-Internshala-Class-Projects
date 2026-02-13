@@ -25,3 +25,5 @@ we can use git reset HEAD~1, to remove the most  recent change after commiting. 
 
 if we want to remove multiple changes, we can use git reset id, this cmd will remove all the commits that are done upto the id that is entered.
 
+forking means creating a copy of the repository.
+
