@@ -1,0 +1,5 @@
+Psuedocode is the logic flow design for a problem that can be understood by everyone.
+
+Flow chart is the visual representation of the Psuedocode, where we defione the steps in form of a flowchart using shapes and symbols.
+
+Oval : used for start and end.
