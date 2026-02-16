@@ -1,0 +1,12 @@
+WE use script tag to connect js file to html file.
+
+can use js in 3 ways:
+    on the browser,
+    on the node.js
+    linking js to html and see output in web console.
+
+----------------------------------------------------------------------
+
+Variables
+
+We can declare variables in Js directly, but using var, by using let(recommended) and by using const.
