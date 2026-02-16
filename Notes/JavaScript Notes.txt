@@ -40,4 +40,4 @@ BigInt (let x = BigInt(216516513216354321321);)
 
 Symbol (let x = Symbol("123");) 
 
-Object
+Object (let x = {name : "Nilesh", age: 22})
