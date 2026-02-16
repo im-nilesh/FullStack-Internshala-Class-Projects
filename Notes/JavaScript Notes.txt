@@ -21,3 +21,23 @@ console.log(a);
 
 Js identifiers are same as python, cannot give numbers,
 can give underscore, no special charcater at the front.
+
+DATATYPES:
+
+8 types of data types in Js
+
+Number 
+
+String
+
+Boolean
+
+Null (let x = null;)
+
+undefined (let age; or let age = undefined;)
+
+BigInt (let x = BigInt(216516513216354321321);)
+
+Symbol (let x = Symbol("123");) 
+
+Object
