@@ -10,3 +10,14 @@ can use js in 3 ways:
 Variables
 
 We can declare variables in Js directly, but using var, by using let(recommended) and by using const.
+
+use var to declare variables for older browsers, 
+
+const is a type of variable whose values cannot be changed.
+
+example: 
+let a = 15;
+console.log(a);
+
+Js identifiers are same as python, cannot give numbers,
+can give underscore, no special charcater at the front.
