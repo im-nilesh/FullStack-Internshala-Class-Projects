@@ -26,7 +26,7 @@ DATATYPES:
 
 8 types of data types in Js
 
-Number 
+Number (in js we dont we int or float we directly say number)
 
 String
 
@@ -41,3 +41,7 @@ BigInt (let x = BigInt(216516513216354321321);)
 Symbol (let x = Symbol("123");) 
 
 Object (let x = {name : "Nilesh", age: 22})
+
+
+To know what the is the datatype of a variable we use typeof(variablename) cmd to get the datatype of the variable.
+
