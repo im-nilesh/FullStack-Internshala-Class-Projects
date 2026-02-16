@@ -11,4 +11,3 @@ Parrellogram : used for input output.
 Rectangle : used for processes
 
 Diamond : used for decision.
-
