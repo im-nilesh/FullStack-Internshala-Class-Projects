@@ -1,3 +1,3 @@
-let num = 30;
-console.log(++num);
-console.log(num);
+let str = "2";
+let a = 2;
+console.log(str + a);

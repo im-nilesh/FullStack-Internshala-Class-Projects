@@ -102,4 +102,11 @@ both are same you know about this.
 This works for everyhting and for all the Operators
 
 if i perform a + or a - operation on the string, js tries to convert the string into number or number into string based on the situatuiom,
-it never gives an error.
+it never gives an error. 
+BUT
+if i use + operator it joins(concatniate the string the and the number)
+BUT
+if i use a - operator it performs a subtraction operation on them
+
+for ex: "2" + 2 = 22
+        "2" - 2 = 0
