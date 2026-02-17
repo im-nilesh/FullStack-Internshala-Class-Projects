@@ -110,3 +110,20 @@ if i use a - operator it performs a subtraction operation on them
 
 for ex: "2" + 2 = 22
         "2" - 2 = 0
+
+
+3. Comparision Operators
+
+everyhting same as >, <, >=, <=
+
+==, ===
+in == we check values 
+    ex: num1 = 40;
+        num2 = 40;
+        console.log(num1 == num2); //output is true because we check only values
+
+in === we check values as well as their datatype
+    ex: num1 = "40";
+        num2 = 40;
+        console.log(num1 == num2); //output is true because we check only values
+        console.log(num1 === num2); //output is false because on is of the string datatype, other is of the number datatype
