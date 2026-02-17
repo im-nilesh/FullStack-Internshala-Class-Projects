@@ -139,3 +139,15 @@ for ex:
                                     but the type is not the same so the check returns true, 
                                     !== returns true if any og the operator is true
 
+
+4. Logical Operators
+
+&& for and operator (both must be true)
+|| for or operator (any one can be true)
+! to negate (reverse the original answer)
+
+Ternary Operator 
+
+let age = 20;
+
+age > 18 ? console.log("Person is adult") : console.log("Person is underage");

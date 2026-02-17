@@ -1,3 +1,3 @@
-let str = "2";
-let a = 2;
-console.log(str + a);
+let age = 0;
+
+age > 18 ? console.log("Persin is adult") : console.log("Person is underage");
