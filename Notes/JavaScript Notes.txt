@@ -146,6 +146,8 @@ for ex:
 || for or operator (any one can be true)
 ! to negate (reverse the original answer)
 
+the typeof operator return Object for the null values.
+
 Ternary Operator 
 
 let age = 20;
