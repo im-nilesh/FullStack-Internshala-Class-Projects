@@ -65,5 +65,41 @@ OPERATORS :
 5. Conditional Operators
 6. Type Operators
 
+1. Arthmatic Operators 
+    everything same as python/java
+
+    post increment : num++ (increases the number llater on)
+
+                        ex: num=30
+                            console.log(num++);
+                            console.log(num);
+
+                            output:
+                            30
+                            31
+    
+    Pre increment : ++num (increases the number before)
+
+                        ex: num=30
+                            console.log(++num);
+                            console.log(num);
+
+                            output:
+                            31
+                            31
+
+    Works the same on decrement
 
 
+2. Assignment Operators 
+
+x=x+y
+
+x+=y 
+
+both are same you know about this.
+
+This works for everyhting and for all the Operators
+
+if i perform a + or a - operation on the string, js tries to convert the string into number or number into string based on the situatuiom,
+it never gives an error.
