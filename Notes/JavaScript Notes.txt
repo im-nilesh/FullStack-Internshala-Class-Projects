@@ -127,3 +127,15 @@ in === we check values as well as their datatype
         num2 = 40;
         console.log(num1 == num2); //output is true because we check only values
         console.log(num1 === num2); //output is false because on is of the string datatype, other is of the number datatype
+
+same for != (checks the values)
+same for !== (checks for the values and the type, if any one of them is true, the answer is true)
+
+for ex: 
+    num1 = "56";
+    num2 = 56;
+    console.log(num1 != num2); //output is false because the values are equal
+    console.log(num1 !== num2); //output is true because the values are same that check returns false,
+                                    but the type is not the same so the check returns true, 
+                                    !== returns true if any og the operator is true
+
