@@ -54,3 +54,16 @@ Object (let x = {name : "Nilesh", age: 22})
 
 To know what the is the datatype of a variable we use typeof(variablename) cmd to get the datatype of the variable.
 
+-----------------------------------------------------------
+
+OPERATORS : 
+
+1. Arthmatic Operators
+2. Comparision  Operators
+3. Logical Operators
+4. Assignment Operators 
+5. Conditional Operators
+6. Type Operators
+
+
+
