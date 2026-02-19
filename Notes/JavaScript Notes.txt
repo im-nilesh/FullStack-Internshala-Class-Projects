@@ -1,13 +1,13 @@
 6 topics:
 
-16-02-2026 to 20-03-2026 (approx 32 days to cover 6 topics)
+17-02-2026 to 20-03-2026 (approx 31 days to cover 6 topics)
 
 Speedrun the topics you know(basic topics)
 
-----------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-WE use script tag to connect js file to html file.
+WE use <script> tag to connect js file to html file.
 
 can use js in 3 ways:
     on the browser,
@@ -153,3 +153,9 @@ Ternary Operator
 let age = 20;
 
 age > 18 ? console.log("Person is adult") : console.log("Person is underage");
+
+------------------------------------------------------------------------------------------
+
+CONDITIONAL STATEMENTS : 
+
+
