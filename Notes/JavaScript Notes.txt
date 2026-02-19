@@ -159,3 +159,24 @@ age > 18 ? console.log("Person is adult") : console.log("Person is underage");
 CONDITIONAL STATEMENTS : 
 
 
+same conditional statements such as:
+if
+else
+else if
+and switch
+
+ex:
+
+let num = 5;
+
+if (num>0){
+    console.log("Numberr is posiitive");
+} else {
+    console.log("Number is Negative");
+}
+
+There is a method in Js to get the day number i.e
+
+let dayNumber = new Date().getDay();
+
+this statement gives us the number of days(happend in the week).
