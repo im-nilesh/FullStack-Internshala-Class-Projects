@@ -28,3 +28,6 @@ git remote add origin 'link'
 
 to checck the rremote rrepo is linked orr not 
 git remote -r 
+
+to push the code 
+git push -u origin main(branch name)
