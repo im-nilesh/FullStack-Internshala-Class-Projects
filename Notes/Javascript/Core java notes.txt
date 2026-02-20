@@ -1,0 +1,38 @@
+Execution Context
+
+in js there the memory exection is generaaly done in followiing step:
+
+initially there is a global memoery allocation for all the variables that are defined in the program,
+once the memory allocation is done the code execution starts and the variables recieve valuesfor those that
+memory allocated
+
+Whenever we are invoking any function, within the execution context therre is another exection context created,
+that would be the local execution context for that function,
+within this exection context there would be same 2 phases i.e 
+Memory allocation phase and the other would be code exection phase.
+
+
+There is a call stack present that has Global execution context at the end,
+then the local execution context that are being called because of the functions get stacked up on the GEC 
+once these local exection context are done with the memory allocation and the code execution they are popped off of the stack 
+and at the end the GEC is executed.
+
+
+--------------------------------------------------------------------------------------
+
+Hoisting
+
+We can access a variable in Js even before declaring the variable, this is known as hoisting.
+
+for example:
+    console.log(a);
+    var a = 9;
+    console.log(a);
+
+    output for this block of code will be :
+    undefined
+    9
+
+This is going to happen because during the execution context phase the memory is already been assigned to the variable about
+in the program the value was not yet been declared for that variable and because of that we get undefined,
+but later on we have provided a value of 9 that is why the output further shows us 9.
