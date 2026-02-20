@@ -1,0 +1,24 @@
+check the status of the folder
+
+we can use git status cmd
+
+it shows us that we are on the branch master
+the number of untracked files
+
+we need to add the file into staging area
+
+we use git add. cmd
+
+
+basically all the steps are :
+1. git init
+2. added a file 
+3. git status (to see the status and current brranch we are on)
+4. git add filename (to track)
+5. git commit -m "message"
+6. git push 
+
+the above are the steps to add a git file on github
+
+To create a branch :
+1. git branch -M branchname
