@@ -22,3 +22,9 @@ the above are the steps to add a git file on github
 
 To create a branch :
 1. git branch -M branchname
+
+to link with remote repo (github)
+git remote add origin 'link'
+
+to checck the rremote rrepo is linked orr not 
+git remote -r 
