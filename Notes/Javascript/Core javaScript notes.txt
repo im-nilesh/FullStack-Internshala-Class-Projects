@@ -36,3 +36,19 @@ for example:
 This is going to happen because during the execution context phase the memory is already been assigned to the variable about
 in the program the value was not yet been declared for that variable and because of that we get undefined,
 but later on we have provided a value of 9 that is why the output further shows us 9.
+
+The above example was for variable hoisting,
+the same can be applied for function hoisting too.
+
+ARROW FUNCTIONS: (function expression)
+
+we can define arrow functions in js too,
+
+for example:
+    var greetings = () => {
+        console.log("Hello)
+    }
+
+When we declare a normal function such as function greeting(){} the hoisting is done as function hoisting,
+but when we declare a arrow function the hoisting does not take place because the we have declared the function in a variable.
+    
