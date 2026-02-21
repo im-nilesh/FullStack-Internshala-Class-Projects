@@ -52,3 +52,14 @@ for example:
 When we declare a normal function such as function greeting(){} the hoisting is done as function hoisting,
 but when we declare a arrow function the hoisting does not take place because the we have declared the function in a variable.
     
+-------------------------------------------------------------------------------------------
+
+STRINGS : 
+
+We can use escape charcters to have a word within te string and that can be in double quotes.
+
+\(back slash) is a escape charcter
+
+for example:
+var sen = "My Name is \"Nilesh\" and I am a Information Science Engineer"
+

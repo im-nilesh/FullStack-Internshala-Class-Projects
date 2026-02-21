@@ -31,3 +31,13 @@ git remote -r
 
 to push the code 
 git push -u origin main(branch name)
+
+To merge eith another branch we first need to be in main branch, then we need to use
+git merge branchname 
+
+this is merge the changes from the branchname to the main branch
+
+basically be on the brach where you want the changes in, once we are in the branch we can use git merge branchnaame
+
+this merges the changes of the branchname in the current branch
+
