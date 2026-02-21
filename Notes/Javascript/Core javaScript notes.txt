@@ -1,3 +1,11 @@
+6 topics:
+
+21-02-2026 to 20-03-2026 (approx 27 days to cover 6 topics)
+
+Speedrun the topics you know(basic topics)
+
+----------------------------------------------------------------------------------------------------------------------
+
 Execution Context
 
 in js there the memory exection is generaaly done in followiing step:
@@ -62,4 +70,28 @@ We can use escape charcters to have a word within te string and that can be in d
 
 for example:
 var sen = "My Name is \"Nilesh\" and I am a Information Science Engineer"
+
+other way of creating a string is via objects
+
+for example:
+var name = new String("Nilesh Dada");
+
+for this type we get the type as object not string. //slow method
+
+Note:
+WHEN WE COMPARE 2 OBJECTS USING == OR === WE ALWAYS GET FALSE.
+
+String methods,
+
+we can replace some characters in the string by using the replace method, but strings are immutable(cannot be changed).
+
+for example:
+
+var sen = "Hello Nilesh";
+const replaceString = sen.replace("Hello", "Hii"); (replace the word hello with hii but the original string does not change).
+console.log(sen); //Hello Nilesh 
+console.log(replaceString); //Hii Nilesh it changes only first hello
+
+another method is 
+const replaceAll = sen.replaceAll("hello", "hii") //replaces all the instances of hello with hii
 
