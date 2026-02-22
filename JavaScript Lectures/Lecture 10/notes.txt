@@ -1,0 +1,9 @@
+JS is a programming language which can be used to imbed logic into programs.
+
+Js is :
+//true in ever situation
+single threaded
+Synchronous
+weakly typed
+Dynamically typed
+
