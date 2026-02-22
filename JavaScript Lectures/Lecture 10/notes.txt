@@ -2,8 +2,24 @@ JS is a programming language which can be used to imbed logic into programs.
 
 Js is :
 //true in ever situation
-single threaded
-Synchronous
-weakly typed
-Dynamically typed
+single threaded : one task at a time.
+Synchronous : Line by Line
+weakly typed : datatype is not fixed can change anytime
+Dynamically typed : datatype of the variable is decided at the run time
+interpreted
 
+programming language are of 2 types 
+interpreter : line by line
+compiler : entire code
+
+js is interpreted
+
+
+----------------------------------------------------------------------------------
+
+in js there are 2 types of datatypes ie Primitive and non Primitive
+
+in js everthing is a object
+
+Primitive : (7 types) 
+Non Primitive : (1 type) 
