@@ -21,5 +21,19 @@ in js there are 2 types of datatypes ie Primitive and non Primitive
 
 in js everthing is a object
 
-Primitive : (7 types) 
-Non Primitive : (1 type) 
+Primitive : (7 types) => smallest entity to use
+Non Primitive : (1 type) => cannot be broken down into smaller substrance 
+
+
+-----------------------------------------------------------------------------------
+
+Variable
+
+a space in memory that points something to hold the data
+
+Everything inside Js points.
+
+variable is basically a memory location that is poinitng
+
+The automatic garbage collectors automatically throw unused data in the memory.
+
