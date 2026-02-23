@@ -14,3 +14,9 @@ OPERATORS :
 
 if its 5%3 3 se 5 divide karna hai (3 ko bahar likh)
 if its 3%7 7 ko 3 se didivde karna hai (7 ko bahar likh) 
+
+we get float using / 
+
+3>3>3<2 = true
+
+this happens because true will type caste itself into 1, false will typecaste into true
