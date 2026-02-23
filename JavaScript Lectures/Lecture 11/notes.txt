@@ -1,0 +1,11 @@
+if-else 
+
+iif condition only executes if the condition is true
+
+if you write all the if statements instead of if-else, all the if's will be printed.
+
+semicolns are not compulsary in js, if you are writing in the same line semicolons are not compulsary,
+if we write in the same line we need the semicolon 
+
+
+OPERATORS : 
