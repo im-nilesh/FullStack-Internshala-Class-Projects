@@ -95,3 +95,10 @@ console.log(replaceString); //Hii Nilesh it changes only first hello
 another method is 
 const replaceAll = sen.replaceAll("hello", "hii") //replaces all the instances of hello with hii
 
+.split() function splits the string into individual elements and stores it in an array
+
+.split(" ") splits the string on basis of space
+.split(",") splits the string on basis of commas
+
+.repeate(2) repeats the string 2 times
+

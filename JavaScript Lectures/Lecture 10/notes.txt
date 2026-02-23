@@ -37,3 +37,4 @@ variable is basically a memory location that is poinitng
 
 The automatic garbage collectors automatically throw unused data in the memory.
 
+(Refer recorded class notes in details i could not write everything up of this call)
