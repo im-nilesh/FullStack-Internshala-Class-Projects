@@ -9,3 +9,8 @@ if we write in the same line we need the semicolon
 
 
 OPERATORS : 
+
+% operator 
+
+if its 5%3 3 se 5 divide karna hai (3 ko bahar likh)
+if its 3%7 7 ko 3 se didivde karna hai (7 ko bahar likh) 
