@@ -20,3 +20,28 @@ we get float using /
 3>3>3<2 = true
 
 this happens because true will type caste itself into 1, false will typecaste into true
+
+== comparision operator (comapres only values)
+=== strict equality (comapres values as well type)
+
+or || accepts anything (or never checks the second condition if the first condtion is false)
+and && want all the conditions to be true
+not ! negates the input
+
+Template Litreals:
+
+good way to add strings and varialbes together is to use string template litreals
+we use `` and write string within it
+
+for example 
+`Hii ${variablename} Hello${variablename}`
+
+replace variable name with the name of the variable and this only works with backticks
+
+LOOPS : 
+
+for
+while
+do-while
+
+you already know about these
