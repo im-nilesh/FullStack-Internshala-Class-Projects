@@ -102,3 +102,22 @@ const replaceAll = sen.replaceAll("hello", "hii") //replaces all the instances o
 
 .repeate(2) repeats the string 2 times
 
+.trim() method trims the extra spaces inside the string
+.trimStart() method trims only the start of the string
+.trimEnd() method trims only the end
+
+concat will join 2 strings
+ex : 
+    let firstname = "Nilesh ";
+    let lastname = "Bartakke";
+    
+    let concat = firstname.concat(lastname);
+    console.log(concat);
+
+    //output will be Nilesh Bartakke
+
+charAt(0) method gives the character present at index 0
+charCodeAt(0) method gives the charcter ASCII code present at index 0
+at() method also gives the character present at the index but we can also use negative indexing in this.
+stringname[index] also gives us the element present at the index number given
+slice(start, end) gives the elements present in between start and end of the string 
