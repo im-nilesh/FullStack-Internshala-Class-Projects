@@ -138,3 +138,12 @@ var : global scoped variables
 let : block scoped Variables (they are accessable only in the block)
         let variable cannot be declared again, we can assign different values to them but declartion is done only once
 
+const : block scoped varialbles (they are also accessable only in the block)
+        let variable cannot be redeclared but they different values can be assigned to them, 
+        in const we can neither redeclare, nor reassign the values to the const variable
+        const variables need to be declared as well as assign some values during the declartion itself, 
+            we cannot leave const variable as undefined.
+        
+        we should generally use const variable to create arrays and objects,
+        we can change the values of the array but cannot replace the entire array with another array
+        
