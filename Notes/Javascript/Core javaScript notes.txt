@@ -183,3 +183,28 @@ console.log(product);
 
 this will take all the values of array and spread it into the function and the product of that is stored in the function product
 
+Rest Parameter : 
+
+rest paramters are basically if we dont know the number of arguments that we need in the function we can just use the spread opreator
+within the parameter
+
+for ex:
+function sumOfAll(...args){
+    let sum = 0;
+    for (let values of args){
+        sum = sum + values;
+    }
+    return sum;
+}
+
+const nums = sumOfAll(2,3 21,3123,123);
+console.log(nums)
+
+in short the rest argument combines all the values into the function parameter
+
+if we use spread operator on objects it will throw a typeerror
+
+the spread operator overwrites the values of duplicate keys
+
+----
+
