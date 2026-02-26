@@ -147,3 +147,9 @@ const : block scoped varialbles (they are also accessable only in the block)
         we should generally use const variable to create arrays and objects,
         we can change the values of the array but cannot replace the entire array with another array
         
+--------------------------------------------------------------------------------------------------------------
+
+TEMPORAL DEAD ZONE
+
+The variables that are defined using let and const arehoisted but, 
+they cannot be accessed before initialization
