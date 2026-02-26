@@ -159,3 +159,27 @@ the variable which are decalred using var is added in the global object,
 the variable which is declared using let and const are not added in the global object
 
 The temporal dead zone occurs during the complining phase of the program
+
+-----------------------------------------------------------------------------------------------------------------
+
+PARAMETERS : 
+
+Default Parameter :
+
+We can define deafult parameter within the function so that if there are no values assigned to the parameter
+the default parameteris going to be executed
+
+Spread Syntax : 
+
+Spread is basically by using ... opreator, this allows the user to spread the values in some other variable, 
+for ex: 
+function mul(x,y){
+    return x*y;
+}
+
+const array = [12, 34];
+const product = mul(...array);
+console.log(product);
+
+this will take all the values of array and spread it into the function and the product of that is stored in the function product
+
