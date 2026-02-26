@@ -153,3 +153,9 @@ TEMPORAL DEAD ZONE
 
 The variables that are defined using let and const arehoisted but, 
 they cannot be accessed before initialization
+
+the variables have been asigned the values but they are in temporal dead zone until the value is assigned
+the variable which are decalred using var is added in the global object,
+the variable which is declared using let and const are not added in the global object
+
+The temporal dead zone occurs during the complining phase of the program
