@@ -1,0 +1,22 @@
+for in and for of loops
+
+Arrays : collection of variables irrespective to the data type
+
+whenever you are tryin top acess a value and that value is not accessible then it is pointed to undefined 
+(the varialbe should exist)
+
+Null vs undefined
+Null is given by the developer, undefined is assumed by the java interpreter automatically and it should never be given by the developer
+
+refer the image for 2,3D array
+
+for of example:
+arr = [12,23,345,436,56]
+for(let i of arr){
+    console.log(i)
+}
+
+we dont have to calc the length using length function instead we use "for of" whenever we want to iterate with the array
+in for of the i item points directly to the value of the array
+
+Objects : 
