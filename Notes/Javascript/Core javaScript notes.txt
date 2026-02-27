@@ -232,3 +232,5 @@ for ex:
 const name = "Nilesh Bartakke"
 const edu = "BE"
 const greet = `Hello ${name} with ${edu} 
+
+We can even add expressions in these
