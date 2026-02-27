@@ -1,6 +1,6 @@
 for in and for of loops
 
-Arrays : collection of variables irrespective to the data type
+Arrays : ordered collection of variables irrespective to the data type
 
 whenever you are tryin top acess a value and that value is not accessible then it is pointed to undefined 
 (the varialbe should exist)
@@ -19,4 +19,38 @@ for(let i of arr){
 we dont have to calc the length using length function instead we use "for of" whenever we want to iterate with the array
 in for of the i item points directly to the value of the array
 
-Objects : 
+for-of = item/element
+for-in = index (not much used in arrays)
+
+
+Objects : unordered collection of properties that hold key:value pair sepreated by comma
+
+ let person = {
+    name : "sam",
+    age : 20,
+    isMale : true,
+    favColor : "black"
+ }
+
+can be accessed as 
+person["age"] //output 20
+
+keys behind the object are stored as string
+
+can be accessed by dot notation
+console.log(person.isMale);
+
+for-in is used for objects majorly (inside the object)
+
+for(keys in person){
+    console.log(keys)
+}
+
+the above example gives all the keys
+
+to access values too
+for(let keys in person){
+    console.log(person[keys])
+}
+
+we dont use dot notation inside the loop as it will try to find the variable name inside the keys
