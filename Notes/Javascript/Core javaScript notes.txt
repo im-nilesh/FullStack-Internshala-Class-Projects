@@ -206,5 +206,29 @@ if we use spread operator on objects it will throw a typeerror
 
 the spread operator overwrites the values of duplicate keys
 
-----
+-----------------------------------------------------------------------------------
 
+ARROW FNCTIONS :
+
+Syntax to write arrow function
+
+const sum = (parameter) => a+b;
+
+for multiple lines of function
+
+const sum = (a+b) => {
+    return a+b;
+}
+arrow functions are called as function expressions
+
+------------------------------------------------------------------------------------
+
+TEMPLATE LITREALS :
+
+In JS we can define a string within `` backticks too,
+
+when the js string is done we can call in variables in them 
+for ex:
+const name = "Nilesh Bartakke"
+const edu = "BE"
+const greet = `Hello ${name} with ${edu} 
