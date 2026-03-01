@@ -54,3 +54,9 @@ for(let keys in person){
 }
 
 we dont use dot notation inside the loop as it will try to find the variable name inside the keys
+
+-------------------------------------------------------------------
+
+FUNCTION 
+
+same as you know 
