@@ -1,0 +1,17 @@
+Execution context : 
+How js runs
+
+1. wheneever a js code runs a global execution context is created
+2. Inisde GEC there are 2 phases
+    => Memory creation phase
+    => Code execcution phase
+3. MCP Executes first i.e all the variables are functions are allocated memory in this phase(Till here 0 lines of code is executed)
+4. CEP is running the code line by line i.e after MCP the code starts to executed
+5. Everthing happens inside something known as call stack
+6. Whenever a function is called a new execution context is created with the same name as that of function
+7. Once the task is done it removes out of the call stack.
+
+        Redecalre reassign
+var:    yes         yes
+let:    no          yes
+const:  no          no
