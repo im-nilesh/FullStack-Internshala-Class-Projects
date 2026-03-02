@@ -15,3 +15,11 @@ How js runs
 var:    yes         yes
 let:    no          yes
 const:  no          no
+
+Hoisting
+When you try to acess a variable/function even before its initinalization
+then the concept is know as hoisting
+
+Types of Hoisting
+1. normal => var => undefined
+2. temporal dead zone => let, const => Error
