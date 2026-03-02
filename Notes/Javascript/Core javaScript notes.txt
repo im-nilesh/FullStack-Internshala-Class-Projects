@@ -272,3 +272,42 @@ because the global execution code is unware of the function abc it only knows th
 
 -----------------------------------------------------------------------------------
 
+Parameter are the names in the functions,
+Arguments are the name we give during the calling of the function
+
+-----------------------------------------------------------------------------------
+
+First Class Functions is defined as,
+
+we can call a entire function from a different function by giving it as a parameters
+for ex: 
+
+const a = function x(){
+    console.log("Hello")
+}
+
+function y(){
+    console.log("hello y");
+}
+
+function x(y){
+    return y;
+}
+
+const b = x(y);
+b();
+
+-----------------------------------------------------------------------------------------------
+
+Immediately Invoked Function Expressions are the expressions where we dont have to call the function 
+we can automatically make the function call itself
+
+for ex:
+
+(function x(){
+    console,log("Hello")
+})();
+
+this is the way to make a self invoking function
+
+-------------------------------------------------------------------------------------------------
