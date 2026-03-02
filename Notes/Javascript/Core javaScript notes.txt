@@ -234,3 +234,41 @@ const edu = "BE"
 const greet = `Hello ${name} with ${edu} 
 
 We can even add expressions in these
+
+------------------------------------------------------------------------------------
+
+FUNCTION EXECUTION :
+
+Memory allocation starts globally then memmory is allocated for the functions
+after that variables are assigned individual values inside the block scope 
+
+same happens during code execution, i.e after the memmory is allocated the values are being stored,
+and for functions seperate code exection takes place
+
+------------------------------------------------------------------------------------
+
+Anonymous Function and Named Function:
+
+Whenever we assign a function to a variable that is known as function expression 
+
+Anonymous functions are functions that are having no name and a anonymous function can only be defined in a function expression
+ex:
+
+var a = function(){
+    console.log("Hello")
+}
+
+Named Function expression is a function expression where we are assigning a variable to a function but we also have a name for the funtion
+for ex:
+
+var a = function abc(){
+    console.log("Hello")
+}
+
+function can be called as a(); //this is ok
+but the function cannot be called as abc(); //this is not ok
+
+because the global execution code is unware of the function abc it only knows the variavle a 
+
+-----------------------------------------------------------------------------------
+
