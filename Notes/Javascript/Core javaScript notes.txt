@@ -311,3 +311,44 @@ for ex:
 this is the way to make a self invoking function
 
 -------------------------------------------------------------------------------------------------
+
+SCOPE, Lexical Environment and scope chain
+
+When we use var variable and define a value to it, it doesnt matter if the variable is given in or outside the function,
+the console.log(x) always works 
+
+for ex:
+function foo(){
+    console.log(x);
+}
+var x = 5
+
+foo(); //output will be 5
+
+but if the varialble is defined inside the function and we are trying to do console.log() outside we wont be able to access it,
+it will give an error
+
+for ex:
+function foo(){
+    var x = 5;
+}
+
+console.log(x) //Error 
+
+but if we have a nested functions, variables defined in the parent function can be accessed
+for ex: 
+function foo1(){
+    var x = 5;
+    function foo2(){
+        console.log(x)
+    }
+}
+
+foo1(); //output will be 5
+
+to summerize, 
+any variable can be accessed within the function and the functions within the functions can access variables from outside its scope,
+but functions variables cannot be accessed globally
+in simple words, jitna bhi andar hoga chalega, bahar raha toh nhi chalega
+Accessing variables of parent is known as lexical Environment
+
