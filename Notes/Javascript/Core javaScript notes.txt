@@ -352,3 +352,40 @@ but functions variables cannot be accessed globally
 in simple words, jitna bhi andar hoga chalega, bahar raha toh nhi chalega
 Accessing variables of parent is known as lexical Environment
 
+console.log() kinta bhi aandar rahe chalega,
+var andar console.log() bahar nahi chalegaa.
+
+VAR HAS FUNCTION SCOPE
+LET AND CONST HAS BLOCK SCOPE
+
+------------------------------------------------------------------------------------------------
+
+BLOCK SCOPE AND SHADOWING IN JS
+
+So when we declare the variable using var, its memory is declared in global scope
+no matter if the same name of the variable is defined in the function,
+because we can reassign the values to the variables that are created from var variable,
+we know that the variable will change its value no matter where the variable is declared(function or globally)
+for ex:
+
+var x = 1;
+function hehe(){
+    var x = 100;
+    console.log(x); //100
+}
+console.log(x) //100
+
+This is known as shadowing
+
+but the variables that are defined using let and const wont follow this
+Note : If we are using a variable using let outside, we cannot use the same varable name with keyword var, this is not allowed
+        this is illegal shadowing
+
+-----------------------------------------------------------------------------------------------
+
+A function along with its lexical Environment is called closure
+first it will try to find the variable within it then it goes to its lexical Environment
+
+this happens because of closure
+
+------------------------------------------------------------------------------------------------
