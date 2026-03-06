@@ -1,4 +1,4 @@
-Scope :
+Lexical Scope / Scope :
 accessibility/reach
 
 There are 4 type of scopes
@@ -25,3 +25,5 @@ Case 2 : if the var is written in {}
 when functional scope and functional and block are coexisting they are defined into a single scope called local
 
 refer the image in the folder to get the example.
+
+because of scope the variables can be accessed from the functions to outer scope whenever we define it with var
