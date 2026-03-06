@@ -412,3 +412,32 @@ the type of arrays is OBJECTS
 In Js negative indexing is not allowed like the classical manner but the we can do it by using .at() method
 for example:
 console.log(arrayname.at(-1)) //gives us the last element
+
+If we are creating an array using the new keyword and the array has only 1 element, it will not consider it to be a value
+instead it will create the array of that length
+for ex:
+const arr = new Array(24); // creates an empty array with length 24
+
+------------------------------------------------------------------------------------------------
+
+ARRAY METHODS
+
+Length property (You already know all about this)
+
+If we want to convert an array into a string, we can use 
+toString() method this allows us to convert an array into a string
+for ex:
+const arr = ["apply", "make", "same", "scope"];
+console.log(arr.toString())
+
+will convert the array into a string
+
+Other method is that we can use join() method
+console.log(arr.join())
+
+but we can give an operator and the join will seperate the element and have the operator in the middle
+
+console.log(arr.join("%")) // output will be apply%make%same%scope
+
+at() it can be used for negative indexing as well as to get elements at any position
+pop() removes the last element of the array
