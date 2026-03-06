@@ -1,0 +1,27 @@
+Scope :
+accessibility/reach
+
+There are 4 type of scopes
+1. Global
+2. Script
+3. Functional
+4. Block
+
+Case 1 : if the var is not written in {}
+for:
+    var - global scope
+    let and const - Script scope
+
+Case 2 : if the var is written in {}
+    if that {} because of function?
+        yes: 
+            var: functional scope
+            let and const: Block Scope
+        no: 
+            var: global scope
+            let and const: block scope
+
+
+when functional scope and functional and block are coexisting they are defined into a single scope called local
+
+refer the image in the folder to get the example.
