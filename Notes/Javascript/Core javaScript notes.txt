@@ -441,3 +441,15 @@ console.log(arr.join("%")) // output will be apply%make%same%scope
 
 at() it can be used for negative indexing as well as to get elements at any position
 pop() removes the last element of the array
+
+shifting is used to add or delete an element at the end of the array
+    shift() Removes the element from the beginning of aan array and returns the removed element 
+    for ex:
+        const arr = ["mango", "asigned", "slash"];
+        arr.shift()
+
+    unshift() Adds the element in the beginning of any array and returns the new length of an array
+    for ex:
+        const arr = ["mango", "asigned", "slash"];
+        const val = arr.unshift("Hello") //adds hello in the front
+        console.log(val)
