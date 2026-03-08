@@ -1,0 +1,17 @@
+Higher order function 
+
+function a(){}
+function b(a){}
+
+when a function is passed as an argument inside anither function, then it is known as higher order function
+
+Baccho bol diya ki sab bohat fast ho raha hai
+
+----------------------------------------------------------------------------------------------------------------
+
+Ternary operator
+
+let age = 5
+age>5 ? console.log("bada baccha") : console.log("chota baccha");
+
+see the image to know 

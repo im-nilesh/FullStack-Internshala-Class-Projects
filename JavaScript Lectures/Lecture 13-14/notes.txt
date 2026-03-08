@@ -22,4 +22,4 @@ then the concept is know as hoisting
 
 Types of Hoisting
 1. normal => var => undefined
-2. temporal dead zone => let, const => Error
+2. temporal dead zone => let, const => Error //time difference between MCP and CEP
