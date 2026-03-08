@@ -1,3 +1,3 @@
-let age = 0;
-
-age > 18 ? console.log("Persin is adult") : console.log("Person is underage");
+const arr = [1, 2, 3, 4, 5, 6];
+arr.splice(2, 1, 11, 12, 12, 12);
+console.log(arr);
