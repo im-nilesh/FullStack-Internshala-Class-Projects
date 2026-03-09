@@ -12,4 +12,10 @@ forEach : it is not a loop its a array method which acts like a loop,
           it iterates each and every method of the array, it accepts a callback function => the callback function has 2 argus and it 
           doesnot return anything
 
-map : also iterates on all the elements and it accepts a callback function, and it will return a new array 
+map : also iterates on all the elements and it accepts a callback function, and it will return a new array //refer image copy
+
+filter : refer image copy 2
+
+some : accepts a callback fn return true or false only if any of the elements fulfill the condition
+
+every : checks for all elements to be true
