@@ -640,3 +640,33 @@ ex:
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9.1];
 const updatedArr = arr.filter((num) => num > 5);
 console.log(updatedArr);
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Reduce Method : 
+
+when we want to reduce the array and get a single output then we use reduce method
+
+reduce function works a bit differently
+suppose we want to add all the elements of the array
+
+const arr = [1,2,3,4,5]
+const updatedArr = arr.reduce(function(acc,curr){
+    acc = acc + curr
+    return acc
+},0)
+
+the acc is basically the final collected value this array is going to return, 
+the curr is the value that is going to iterate
+
+the above function will give the sum of all numbers and the 0 is basically the initial value of the acc variable
+
+to find max element of array using reduce method
+
+const arr = [1,2,3,4,5]
+arr.reduce(function(max, curr){
+    if(curr>max){
+        max = curr
+    }
+    return max
+}, 0)
