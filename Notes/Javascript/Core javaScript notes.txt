@@ -559,3 +559,61 @@ for (let x in arr){
 }
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+HIGHER ORDER FUNCTION : 
+
+Higer order functions are the functions that taake another function as a paramenter and return a function 
+for ex:
+function x(){
+    console.log("Hello")
+}
+
+function y(x){
+    x()
+}
+
+console.log(y(x))
+
+y is the higher order function and x is the callback function (the function which is passed as paraameter is called callback function)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+MAP Method
+
+map method : A higher order function which is used to transform contents of an array, basically to change the contents of an array
+             it does not modify the original array, it creates a new array
+
+             for ex:
+             const arr = [1,2,3,4,5]
+
+             function square(x){
+                return x*x
+             }
+
+             const squaredArray = arr.map(square) // it takes all the elements of arr one by one use the function and store the
+                                                     output in squaredArray variable
+
+            instead of writing the function seperate we can write the function within the map 
+            
+            for ex:
+             const arr = [1,2,3,4,5]
+
+             const squaredArray = arr.map(function square(x){
+                return x*x
+             })
+
+            We can also use arrow functions (no example written for this)
+
+            for ex:
+            const user = [{
+                firstname : "Nilesh"
+                lastname : "Bartakke"
+                age : 24
+            },
+            {
+                firstname : "Nikhil"
+                lastname : "Bartakke"
+                age : 27
+            }]
+
+            const username = user.map( x => user,firstname )
