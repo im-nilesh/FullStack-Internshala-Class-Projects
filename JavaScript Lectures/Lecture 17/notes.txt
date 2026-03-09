@@ -19,3 +19,14 @@ filter : refer image copy 2
 some : accepts a callback fn return true or false only if any of the elements fulfill the condition
 
 every : checks for all elements to be true
+
+
+push, pop, shift, unshift
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Closure : 
+
+when a function is being returned it is never returned alone, it also is returned with its
+lexical DEPENDENT enviornment
+
