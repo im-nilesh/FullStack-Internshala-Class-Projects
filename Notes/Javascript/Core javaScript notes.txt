@@ -734,3 +734,6 @@ findLastIndex(): return the index of last element that satisfied the condition
                  for ex: 
                  const arr = [12,23,34,45,6567]
                  const firstEven = arr.findLastIndex(x => x % 2 == 0) // returns the last index of even element that is encountered
+
+----------------------------------------------------------------------------------------------------------------------------------
+

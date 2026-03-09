@@ -52,3 +52,7 @@
 // console.log(updatedArr);
 
 // ---------------------------------------
+
+const arr = [1, 2, 3, 4, 5];
+const [f, s, ...rest] = arr;
+console.log(f, s, rest);

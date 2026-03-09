@@ -1,0 +1,15 @@
+Higher order functions :
+1. when you are passing another function as an argument then the function which is accpeting the argument is called higher order function
+
+2. When you return a function from some other function then the fn which is returning the smaller function is called higher order function
+
+either accept or return a function it is known as higher order function
+
+the function that goes as an argument is called  callback function
+
+in built hof/array methods:
+forEach : it is not a loop its a array method which acts like a loop,
+          it iterates each and every method of the array, it accepts a callback function => the callback function has 2 argus and it 
+          doesnot return anything
+
+map : also iterates on all the elements and it accepts a callback function, and it will return a new array 
