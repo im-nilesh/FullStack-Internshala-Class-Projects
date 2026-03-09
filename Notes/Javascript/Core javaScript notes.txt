@@ -602,7 +602,7 @@ map method : A higher order function which is used to transform contents of an a
                 return x*x
              })
 
-            We can also use arrow functions (no example written for this)
+            We can also use arrow functions (watch this many times to understand)
 
             for ex:
             const user = [{
@@ -616,4 +616,27 @@ map method : A higher order function which is used to transform contents of an a
                 age : 27
             }]
 
-            const username = user.map( x => user,firstname )
+            const username = user.map( x => user.firstname )
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Filter Method : 
+
+this function is used to filter out contents of array based on some conditions
+
+the working is same as map
+
+for ex:
+const arr = [1,2,3,4,5,6,7]
+function x(num){
+    return num % 2 == 0;
+}
+
+const updatedArr = arr.filter(x) //gives the element which satisfies the conditions of the function
+
+to take out numbers greater than 5
+
+ex:
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9.1];
+const updatedArr = arr.filter((num) => num > 5);
+console.log(updatedArr);
