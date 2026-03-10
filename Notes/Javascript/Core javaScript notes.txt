@@ -740,3 +740,57 @@ findLastIndex(): return the index of last element that satisfied the condition
 OBJECT ORIENTED PROGRAMMING:
 
 Objects are the things that store everything as key value pair may it be an array, function or another object 
+
+Bracket notation : 
+we can access a variable key like this
+console.log(user["age"])
+
+we genreally use the bracket notation when we are going to pass the object value into a function 
+
+we  can change the object values like this:
+user["names"]["firstName"] = "Alice"
+user.names.firstname = "Alice"
+
+just like above example we can add new function new array in the object
+
+---------------------------------------------------------------------------------------------------------------------------
+
+DEFINING CLASSES IN JS
+basic template of a class
+
+class Customer{
+    constructor(name, email){
+        this.email = email
+        this.name = name
+    }
+
+    get info(){
+        return this.name
+    }
+
+    printDetails(){
+        console.log(`Name of customer is ${this.name} and email is ${this.email}`);
+    }
+}
+
+const customer1 = new Customer("John", "abc@gmail.com") //this will add the deatails in the variable
+customer1.printDetails()
+
+to call get method
+console.log(customer1.info())
+
+one example:
+
+class Book {
+constructor(title, author, year){
+        this.title = title;
+        this.author = author;
+        this.year = year
+    }
+    getSummary(){
+        return `${this.title} by ${this.author}, published in ${this.year}.`
+    }
+}
+
+const myBook = new Book('The Jungle Book', 'Rudyard Kipling', 1894);
+console.log(myBook.getSummary());
