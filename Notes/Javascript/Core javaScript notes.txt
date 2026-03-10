@@ -757,6 +757,7 @@ just like above example we can add new function new array in the object
 
 DEFINING CLASSES IN JS
 basic template of a class
+new keyword is used to call the constructor of the class
 
 class Customer{
     constructor(name, email){
@@ -794,3 +795,24 @@ constructor(title, author, year){
 
 const myBook = new Book('The Jungle Book', 'Rudyard Kipling', 1894);
 console.log(myBook.getSummary());
+
+--------------------------------------------------------------------------------------------------------------------------
+
+INHERITANCE : 
+
+super keyword is used to call the constructor of the parent class
+
+example
+class VIPCustomer extends  Customer1{
+    constructor(name, email, vipLevel){
+        super(name, email);
+        this.vipLevel = vipLevel
+    }
+
+    updateVIPLevel(level){
+        this.vipLevel = level
+    }
+}
+
+----------------------------------------------------------------------------------
+
