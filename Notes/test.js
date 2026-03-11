@@ -53,6 +53,35 @@
 
 // ---------------------------------------
 
-const arr = [1, 2, 3, 4, 5];
-const [f, s, ...rest] = arr;
-console.log(f, s, rest);
+// const arr = [1, 2, 3, 4, 5];
+// const [f, s, ...rest] = arr;
+// console.log(f, s, rest);
+
+// ---------------------------------------
+
+// const obj = {
+
+//     x: 10,
+//     y : function(){
+        
+//         console.log(this)
+//     }
+    
+// }
+
+// obj.y();
+
+
+//--------------------------------------------
+
+const obj = {
+    x : 10,
+    z : function(){
+        const x = () => { 
+        console.log(this)
+        }
+        x();
+    }
+}
+
+obj.z()

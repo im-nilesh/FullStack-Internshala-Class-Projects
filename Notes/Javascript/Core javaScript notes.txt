@@ -852,3 +852,112 @@ obj.y() // it will give us the object itself
 
 CALL APPLY AND BIND METHODS
 
+whenever we have a method, and we want to share the method with different functions, we can use call apply and BIND
+
+CALL : 
+
+const user = {
+    firstName : "Nilesh"
+    lastName : "Dada"
+    printName : function (){
+        console.log(`the user's firstname is ${this.firstName} and last name is ${lastName}`)
+    }
+}
+
+user.printName() // gives us output
+
+but 
+
+const user1 = {
+    firstName : "Nikhil"
+    lastName : "Dada"
+    
+}
+
+user1.printName() //gives us error
+
+if we want to use the method of object user 1 we can do this
+user.printName.call(user1) // gives us output for user1 as well
+
+another way is that we define the function outside itself and the obj can be called by using call 
+for ex:
+
+onst user = {
+    firstName : "Nilesh"
+    lastName : "Dada"
+    
+}
+
+let printName = function (){
+        console.log(`the user's firstname is ${this.firstName} and last name is ${lastName}`)
+    }
+
+printName.call(user1) //works the same
+
+if we want to pass a parameter
+printName : function (color){
+        console.log(`the user's firstname is ${this.firstName} and last name is ${lastName} and fav color is ${color}` )
+    }
+printName.call(user1, "Orange") //this is how we can accept parameters in call operator
+
+APPLY : 
+Apply is same as call, only difference is that the paramenters are accepted in array
+
+printName.call(user1, ["Orange", "other_parameter"])
+
+BIND: 
+Bind returns a function and it needs to be called we needed bu storing in variable
+for ex:
+
+const details = printName.bind(user1, "Orange")
+details(); //this will give the output
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+This inside arrow functions
+
+arrow functions dont have their own this, it retains the value of this of enclosing lexical context
+
+which means ki, when we call this on a normal method which is inside the object, we get the object itself as it is the parent,
+but if we use arrow functions, we wont be getting the function, but we will be getting the global context, 
+
+just as the output of something which is not inside the function,
+
+example for normal function using this
+const obj = {
+
+    x: 10,
+    y : function(){
+        
+        console.log(this)
+    }
+    
+}
+
+obj.y(); // output for this will be the entire object
+
+but if we use arrow function
+const obj = {
+    x : 10,
+    y : () => {
+        console.log(this)
+    }
+}
+
+obj.y();
+
+the output will not be the entire obj, but it will be pointing to the global context,
+
+another example:
+const obj = {
+    x : 10,
+    z : function(){
+        const x = () => { 
+        console.log(this)
+        }
+        x();
+    }
+}
+
+obj.z() // this will return the entire obj because the arrow function will point to the value of its enclosing lexical context
+(function in this case and the function will return the obj)
