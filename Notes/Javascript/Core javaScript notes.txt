@@ -961,3 +961,54 @@ const obj = {
 
 obj.z() // this will return the entire obj because the arrow function will point to the value of its enclosing lexical context
 (function in this case and the function will return the obj)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+PROTOTYPE
+
+Every Object in Javascript has a special property attached to it called PROTOTYPE
+
+Prototype chain
+if we type, 
+object.getPrototypeOf(objectname) // this will give the protoype of the object
+or we can do
+objectname.__proto__ // gives the prototype of the object
+
+we can check the prototype of anything, but after we check the prototype of something, we cannot check the prototype of the 
+result that we got, i.e object.prototype is the end
+
+There are a few function names in the Date object, 
+we can define same names of those functions and create user defined functions witht the same name
+and when we call it, the user defined  function is called not the one in the prototype, this is called as 
+shadowing
+this happens because js searchs for the property in the object first, and only then it moves to the prototype,
+if it encountered in the object it, wont go intot the prototype
+
+INHERITANCE was possible in classes, 
+but inhertiance is possible in objects too, we can define the prototype of a object to another object, this will cause 
+inhertiance as the object will search property in the protoype if there are none found in its own
+
+for ex:
+const obj1 = {
+    a : 10,
+    b : 20,
+    sum : function() {
+        console.log(this.a + this.b)
+    }
+}
+
+obj1.sum() // 30
+
+const obj2 = {
+    c : 10,
+    d : 10,
+    mult : function () {
+        console.log(this.c + this.d)
+    }
+}
+
+obj2.mult() // 100
+
+obj2.__proto__ = obj1
+
+we can perform all the operations of obj1 in obj2 
