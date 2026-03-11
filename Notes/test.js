@@ -74,14 +74,30 @@
 
 //--------------------------------------------
 
-const obj = {
-    x : 10,
-    z : function(){
-        const x = () => { 
-        console.log(this)
-        }
-        x();
+// const obj = {
+//     x : 10,
+//     z : function(){
+//         const x = () => { 
+//         console.log(this)
+//         }
+//         x();
+//     }
+// }
+
+// obj.z()
+
+//--------------------------------------------
+
+function outer(){
+    const x = 10;
+    const y = function(){
+        let z = 10000;
+        console.log(z)
+        console.log(x)
     }
+    console.log(this);
+    y();
 }
 
-obj.z()
+const functionCalls = outer();
+// console.log(functionCalls);
