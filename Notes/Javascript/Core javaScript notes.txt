@@ -816,3 +816,37 @@ class VIPCustomer extends  Customer1{
 
 ----------------------------------------------------------------------------------
 
+THIS keyword
+
+this keyword points to  the global object
+everytime we run a file, exection context is created, and this keyword is also created with that
+
+this keyword in function scope
+
+function greet(){
+    console.log("Hello")
+    console.log(this) // global object (it will console the global object, on browser the global  object is window)
+}
+
+greet();
+
+in function, this keyword points to the globaal object,
+but in strict mode, this keyword points to undefined
+
+this keyword inside object Method
+
+when we have a function written inside the object is called method
+
+this keyword inside an object method will point to the object becuase the parent of the method will be the object
+for ex:
+const obj = {
+    x : 10,
+    y : function(){
+        console.log(this)
+    }
+}
+
+obj.y() // it will give us the object itself
+
+CALL APPLY AND BIND METHODS
+
