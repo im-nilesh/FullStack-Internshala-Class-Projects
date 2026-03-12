@@ -1022,5 +1022,48 @@ The browser takes the html file and converts it into a tree like structure
 The js can access each node of the tree 
 DOM allows programs and script to dynamically access and update the content, structure and style of the document
 
-DOM NODES AND RELATIONSHIP 
+Finding HTML elements
+If we want to find a element in the html document, we need to use dom tags 
+in js 
+we create a variable to get the id, we can use document.getElementById("idname") function to get the id
+we can access the elements that have tags by using, document.getElementByTagName("tagname")
+we can access the elements that have classes by using, document.getElementByClassName("classname")
+
+for css element finding, we can use
+document.quesryselector(".forclass, #forid")
+
+TO Change the value of the HTML element, 
+
+we can use 
+const header = document.queryselector(".header")
+header.innerHTML = "Value you want to change" 
+you can change the image too by using, 
+document.getElementById("myImg").scr = "bird.jpg"
+
+.src for changing the image, .innerHTML for changing the html content
+
+to do anychanges, we first need to create a variable and store the content of the element, 
+we can do that by any of the methods that the document provides but just remember, we need to store them
+
+To add a new Paragraph using js we can do following example:
+<body>
+<div id = "parent">
+    <p id = "existingpara">
+    Test Paragraph
+    </p>
+</div>
+</body>
+
+<script>
+const para = document.createElement("p")
+para.innerHTML = "TEST PARAGRAPH" 
+const parent = document.getElementById("parent")
+parent.appendChild(para) //adds the para after the p tag
+const madepara = document.getElementById("existingpara")
+parent.insertBefore("madepara") // adds the para after the p tag that was already exisiting
+</script>
+
+to remove exisitng elements we can use
+variablename.remove()
+
 
