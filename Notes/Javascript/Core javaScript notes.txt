@@ -1030,7 +1030,7 @@ we can access the elements that have tags by using, document.getElementByTagName
 we can access the elements that have classes by using, document.getElementByClassName("classname")
 
 for css element finding, we can use
-document.quesryselector(".forclass, #forid")
+document.queryselector(".forclass, #forid")
 
 TO Change the value of the HTML element, 
 
@@ -1066,4 +1066,72 @@ parent.insertBefore("madepara") // adds the para after the p tag that was alread
 to remove exisitng elements we can use
 variablename.remove()
 
+-------------------------------------------------------------------------------------------------------------------------------
 
+DOM EVENTS 
+
+In JavaScript, an event is something that happens in the browser,
+usually because of a user action or a browser action, and JavaScript can detect it and run code in response.
+
+example : 
+<body>
+    
+    <div id = "conatiner" >
+
+        <button onclick="onSubmit()"> Submit</button>
+
+    </div>
+
+
+    <script>
+        function onSubmit(){
+            document.querySelector("body").style.backgroundColor = "red";
+        }
+    </script>
+</body>
+
+DOM EVENT LISTENERS
+
+We can add a aclick event in JS using
+
+addEventListerner() takes 3 parameters ie, first is the event, second is the function, third will be introduced a bit later
+
+an example of event lister 
+<body>
+    
+    <div id = "conatiner" >
+
+        <button onclick="onSubmit()"> Submit</button>
+        <div class="diiv" style="height: 200; width: 200; background-color: lightgray;">
+            <p> Click me</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        function onSubmit(){
+            document.querySelector("body").style.backgroundColor = "red";
+        }
+        document.querySelector("p").addEventListener("click", function(){
+            document.querySelector("body").style.backgroundColor = "green"
+        })
+    </script>
+</body>
+
+to remove any event listner we can use removeEventListener() method, it takes the first paramter as the the event, next as the function that needs to be removed
+
+-------------------------------------------------------------------------------------------------------------------------
+
+EVENT Bubbling and capturing
+
+Event bubbling is basically, it basically runs the inner event then goes on top 
+When an event happens on an element, it first runs on that element, then bubbles up to its parent, then grandparent, and so on until it reaches the document
+
+Event Capture is when the outer element is handeled first then the inner event is handeled
+
+as i said, the addEventListener takes 3 paramenters,
+one is the event,
+next is the function, third value is event capture which is a boolean value, if the value of this is false, event bubbling happens
+if its true,
+event capturing occurs

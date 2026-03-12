@@ -6,12 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>TEST
-        
-    </h1>
+    
+    <div id = "conatiner" >
+
+        <button onclick="onSubmit()"> Submit</button>
+        <div class="diiv" style="height: 200; width: 200; background-color: lightgray;">
+            <p> Click me</p>
+        </div>
+
+    </div>
 
 
-
-    <script src="test.js"></script>
+    <script>
+        function onSubmit(){
+            document.querySelector("body").style.backgroundColor = "red";
+        }
+        document.querySelector("p").addEventListener("click", function(){
+            document.querySelector("body").style.backgroundColor = "green"
+        })
+    </script>
 </body>
 </html>
