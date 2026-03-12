@@ -1,6 +1,6 @@
 6 topics:
 
-11-03-2026 to 20-03-2026 (approx 19 days to cover 4 topics + project)
+12-03-2026 to 20-03-2026 (approx 8 days to cover 3 topics + project)
 
 Speedrun the topics you know(basic topics)
 
@@ -816,7 +816,7 @@ class VIPCustomer extends  Customer1{
 
 ----------------------------------------------------------------------------------
 
-THIS keyword
+THIS keyword (need live lectures for more clarification)
 
 this keyword points to  the global object
 everytime we run a file, exection context is created, and this keyword is also created with that
@@ -964,7 +964,7 @@ obj.z() // this will return the entire obj because the arrow function will point
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-PROTOTYPE
+PROTOTYPE (need live lectures for more clarification)
 
 Every Object in Javascript has a special property attached to it called PROTOTYPE
 
@@ -1011,4 +1011,16 @@ obj2.mult() // 100
 
 obj2.__proto__ = obj1
 
-we can perform all the operations of obj1 in obj2 
+we can perform all the operations of obj1 in obj2
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+DOM (document object model) MANIPULATION : 
+
+The browser takes the html file and converts it into a tree like structure
+
+The js can access each node of the tree 
+DOM allows programs and script to dynamically access and update the content, structure and style of the document
+
+DOM NODES AND RELATIONSHIP 
+
