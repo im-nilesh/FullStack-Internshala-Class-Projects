@@ -1,6 +1,6 @@
 6 topics:
 
-12-03-2026 to 20-03-2026 (approx 8 days to cover 3 topics + project)
+14-03-2026 to 20-03-2026 (approx 6 days to cover 2 topics + project)
 
 Speedrun the topics you know(basic topics)
 
@@ -1140,4 +1140,18 @@ event capturing occurs
 
 Asynchronous Programming :
 
-Asynchronous Programming allows us to do multitasking at a same time, enables program to execute multiple tasks concurrently 
+Asynchronous Programming allows us to do multitasking at a same time, enables program to execute multiple tasks concurrently,
+it allows effiency and responsiveness
+
+Javascript is a single threaded synchornous language, but use of callbacks, promises event loop, it can behave as Asynchronous 
+
+setTimeout method : 
+
+setTimeout is a webAPI which allows us to execute some code after some delay
+for ex:
+console.log("hello")
+setTimeout(()=> {
+    console.log("Delayed code")
+}, 1000)
+
+console.log("Hello")
