@@ -1135,3 +1135,9 @@ one is the event,
 next is the function, third value is event capture which is a boolean value, if the value of this is false, event bubbling happens
 if its true,
 event capturing occurs
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Asynchronous Programming :
+
+Asynchronous Programming allows us to do multitasking at a same time, enables program to execute multiple tasks concurrently 
