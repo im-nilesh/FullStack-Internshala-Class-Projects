@@ -30,6 +30,7 @@
 // let p1 = new Person("Neel", 21);
 // p1.greet();
 
+//-------------------------------------------------------------
 // //classes
 
 // class Person{
@@ -45,4 +46,18 @@
 // let person1 = new Person("Nilesh",21);
 // person1.greet();
 
-let obj = {}
+// class Person{
+//     constructor(name, age, email){
+//         this.name = name;
+//         this.age = age;
+//         this.email = email;
+
+//     }
+//     greet(){
+//         console.log(`Hello ${this.name} jii`);
+//     }
+// }
+
+// let person1 = new Person("neel", 21, "neel@gmail.com");
+// person1.greet();
+

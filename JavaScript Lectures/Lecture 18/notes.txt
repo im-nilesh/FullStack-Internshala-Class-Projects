@@ -139,3 +139,8 @@ object banane ke 2 tarike,
 ek hota hard code, ek hota constructor
 hardcode => object.protoype
 constructor => functionName.protoype
+
+-----------------------------------------------------------------------
+
+We call super keyword to get the key values of the of the parent
+super keyword is calling the const. of the parent
