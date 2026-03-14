@@ -1,0 +1,141 @@
+CONSTRUCTORS : 
+
+They are functions, 
+they alaways start with captial letters (convention)
+compulsary part is to write new keyword
+
+constructor function => object banane wala function
+
+when the function has no return it returns undefined
+
+function Neel(){
+...code...
+}
+new Neel() 
+
+function neel(){
+
+}
+
+console.log(neel()) this returns undefined
+
+function Neel(){
+
+}
+
+console.log( new Neel()) this gives us a empty object
+
+calling function noramlly gives undefined, if its called with a new keyword, it is not a normal function anymore
+it becomes a constructor function, 
+the role of constructor is to create empty object
+
+in a constructor 
+we define key object pair
+
+but in a constructor function
+we define the key as given in the example below
+
+function Neel(){
+    this.favColor (key) = "blue" (value);
+    this.phone (key) = "Nokia 3310" (value);
+    this.hobby (key) = "coding" (value);
+}
+console.log(Neel())
+
+this will return a object with key value pairs
+
+example for paramerterized const.
+function Neel(color, phone, hobby){
+    this.favColor = color;
+    this.phone = phone;
+    this.hobby = hobby;
+}
+
+console.log(Neel("red", "iPhone", "gaming"))
+
+the function is stored everytime the obj is called
+
+50% constructor done
+
+------------------------------------------------------------------
+
+Note : JS is not OOPS Lang. OOPs were introudced in es6, closure was used to privatize the variable before OOPs.
+
+Classes: 
+
+Classes are blueprint, instance of object
+Main Ans : Classes are syntactical sugar of constructor function (beautiful tarika constructor likhne ka)
+
+They are also used to create objects
+
+example for Classes
+class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    greet(){
+        console.log("Hello jii");
+    
+}}
+
+let person1 = new Person("Nilesh",21);
+person1.greet();
+
+the greet function is not being stored again and again.
+
+50% classes done
+
+------------------------------------------------------------------
+
+Note : in obj, when we are not able to find a property we can undefined, even if its not defined
+in case of method, we get error 
+
+Protoype : it is a fallback(dependence) source which itself is an object and it gives you 
+the access to properties and methods available
+
+Js will check if the property/method is in the obj or not, 
+but
+if it doesnt get the method/property it goes to check to Protoype
+
+fallback => Protoype
+
+to check the Protoype:
+.__proto__ => gives us the fallback
+
+let obj = {} iske maa baap .__proto__ (object.protoype) hota hai, 
+.__proto__ ka maa baap obj.__proto__.__proto__
+
+.__proto__ se check karte hai, kis se check karte hai? object.protoype() se
+
+obj ka papa object.protoype,
+string ka papa string.protoype
+array ka papa array.protoype
+
+---------------------------------------------------------------------------
+
+CONSTRUCTORS : 
+
+to solve the issue of storing the function again and again, 
+we store the function in protoype of that function
+
+agar hame function ko protoype ko dalna hai,
+toooo...
+
+function Person(name, age){
+this.name = name ;
+this.age = age;
+
+    
+}
+
+Neel.protoype.greet = function(){
+    console.log("Hello jii");
+}
+let p1 = new Person("Neel", 21);
+p1.greet();
+
+object banane ke 2 tarike, 
+ek hota hard code, ek hota constructor
+hardcode => object.protoype
+constructor => functionName.protoype
