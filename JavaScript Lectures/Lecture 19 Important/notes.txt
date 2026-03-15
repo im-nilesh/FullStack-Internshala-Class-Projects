@@ -1,0 +1,96 @@
+This Keyword :
+
+basic def : It is a reserved keyword, and it points to the current object where we are using it (wrong)
+
+Important : this keyword is never fixed, it depends on how it is being called upon,
+this keyword not only points to object, it depends on how it is being called 
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Types 5 :
+
+1. functional calling
+2. Object calling
+3. constructor calling
+4. indirect calling
+5. Arrow function calling
+
+
+1. function calling : in case of direct function call, this keyword always point to window object
+
+function neel(){
+    console.log(this)
+}
+neel() //directly called
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+2. object calling : in case of object calling this points to the object inside which the method is available
+
+let obj = {
+    a : 100,
+    fn : function(){
+        console.log(this)
+    }
+}
+obj.fn() //obj
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+3. Constructor calling : in case of constructor calling this keyword points to newly created object
+
+function Neel(){
+    this.age = 21
+    this.name = "neel"
+}
+
+let n1 = new Neel () //this points to n1 here
+let n2 = new Neel() //this points to n2 here
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+4. Indirect calling : in case of indirect calling we change the context of this
+
+call
+
+let obj1 = {
+    a:10,
+    fn: function(x,y,z){console.log(this.a,x,y,z)}  //somewhat written as obj1.a
+}
+obj1.fn() //10
+
+
+let obj2 = {
+    a:50,
+}
+
+// obj2.fn() this will give error because fn is not present in obj2
+
+obj1.fn.call(obj2, 01,20,20) //50 
+obj1.fn.apply(obj2, [01,20,20])
+obj1.fn.bind(obj2)
+
+apply is 100% same as they call but the only difference is in the way we pass the arguments
+apply accpet arguments in the form of array.
+
+bind doesnot execute itself it only creates a copy of the function,
+we need to return the value
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+5. Arrow functions : in case of arrow function calling this depends/points to parent's this
+
+let obj ={
+    a:10,
+    fn: function(){
+        console.log(this); //obj
+        let sam = () => {
+            console.log(this);//obj
+            
+        }
+        sam()
+        
+    }
+}
+obj.fn()
+
