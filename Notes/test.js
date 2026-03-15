@@ -88,16 +88,35 @@
 
 //--------------------------------------------
 
-function outer(){
-    const x = 10;
-    const y = function(){
-        let z = 10000;
-        console.log(z)
-        console.log(x)
-    }
-    console.log(this);
-    y();
-}
+// function outer(){
+//     const x = 10;
+//     const y = function(){
+//         let z = 10000;
+//         console.log(z)
+//         console.log(x)
+//     }
+//     console.log(this);
+//     y();
+// }
 
-const functionCalls = outer();
-// console.log(functionCalls);
+// const functionCalls = outer();
+// outer()
+
+//----------------------------------------------------------------
+
+let obj = {
+    x: 10,
+    y: function(){
+        let Neel = {
+                naam : "Nilesh",
+                kaam : "Full Stack Dev",
+                umar : 22,
+                scope : () => {
+                    console.log(this);
+                    
+                }
+        }
+        Neel.scope()
+        
+    }
+}
