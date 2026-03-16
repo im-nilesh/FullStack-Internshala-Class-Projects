@@ -1190,7 +1190,7 @@ the nesting of functions and callbacks creating issues is callback hell
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-Promises : 
+Promises refer this entire topic from class or chatgpt : 
 
 Promise allows the program to continue with other tasks without waiting fot the Asynchronous operation to complete.
 Once the asynchoronous task is comeplete the promise is fulfilled signaling the program that the data is ready for use
@@ -1200,8 +1200,71 @@ Create and consume promises
 it requires the promise keyword, which takes a function, the function takes 2 callback functions one is resolve, 
 other is reject
 
+A Promise has 3 states:
+
+Pending → still waiting
+
+Resolved (fulfilled) → success
+
+Rejected → failed
 
 
-const promise = new Promise(function(resolve, reject){
 
+let myPromise = new Promise(function(resolve, reject) {
+
+    let foodReady = true;
+
+    if (foodReady) {
+        resolve("Food is ready!");
+    } else {
+        reject("Food is not ready");
+    }
+
+});
+
+myPromise
+.then(function(result){
+    console.log(result);
 })
+.catch(function(error){
+    console.log(error);
+});
+
+
+.then() runs when the promise is fulfilled, 
+.catch() runs when the promise fails
+
+example 2:
+let promise = new Promise(function(resolve, reject) {
+
+    setTimeout(function(){
+        resolve("Task completed");
+    }, 2000);
+
+});
+
+promise.then(function(result){
+    console.log(result);
+});
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+fetch api :
+
+fetch api is a api provided by the browser to us to fect data from any extrenal servers 
+
+fetch Api resturns a promise
+
+const promiseObject = fetch("api url")
+console.log(promiseObject) //output is Pending
+
+promiseObject.then(response => response.json()).then(result => console.log(result)); //the reponse needs to be converted into json format, the ,json() also returns
+                                                                                        returns a promise and thats why we need to resolve that promise too
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Refer promise.all, promise.any from docs or class
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Async/Await : understood but notes will be uploded later for this because promise made my brain a mess 
