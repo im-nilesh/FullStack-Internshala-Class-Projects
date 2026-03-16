@@ -104,19 +104,35 @@
 
 //----------------------------------------------------------------
 
-let obj = {
-    x: 10,
-    y: function(){
-        let Neel = {
-                naam : "Nilesh",
-                kaam : "Full Stack Dev",
-                umar : 22,
-                scope : () => {
-                    console.log(this);
+// let obj = {
+//     x: 10,
+//     y: function(){
+//         let Neel = {
+//                 naam : "Nilesh",
+//                 kaam : "Full Stack Dev",
+//                 umar : 22,
+//                 scope : () => {
+//                     console.log(this);
                     
-                }
-        }
-        Neel.scope()
+//                 }
+//         }
+//         Neel.scope()
         
-    }
-}
+//     }
+// }
+
+//--------------------------------------------------------------------
+
+// function createMessage(name, callback){
+//     setTimeout(()=> {
+//         const message = `Hello ${name}`
+//         callback(message)
+//     },1000)
+// }
+
+// function displayMessage(message){
+//     console.log(message);
+    
+// }
+
+// createMessage("Nilesh", displayMessage)

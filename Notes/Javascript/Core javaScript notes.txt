@@ -1158,5 +1158,50 @@ console.log("Hello")
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-Event Looping : 
+CallBack function :
 
+The function that is passed as a paramenter to the higher order function is called as callback function
+
+if the function is having a timeout, and the other function is dependent on the function which is having timeout, 
+due to the timeout, the function cannot be accessed, and it returns undefined, 
+
+to overcome this issue, callback functions are used so that the undefined doesnt happen
+for ex:
+
+function createMessage(name, callback){
+    setTimeout(()=> {
+        const message = `Hello ${name}`
+        callback(message)
+    },1000)
+}
+
+function displayMessage(message){
+    console.log(message);
+    
+}
+
+createMessage("Nilesh", displayMessage)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+CallBackHell and Pyramid of Doom
+
+the nesting of functions and callbacks creating issues is callback hell
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Promises : 
+
+Promise allows the program to continue with other tasks without waiting fot the Asynchronous operation to complete.
+Once the asynchoronous task is comeplete the promise is fulfilled signaling the program that the data is ready for use
+
+Create and consume promises
+
+it requires the promise keyword, which takes a function, the function takes 2 callback functions one is resolve, 
+other is reject
+
+
+
+const promise = new Promise(function(resolve, reject){
+
+})
