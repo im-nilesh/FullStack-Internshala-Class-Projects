@@ -1267,4 +1267,6 @@ Refer promise.all, promise.any from docs or class
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
-Async/Await : understood but notes will be uploded later for this because promise made my brain a mess 
+Async/Await : understood but notes will be uploded later for this because promise made my brain a mess
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
