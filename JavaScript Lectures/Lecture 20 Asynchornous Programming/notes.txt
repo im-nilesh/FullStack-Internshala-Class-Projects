@@ -1,0 +1,16 @@
+Asynchronous Programming : 
+
+Js is Synchronous Language,
+
+setTimeout() => delay
+setInterval() => repeats the code everytime after some certain time
+clearTimeout()
+clearIntervals() => stops the interval 
+
+these are web APIS(super power of browser)
+
+setTimeout() : is a web api which is provided by the browser which provides us delay
+why does it behave async?
+
+Event loop is a loop which constantly keeps working and checks that, if the call stack is empty? if its empty, it checks callback queue if there are functions
+it sends the callback queue functions only when the call stack is empty

@@ -1190,7 +1190,7 @@ the nesting of functions and callbacks creating issues is callback hell
 
 -------------------------------------------------------------------------------------------------------------------------------
 
-Promises refer this entire topic from class or chatgpt : 
+Promises (refer this entire topic from class or chatgpt) : 
 
 Promise allows the program to continue with other tasks without waiting fot the Asynchronous operation to complete.
 Once the asynchoronous task is comeplete the promise is fulfilled signaling the program that the data is ready for use
