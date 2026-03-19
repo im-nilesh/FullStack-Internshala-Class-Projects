@@ -1270,3 +1270,17 @@ Refer promise.all, promise.any from docs or class
 Async/Await : understood but notes will be uploded later for this because promise made my brain a mess
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+Local Storage : 
+
+We can store strings on the browser locally, i.e by using
+localstorage.setItem("name", "Nilesh") //takes only strings and in key value pair format
+.getItem() can be used to get the value that is in the key
+.removeItem() can be used to remove the key, value pair
+.clear() used to clear entire local storage 
+.length() gives us the number of key items pair 
+.key(indexnumber) gives us the key present at that index
+other way to store data is by 
+localstorage.hobby = "Teaching" //works as the same way, take hobby as keyword and Teaching as value
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
