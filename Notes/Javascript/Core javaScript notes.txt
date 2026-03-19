@@ -11,12 +11,10 @@ that would be the local execution context for that function,
 within this exection context there would be same 2 phases i.e 
 Memory allocation phase and the other would be code exection phase.
 
-
 There is a call stack present that has Global execution context at the end,
 then the local execution context that are being called because of the functions get stacked up on the GEC 
 once these local exection context are done with the memory allocation and the code execution they are popped off of the stack 
 and at the end the GEC is executed.
-
 
 --------------------------------------------------------------------------------------
 
@@ -51,7 +49,7 @@ for example:
 
 When we declare a normal function such as function greeting(){} the hoisting is done as function hoisting,
 but when we declare a arrow function the hoisting does not take place because the we have declared the function in a variable.
-    
+
 -------------------------------------------------------------------------------------------
 
 STRINGS : 
@@ -365,7 +363,7 @@ function hehe(){
     var x = 100;
     console.log(x); //100
 }
-console.log(x) //100
+console.log(x) //1
 
 This is known as shadowing
 
