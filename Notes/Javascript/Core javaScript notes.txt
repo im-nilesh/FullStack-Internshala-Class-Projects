@@ -1,6 +1,6 @@
 6 topics:
 
-14-03-2026 to 20-03-2026 (approx 6 days to cover 2 topics + project)
+19-03-2026 to 20-03-2026 (approx 1 days to cover 1 topic)
 
 Speedrun the topics you know(basic topics)
 
@@ -1284,3 +1284,11 @@ other way to store data is by
 localstorage.hobby = "Teaching" //works as the same way, take hobby as keyword and Teaching as value
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
+
+Session Storage : 
+
+Same as Local Storage but the contents wont be availble if the project is opened in the new tab
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+JavaScript Completed
