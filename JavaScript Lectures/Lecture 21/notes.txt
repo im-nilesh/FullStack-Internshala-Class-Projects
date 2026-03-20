@@ -27,4 +27,28 @@ finally() => anyone of the scenario
 
 Async, Await : 
 
+asyn in front of function => A Promise is always returned (no matter what)
+async can work alone, await needs async always 
+
+we write await when we need to wait for something
+
+whenever there is a promise, we write await, so that we get rid of .then(), .catch()
+
+function sam(){
+    fetch(' some api ') //returns a promise
+    .then()
+    .catch()
+}
+
+async function neel(){
+    let res = await fetch("some api")
+    let data = await res.json()
+    console.log(data)
+}
+
+neel()
+
+await blocks the function from the statement with which is called, 
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
