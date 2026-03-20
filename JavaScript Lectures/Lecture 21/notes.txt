@@ -1,0 +1,29 @@
+Promise : 
+
+Promise : Sir will come to teach me
+=> he will come
+=> he will not come 
+
+Promise => resolve, reject
+
+Promise is a costructor function, => new Promise()
+
+it accepts a call back function
+new Promise(()=>{})
+
+The callback function has 2 arguments -> resolve, reject(both are fn)
+new Promise(resolve, reject)=>{
+    resolve()
+    Reject()
+}
+
+then() => resolve
+catch() => reject
+finally() => anyone of the scenario
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Async, Await : 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
