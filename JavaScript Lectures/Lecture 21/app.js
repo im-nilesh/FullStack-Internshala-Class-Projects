@@ -26,11 +26,11 @@
 
 //--------------------------------------------------------------------------------------------------
 
-async function neel() {
-  console.log("start");
-  let res = await fetch("https://api.example.com/data");
-  let data = await res.json();
-  console.log(data);
-}
-console.log("These lines may print themseleves");
-console.log("End of deafult console lines");
+// async function neel() {
+//   console.log("start");
+//   let res = await fetch("https://api.example.com/data");
+//   let data = await res.json();
+//   console.log(data);
+// }
+// console.log("These lines may print themseleves");
+// console.log("End of deafult console lines");
