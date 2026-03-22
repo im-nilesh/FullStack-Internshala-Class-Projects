@@ -11,15 +11,15 @@
 //     return err;
 //   });
 
-const API = "https://jsonplaceholder.typicode.com/todos";
+// const API = "https://jsonplaceholder.typicode.com/todos";
 
-async function apicalling() {
-  try {
-    let resp = await axios.get(API);
-    console.log(resp.data);
-  } catch (error) {
-    console.log(error);
-  }
-}
+// async function apicalling() {
+//   try {
+//     let resp = await axios.get(API);
+//     console.log(resp.data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-apicalling();
+// apicalling();

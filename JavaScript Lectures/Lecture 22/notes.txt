@@ -44,3 +44,25 @@ async function apicalling(){
 apicalling()
 
 ------------------------------------------------------------------------
+
+DOM : 
+
+Document  Object    Model 
+  HTML      Js    Changing
+Changing HTML with Js is DOM 
+
+steps
+1. Selection
+2. Manipulation
+
+Ways of Selection : 5
+
+getElementsbyTagName => like array
+getElementbyId
+getElementsbyClassName => like array
+
+querySelector
+querySelectorAll
+
+------------------------------------------------------------------------
+
