@@ -1,16 +1,12 @@
-function Neel(name, age, prof){
-    this.name = name;
-    this.age = age;
-    this.profession = prof;
-}
+const API = "https://jsonplaceholder.typicode.com/todos";
 
-Neel.prototype.greet = function(){
-    console.log(`Hello ${this.name}`);
-    console.log(this);
-    
-}
-
-let n1 = new Neel("Nilesh", 21, "Full Stack Dev")
-let n2 = new Neel("Laxmi", 19, "Student")
-n1.greet()
-n2.greet()
+fetch(API)
+  .then((data) => {
+    return data.json();
+  })
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    return err;
+  });

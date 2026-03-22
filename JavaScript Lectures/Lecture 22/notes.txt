@@ -2,4 +2,45 @@ Api:
 
 Application Programming interface
 
-=> gives data
+=> end point(BTS we dont know) = (tv remote)
+=> give data
+
+it is an end point, visiting this endpoint gives us data 
+---------------------------------------------------------------------------------------------------------------------------------
+
+=> how to call the API 
+Most important : Fetch, Axios
+
+//more ways
+XMLhhtpRequest, Jquery
+
+---------------------------------------------------------------------------------------
+
+Fetch => web api(browser) => externally dont need to install it
+
+fetch("api") //always inside string
+
+-------------------------------------------------------------------------
+
+Axios is a 3rd party package, and we need to externally install / not 
+already available 
+
+cdn - content delivery network 
+(we can use cdn link to directly access axios without need to install it)
+
+-------------------------------------------------------------------------
+
+Axios => returns a promise, and it gives us entire data at once no need for .json()
+axios.get(API)
+.then()
+.catch()
+
+or
+
+async function apicalling(){
+    await axios.get(API)
+}
+
+apicalling()
+
+------------------------------------------------------------------------
