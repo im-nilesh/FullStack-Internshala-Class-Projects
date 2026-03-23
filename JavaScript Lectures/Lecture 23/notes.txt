@@ -15,3 +15,9 @@ it can change the tags too
 
 Attributes : 
 
+we can get the attritube, input1.getAttribute('id') //gives us ID 
+we can set the attritube, using setAttribute("current attritube","which you want to change to")
+
+---------------------------------------------------------------------------------
+
+h1.classList.add('neel', 'dada') //adds classes with names neel dada 

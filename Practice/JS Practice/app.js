@@ -29,3 +29,13 @@
 // const h1 = document.querySelector("h1");
 
 // h1.innerText = "Hello Nilesh";
+
+//-----------------------------------------------------------------
+
+// let ip1 = document.get("ip1");
+// let ip2 = document.querySelector("ip2");
+// (not working need to get them)
+// ip1.setAttribute("text", "password");
+// ip2.setAttribute("text", "email");
+
+//-------------------------------------------------------------------
