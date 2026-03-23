@@ -1,0 +1,17 @@
+How to get content that is written in the tag 
+
+innerText, textContent, innerHTML
+
+=> innerText doesnt show the hidden content (brainful)
+
+=> textContent shows the hidden data as well (brainless)
+
+they can be used to get the data, as well as set the data
+
+=> innerHTML gives us the HTML tag as well, it can be getter and setter 
+it can change the tags too
+
+------------------------------------------------------------------------------
+
+Attributes : 
+
