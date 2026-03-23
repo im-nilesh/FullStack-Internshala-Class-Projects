@@ -32,10 +32,20 @@
 
 //-----------------------------------------------------------------
 
-// let ip1 = document.get("ip1");
-// let ip2 = document.querySelector("ip2");
-// (not working need to get them)
-// ip1.setAttribute("text", "password");
-// ip2.setAttribute("text", "email");
+// let ip1 = document.querySelector("#ip1");
+// let ip2 = document.querySelector("#ip2");
+
+// ip1.setAttribute("type", "password");
+// ip2.setAttribute("type", "email");
+
+//-------------------------------------------------------------------
+
+// const button = document.getElementById("button");
+
+// button.addEventListener("click", handelClick);
+
+// function handelClick() {
+//   alert("Button Clicked");
+// }
 
 //-------------------------------------------------------------------

@@ -20,4 +20,8 @@ we can set the attritube, using setAttribute("current attritube","which you want
 
 ---------------------------------------------------------------------------------
 
-h1.classList.add('neel', 'dada') //adds classes with names neel dada 
+h1.classList.add('neel', 'dada') //adds classes with names neel dada
+
+--------------------------------------------------------------------------
+
+event listner was also discussed in the classes
