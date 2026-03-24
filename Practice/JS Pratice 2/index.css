@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.operator {
+  display: flex;
+}
+.input {
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  border-radius: 12px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+#submit {
+  background-color: lightcoral;
+}
