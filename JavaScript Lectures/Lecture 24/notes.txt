@@ -1,1 +1,12 @@
 Tic Tac Toe Project done
+
+Interview questions
+
+var,let,const me diference
+short circuiting,string template literals
+literals,
+undefined vs null, hoisting, temporal zone,
+scope, closures, this keyword,HOF, map,filter,
+reduce,every -very impo,superkeyword,promises,
+async,await,call-bind-apply,protypes.
+
