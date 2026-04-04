@@ -54,3 +54,30 @@
 // console.log(res);
 
 //------------------------------------------------------------------------------------------------------------
+
+// binary search
+
+const arr = [2, 3, 4, 12, 124, 145, 1234, 12345, 12435, 123467];
+
+const target = 12345;
+
+function binarySearch(arr, target) {
+  let start = 0;
+  let end = arr.length - 1;
+  while (start <= end) {
+    let mid = start + Math.floor((end - start) / 2);
+    if (arr[mid] === target) {
+      return `Element found at index ${mid}`;
+    }
+
+    if (target > mid) {
+      start = mid + 1;
+    } else {
+      end = mid - 1;
+    }
+  }
+  return `Element not found`;
+}
+
+const res = binarySearch(arr, target);
+console.log(res);
