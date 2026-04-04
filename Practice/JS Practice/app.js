@@ -34,3 +34,23 @@
 // console.log(sortedArray);
 
 // ------------------------------------------------------------
+
+// Linear Search done
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let target = 1;
+
+// function linearSearch(arr, target) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == target) {
+//       return `Found at index ${i}`;
+//     }
+//   }
+//   return `Target not Found`;
+// }
+
+// let res = linearSearch(arr, target);
+// console.log(res);
+
+//------------------------------------------------------------------------------------------------------------
