@@ -1,0 +1,14 @@
+hashmap is a data structure, it stores data in key value pairs
+
+where keys are unique,
+for ex: 
+name: "Harry"
+age: 30
+name: "Garry" // gets overwritten
+
+Map functions: 
+set: set keys and values
+get: get the keys
+has: checks if key is there or no
+delete: deletes one key
+clear: clears the map
