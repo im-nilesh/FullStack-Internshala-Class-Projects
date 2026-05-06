@@ -108,3 +108,17 @@
 // }).catch((err) => {
 //   console.log(err);
 // });
+
+// async function fetching() {
+//   let data = await fetch("some api");
+//   let res = await data.json;
+//   console.log(res);
+// }
+
+// let obj = {
+//   a: 10,
+//   fn() {
+//     console.log(this);
+//   },
+// };
+// obj.fn();
