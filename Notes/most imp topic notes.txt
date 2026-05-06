@@ -26,3 +26,34 @@ fn(); // 2
 
 A Promise is an object that represents the result of an asynchronous operation.
 
+-----------------------------------------------------------
+
+1. The Core Idea (VERY IMPORTANT)
+
+JavaScript is:
+
+Single-threaded + asynchronous (via Web APIs / runtime)
+
+👉 Meaning:
+
+One thing runs at a time (call stack)
+But async tasks are handled outside and come back later
+🧠 2. The 3 Main Players
+
+Think of it like this:
+
+🧩 1. Call Stack
+Where code executes
+Sync code runs here
+🧩 2. Web APIs (Browser / Node)
+setTimeout, fetch, etc.
+They run async stuff outside JS
+🧩 3. Queues
+Microtask Queue → Promises
+Callback Queue → setTimeout, setInterval
+
+console statements executes first and then if promise is there the promise and after that the set timeouts 
+console, promise/statements after await, settimeouts
+
+A Promise is a placeholder for a value that will come in the future
+

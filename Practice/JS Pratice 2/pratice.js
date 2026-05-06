@@ -52,3 +52,59 @@
 // });
 
 // promise.then()
+
+// let p1 = new Promise((resolve, reject) => {
+//   let success = true;
+
+//   if (success) {
+//     resolve("Data fetched");
+//   } else {
+//     reject("Failed");
+//   }
+// });
+
+// p1.then((data) => {
+//   console.log(data);
+// }).catch((data) => {
+//   console.log(err);
+// });
+
+// let p1 = new Promise((res, rej) => {
+//   let success = false;
+
+//   if (success) {
+//     res("data Fetched");
+//   } else {
+//     rej("Fetch failed");
+//   }
+// });
+
+// p1.then((data) => {
+//   console.log(data);
+// }).catch((err) => {
+//   console.log(err);
+// });
+
+// async function greet() {
+//   return "hello";
+// }
+
+// greet().then((data) => {
+//   console.log(data);
+// });
+
+// let p1 = new Promise((res, rej) => {
+//   let success = true;
+
+//   if (success) {
+//     res("Fetch Complete");
+//   } else {
+//     rej("Fetch Failed");
+//   }
+// });
+
+// p1.then((data) => {
+//   console.log(data);
+// }).catch((err) => {
+//   console.log(err);
+// });
