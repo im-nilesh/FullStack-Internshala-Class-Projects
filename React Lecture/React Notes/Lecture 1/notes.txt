@@ -60,4 +60,4 @@ manages the files and execute it
 
 Vite - bundler - react to create my first application
 
-`npm create vite@7` : create project 
+`npm create vite@7` : create project
