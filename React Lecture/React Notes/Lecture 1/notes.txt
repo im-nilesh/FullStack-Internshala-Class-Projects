@@ -15,6 +15,8 @@ Disadvantages of React
 -> poor SEO
 -> state management is not fixed
 
+Advantages:
+
 =>  virtual dom is a light weigth copy of the real dom, i.e 
     everything is not recraeted, it only recreated the changed part ie,
     it compares 2 doms, and tells what is the diff amonngst them and the differnece part os recreated
@@ -24,3 +26,38 @@ Disadvantages of React
 => SPA Single page application : website will not reload even if required
 
 => JSX syntax of writing a code
+
+Disadvantages:
+
+=> external sourcing - react router dom as we cannot route to differnent pages on our own
+
+=> since there is no reload browser doesnt understand a new page is created or not
+
+=> Big projects are difficult to maintain hence we cannot use state managament tools
+
+How many types of components are there in react?
+
+2 types: 
+1. functional component = functions
+2. Class based component = es6 classes
+
+prefer functional
+difference between them is stateless/stateful
+
+stateless = static changes = basic changes (not event based) not directly refelected on UI
+stateful = dynamic changes = they can do dynamic changes, visible on the UI.
+
+--------------------------------------------------------------------------
+
+Interview question : 
+
+Browser <--- JS <--- JSX (babel compiler converts jsx to js)
+
+vite parcel cra = bundlers 
+manages the files and execute it 
+
+----------------------------------------------------------------------------
+
+Vite - bundler - react to create my first application
+
+`npm create vite@7` : create project 
