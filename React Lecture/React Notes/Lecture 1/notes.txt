@@ -1,0 +1,26 @@
+React is Library,
+React is fast
+React is Front end only
+
+Why react is fast? / Advantages of React
+-> because of virtual DOM 
+-> component based architecture
+-> reusability of component
+-> SPA (single page application) no reloading
+-> JSX (syntax)
+
+Disadvantages of React
+-> we cant write backend
+-> we do not have routing of our own
+-> poor SEO
+-> state management is not fixed
+
+=>  virtual dom is a light weigth copy of the real dom, i.e 
+    everything is not recraeted, it only recreated the changed part ie,
+    it compares 2 doms, and tells what is the diff amonngst them and the differnece part os recreated
+
+=> component based architecture : Divide the code and use it
+
+=> SPA Single page application : website will not reload even if required
+
+=> JSX syntax of writing a code
