@@ -4,3 +4,26 @@ Functional Components : fn Component = function, (it returns JSX) functions that
 install react using vite
 
 Brower <-- index.html <-- Main.jsx <-- app.jsx <-- Component
+
+can create any amount of components
+src:
+    Component
+        lion.jsx
+        dog.jsx
+
+write first letter captial always 
+
+types of exports : 
+
+=> named export = multiple
+=> default export = 1
+
+when the file name is not captial, function name not capital, 
+export is also not capital, we wont be getting a suggestion (we cannot access it)
+
+user defined components are generally suggested to write with a capital starting letter
+
+so...
+we can use default, but while exporting we can use a small letter, but while importing we should import with a capital letter
+the compulsary part is we need to import with a captial letter, and default export can be exported with anyname
+
