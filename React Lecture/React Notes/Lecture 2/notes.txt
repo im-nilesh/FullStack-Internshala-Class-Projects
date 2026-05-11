@@ -18,6 +18,8 @@ types of exports :
 => named export = multiple
 => default export = 1
 
+Default : 
+
 when the file name is not captial, function name not capital, 
 export is also not capital, we wont be getting a suggestion (we cannot access it)
 
@@ -26,4 +28,10 @@ user defined components are generally suggested to write with a capital starting
 so...
 we can use default, but while exporting we can use a small letter, but while importing we should import with a capital letter
 the compulsary part is we need to import with a captial letter, and default export can be exported with anyname
+
+Named : 
+
+in named export the components must be exported with its own name,
+in named export the component must have both function and import as capital
+default can be exported by anyname
 
