@@ -1,0 +1,6 @@
+Componnets: 
+Functional Components : fn Component = function, (it returns JSX) functions that returns jsx is a functional Component
+
+install react using vite
+
+Brower <-- index.html <-- Main.jsx <-- app.jsx <-- Component
