@@ -1,9 +1,13 @@
 import "./App.css";
-import List from "./components/List";
+import Product from "./components/Product";
 
 function App() {
-  const items = ["pen", "pencil", "ruler", "eraser"];
-  return <List header="Items" items={items} />;
+  const products = [
+    { id: 1, title: "iPhone", price: 70000 },
+    { id: 2, title: "Samsung", price: 50000 },
+    { id: 3, title: "OnePlus", price: 40000 },
+  ];
+  return <Product product={products} />;
 }
 
 export default App;
