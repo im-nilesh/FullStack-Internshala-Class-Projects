@@ -1,8 +1,9 @@
 import "./App.css";
-import Cat from "./components/cat";
+import List from "./components/List";
 
 function App() {
-  <Cat isSofaa={112} />;
+  const items = ["pen", "pencil", "ruler", "eraser"];
+  return <List header="Items" items={items} />;
 }
 
 export default App;
