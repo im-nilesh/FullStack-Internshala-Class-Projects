@@ -1,13 +1,14 @@
 import "./App.css";
+import Button from "./components/Button";
 import Product from "./components/Product";
 
 function App() {
-  const products = [
-    { id: 1, title: "iPhone", price: 70000 },
-    { id: 2, title: "Samsung", price: 50000 },
-    { id: 3, title: "OnePlus", price: 40000 },
+  const employees = [
+    { id: 1, name: "Nilesh", role: "Frontend Developer" },
+    { id: 2, name: "Rahul", role: "Backend Developer" },
+    { id: 3, name: "Aman", role: "UI Designer" },
   ];
-  return <Product product={products} />;
+  return <Product list={employees} />;
 }
 
 export default App;
