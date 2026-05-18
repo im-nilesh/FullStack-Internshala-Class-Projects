@@ -1,0 +1,12 @@
+Variables are getting changed but, 
+re rerendering is not taking place. 
+
+who will help in rerender?
+Hooks = inbuilt functions
+
+useState(): helps to change the UI
+use state returns 2 things, 1st is vairalbe and 2nd is function that changes the vairalbe
+
+callback functions return prev value and normal function will return the inital value in usestate 
+
+bactching in react is homework
