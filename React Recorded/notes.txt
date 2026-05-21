@@ -2,3 +2,20 @@ package.json is the file where we get the dependiencies that are in the file,
 package-lock.json : when we install a dependency that particular dependency might require some other dependiencies as well,
                     that details is stored in the package-lock.json
 
+npm = node package manager
+npx is for executing any npm package
+
+npm-create-app is depricated and is no longer in use
+
+Babel converts JSX in HTML
+
+-------------------------------------------------------------------------------------------------------
+
+There are 2 types of components:
+Functional components (New way): A functional component is literally just a plain JavaScript function,
+                                 that returns JSX (which looks like HTML but is converted into React Elements/Objects).
+
+                example : function WelcomeMessage() {
+                            return <h1>Hello, Welcome to React!</h1>;
+                            }
+Class based components (Old way): 
