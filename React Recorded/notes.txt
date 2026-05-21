@@ -1,0 +1,4 @@
+package.json is the file where we get the dependiencies that are in the file, 
+package-lock.json : when we install a dependency that particular dependency might require some other dependiencies as well,
+                    that details is stored in the package-lock.json
+
