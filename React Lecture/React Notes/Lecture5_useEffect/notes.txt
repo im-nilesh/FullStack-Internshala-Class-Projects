@@ -1,0 +1,26 @@
+Batching is a optimisation technique, 
+multiple state together rerendering,
+
+wheneever there is a change in state, the component rerenders
+but batchiing groups all the state and ultimately makes it 1 render
+
+function Counter() {
+  const [count, setCount] = React.useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+    setCount(count + 1);
+    setCount(count + 1);
+  };
+
+  return <button onClick={handleClick}>{count}</button>;
+}
+
+--------------------------------------------------------------------------------
+
+useEffect()
+
+side effects are teh tasks that does not bother the dom manipulation
+fetch, setTimeout, setInterval etc
+
+-----------------------------------------------------------------------------------
