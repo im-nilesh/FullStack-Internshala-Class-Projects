@@ -19,3 +19,6 @@ Functional components (New way): A functional component is literally just a plai
                             return <h1>Hello, Welcome to React!</h1>;
                             }
 Class based components (Old way): 
+
+--------------------------------------------------------------------------------------------------------------
+
