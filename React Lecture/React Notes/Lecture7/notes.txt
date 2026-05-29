@@ -1,0 +1,23 @@
+React reconcilation : 
+
+Process used by react to efficiently UI via DOM. 
+avoiding unnecessary rerenders.
+To enhance preformance.
+
+Diffing Algorithm : 
+
+react compares your old vs new dom. 
+it does not re renderes the entire UI. It only
+recreates the changed part.
+
+React fiber : react reconcilation process engine. after react 16.
+
+Lifecycle Methods : 
+
+1. component didMount - Initilazation = created for this first time
+2. component DidUpdate - Modification = changed in the state
+3. componentWillUnMount - Cleaner functions = removed from the UI
+
+in class based component all these methods were individually executed
+
+make sure you do the counter example
