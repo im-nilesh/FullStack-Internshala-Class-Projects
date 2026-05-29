@@ -1,0 +1,479 @@
+
+COMPLETE DSA ROADMAP FOR INTERVIEWS
+==================================
+
+1. INTRODUCTION TO DSA
+======================
+
+DSA stands for:
+- Data Structures
+- Algorithms
+
+Purpose:
+--------
+DSA helps solve problems efficiently.
+
+Why DSA is Important
+--------------------
+1. Improves problem-solving skills
+2. Important for coding interviews
+3. Helps optimize code
+4. Builds logical thinking
+
+====================================================
+
+2. TIME COMPLEXITY
+==================
+
+Definition
+----------
+Measures how fast an algorithm runs.
+
+Big O Notation
+--------------
+
+O(1)     Constant
+O(log n) Logarithmic
+O(n)     Linear
+O(n log n)
+O(n²)
+O(2^n)
+
+Examples
+--------
+
+O(1):
+Array access
+
+O(n):
+Linear search
+
+O(log n):
+Binary search
+
+====================================================
+
+3. ARRAYS
+==========
+
+Topics:
+-------
+- Traversal
+- Insertion
+- Deletion
+- Prefix Sum
+- Sliding Window
+- Two Pointers
+
+Important Problems
+------------------
+1. Two Sum
+2. Best Time to Buy Stock
+3. Move Zeroes
+4. Maximum Subarray
+5. Trapping Rain Water
+
+Patterns
+--------
+1. Sliding Window
+2. Two Pointers
+3. Prefix Sum
+
+====================================================
+
+4. STRINGS
+===========
+
+Topics:
+-------
+- Palindrome
+- Anagrams
+- Frequency Count
+- Sliding Window
+
+Important Problems
+------------------
+1. Valid Palindrome
+2. Group Anagrams
+3. Longest Substring Without Repeating Characters
+4. Minimum Window Substring
+
+====================================================
+
+5. RECURSION
+=============
+
+Definition
+----------
+Function calling itself.
+
+Key Concepts
+------------
+1. Base Case
+2. Recursive Call
+
+Problems
+--------
+1. Factorial
+2. Fibonacci
+3. Print Subsequences
+4. Generate Permutations
+
+====================================================
+
+6. SORTING
+===========
+
+Algorithms:
+-----------
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort
+
+Complexities
+------------
+
+Bubble Sort:
+O(n²)
+
+Merge Sort:
+O(n log n)
+
+Quick Sort:
+O(n log n) average
+
+====================================================
+
+7. BINARY SEARCH
+================
+
+Definition
+----------
+Searches efficiently in sorted arrays.
+
+Complexity:
+-----------
+O(log n)
+
+Important Problems
+------------------
+1. Search in Rotated Array
+2. Peak Element
+3. First and Last Position
+4. Square Root
+
+====================================================
+
+8. LINKED LIST
+===============
+
+Types
+-----
+1. Singly Linked List
+2. Doubly Linked List
+3. Circular Linked List
+
+Problems
+--------
+1. Reverse Linked List
+2. Detect Cycle
+3. Merge Two Lists
+4. Remove Nth Node
+
+====================================================
+
+9. STACK
+=========
+
+Definition
+----------
+LIFO structure.
+
+Operations
+----------
+1. Push
+2. Pop
+3. Peek
+
+Problems
+--------
+1. Valid Parentheses
+2. Next Greater Element
+3. Largest Rectangle Histogram
+
+====================================================
+
+10. QUEUE
+==========
+
+Definition
+----------
+FIFO structure.
+
+Types
+-----
+1. Queue
+2. Circular Queue
+3. Deque
+4. Priority Queue
+
+Problems
+--------
+1. Sliding Window Maximum
+2. Implement Queue Using Stack
+
+====================================================
+
+11. HASHING
+============
+
+Data Structures
+---------------
+1. HashMap
+2. HashSet
+
+Problems
+--------
+1. Two Sum
+2. Longest Consecutive Sequence
+3. Subarray Sum Equals K
+
+====================================================
+
+12. TREES
+==========
+
+Most Important Topic
+
+Topics
+------
+1. Binary Tree
+2. Binary Search Tree
+
+Traversals
+----------
+1. Inorder
+2. Preorder
+3. Postorder
+4. Level Order
+
+Problems
+--------
+1. Height of Tree
+2. Diameter of Tree
+3. Balanced Tree
+4. Lowest Common Ancestor
+
+====================================================
+
+13. HEAP
+=========
+
+Types
+-----
+1. Min Heap
+2. Max Heap
+
+Problems
+--------
+1. Kth Largest Element
+2. Top K Frequent Elements
+
+====================================================
+
+14. GREEDY ALGORITHMS
+=====================
+
+Definition
+----------
+Take locally optimal choice.
+
+Problems
+--------
+1. Activity Selection
+2. Jump Game
+3. Fractional Knapsack
+
+====================================================
+
+15. GRAPHS
+===========
+
+Topics
+------
+1. BFS
+2. DFS
+3. Dijkstra
+4. Topological Sort
+
+Problems
+--------
+1. Number of Islands
+2. Clone Graph
+3. Course Schedule
+
+====================================================
+
+16. DYNAMIC PROGRAMMING
+========================
+
+Very Important Topic
+
+Steps
+-----
+1. Recursion
+2. Memoization
+3. Tabulation
+
+Problems
+--------
+1. Fibonacci
+2. Climbing Stairs
+3. Coin Change
+4. Longest Common Subsequence
+
+====================================================
+
+17. BACKTRACKING
+=================
+
+Definition
+----------
+Try all possibilities recursively.
+
+Problems
+--------
+1. N Queens
+2. Sudoku Solver
+3. Rat in Maze
+
+====================================================
+
+18. TRIE
+=========
+
+Definition
+----------
+Prefix tree.
+
+Problems
+--------
+1. Implement Trie
+2. Search Suggestions
+
+====================================================
+
+19. IMPORTANT DSA PATTERNS
+===========================
+
+Arrays:
+-------
+1. Sliding Window
+2. Two Pointers
+3. Prefix Sum
+
+Trees:
+------
+1. DFS
+2. BFS
+
+Graphs:
+-------
+1. BFS
+2. DFS
+
+DP:
+---
+1. Memoization
+2. Tabulation
+
+====================================================
+
+20. BEST PLATFORMS
+===================
+
+1. LeetCode
+https://leetcode.com
+
+2. GeeksforGeeks
+https://www.geeksforgeeks.org
+
+3. Codeforces
+https://codeforces.com
+
+4. HackerRank
+https://www.hackerrank.com
+
+====================================================
+
+21. BEST RESOURCES
+===================
+
+1. Striver A2Z Sheet
+https://takeuforward.org
+
+2. NeetCode
+https://neetcode.io
+
+3. CodeHelp
+https://www.youtube.com/@CodeHelp
+
+====================================================
+
+22. DAILY PRACTICE PLAN
+========================
+
+Beginner:
+---------
+2 Easy Questions
+1 Medium Question
+
+Intermediate:
+-------------
+2 Medium
+1 Hard
+
+====================================================
+
+23. INTERVIEW PREPARATION
+==========================
+
+Focus Order:
+------------
+1. Arrays
+2. Strings
+3. Hashing
+4. Binary Search
+5. Linked List
+6. Trees
+7. Graphs
+8. DP
+
+====================================================
+
+24. MOST ASKED TOPICS
+======================
+
+1. Sliding Window
+2. Two Pointers
+3. Binary Search
+4. DFS
+5. BFS
+6. DP
+7. Recursion
+
+====================================================
+
+25. FINAL TIPS
+===============
+
+1. Practice daily
+2. Revise old problems
+3. Learn patterns
+4. Understand complexity
+5. Dry run solutions
+6. Do mock interviews
+
+END OF DSA ROADMAP
