@@ -32,6 +32,15 @@ function App() {
     setShowStudents(!showStudents);
   }
 
+  const copy = [...students];
+  const [sorted, setSorted] = useState(copy);
+
+  function sortAge(){
+    sorted.sort(a,b){
+      setSorted(a.Age-b.Age)
+    }
+  }
+
   return (
     <>
       {showStudents ? (
@@ -52,6 +61,7 @@ function App() {
       <button onClick={handleClick}>
         {showStudents ? "Hide Students" : "Show Students"}
       </button>
+      <button onClick={sortAge}>Sort By Age</button>
     </>
   );
 }

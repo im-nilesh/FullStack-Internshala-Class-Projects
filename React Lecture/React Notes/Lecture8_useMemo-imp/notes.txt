@@ -1,0 +1,25 @@
+Memo = function = memoize the component
+useMemo = hook = memoize the values
+useCallback = hook = memoize the function
+
+Memo says if the props are smae then the components will not renrender itself
+
+-----------------------------------------------
+controlled and uncontrolled inputs
+
+=>by default all the inputs are uncontrolled
+to make it controlled we need 3 things: 
+1. state
+2. event handler
+3. values
+
+------------------------------------------------------------------------
+
+useMemo:
+
+memoize the value
+
+----------------------------------------------------------
+
+useCallback = memoize functions 
+
