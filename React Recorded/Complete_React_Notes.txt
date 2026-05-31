@@ -1,0 +1,735 @@
+TABLE OF CONTENTS
+=================
+1. Introduction to React
+2. Why React Exists
+3. Virtual DOM
+4. Real DOM vs Virtual DOM
+5. React Rendering Cycle
+6. JSX
+7. Components
+8. Props
+9. State
+10. Batching
+11. Event Handling
+12. Conditional Rendering
+13. List Rendering and Keys
+14. useEffect
+15. useRef
+16. useMemo
+17. useCallback
+18. React.memo
+19. Controlled vs Uncontrolled Components
+20. React Router
+21. Context API
+22. Prop Drilling
+23. API Calls
+24. Axios
+25. Lifecycle
+26. Reconciliation
+27. Custom Hooks
+28. useReducer
+29. Redux Basics
+30. Performance Optimization
+31. Lazy Loading & Code Splitting
+32. Lifting State Up
+33. React 18 Features
+34. Common Interview Questions
+35. Best Practices
+36. Common Mistakes
+37. Revision Cheat Sheet
+
+=================================================================
+1. INTRODUCTION TO REACT
+=================================================================
+
+What is React?
+
+React is a JavaScript library used for building User Interfaces.
+
+User Interface means anything the user can see:
+- Buttons
+- Forms
+- Cards
+- Navigation Bars
+- Dashboards
+
+Why is React popular?
+
+Because it helps us build large applications by dividing them into small reusable pieces called components.
+
+Real World Example:
+
+Think of a house.
+
+A house is made from:
+- Doors
+- Windows
+- Rooms
+- Kitchen
+
+Similarly React applications are made from Components.
+
+Interview Answer:
+React is a JavaScript library developed by Meta for building reusable and dynamic user interfaces.
+
+=================================================================
+2. WHY REACT EXISTS
+=================================================================
+
+Before React:
+
+Developers manually updated the DOM.
+
+Example:
+
+document.getElementById("title").innerHTML = "Hello";
+
+For small projects this was fine.
+
+For large projects:
+- Difficult maintenance
+- Repeated code
+- Slow updates
+
+React solves this using:
+- Components
+- Virtual DOM
+- One Way Data Flow
+
+=================================================================
+3. VIRTUAL DOM
+=================================================================
+
+Most people memorize:
+
+"Virtual DOM is a lightweight copy of the Real DOM."
+But what does that actually mean?
+Imagine a classroom of 100 students.
+Only one student's marks change.
+Will the teacher check all 100 students again?
+No.
+Only the changed student needs attention.
+React follows the same idea.
+When state changes:
+Step 1:
+React creates a new Virtual DOM.
+
+Step 2:
+Compares old and new Virtual DOM.
+
+Step 3:
+Finds differences.
+
+Step 4:
+Updates only changed parts.
+
+Why important?
+
+DOM operations are expensive.
+React tries to do fewer of them.
+
+=================================================================
+4. REAL DOM VS VIRTUAL DOM
+=================================================================
+
+REAL DOM
+- Actual browser structure
+- Slow updates
+- Directly changes screen
+
+VIRTUAL DOM
+- Exists in memory
+- Faster comparisons
+- Updates only changed nodes
+
+Interview Question:
+
+Why is React fast?
+
+Because React uses Virtual DOM and Reconciliation to minimize DOM updates.
+
+=================================================================
+5. REACT RENDERING CYCLE
+=================================================================
+
+What is Rendering?
+
+Displaying UI on screen.
+
+What is Re-rendering?
+
+Running the component again.
+
+When does re-render happen?
+
+1. State changes
+2. Props change
+3. Context changes
+4. Parent re-renders
+
+Important:
+
+Re-render DOES NOT mean page refresh.
+
+=================================================================
+6. JSX
+=================================================================
+
+JSX = JavaScript XML
+
+Allows us to write HTML-like syntax inside JavaScript.
+
+Example:
+
+const heading = <h1>Hello</h1>
+
+Internally:
+
+React.createElement("h1", null, "Hello")
+
+Rules:
+
+1. Single parent element
+2. class becomes className
+3. JS inside {}
+4. Close all tags
+
+=================================================================
+7. COMPONENTS
+=================================================================
+
+What is a Component?
+
+A reusable piece of UI.
+
+Example:
+
+function Navbar(){
+ return <h1>Navbar</h1>
+}
+
+Benefits:
+
+- Reusable
+- Cleaner code
+- Easier debugging
+
+=================================================================
+8. PROPS
+=================================================================
+
+Props allow Parent -> Child communication.
+
+Example:
+
+<User name="Nilesh" />
+
+function User({name}){
+ return <h1>{name}</h1>
+}
+
+Important:
+
+Props are Read Only.
+
+Never modify props directly.
+
+=================================================================
+9. STATE
+=================================================================
+
+Why do we need State?
+
+Suppose:
+
+let count = 0;
+
+count changes.
+
+Will UI update?
+
+No.
+
+React doesn't track normal variables.
+
+State is React's special memory.
+
+When state changes:
+React updates the UI.
+
+=================================================================
+10. BATCHING
+=================================================================
+
+React groups multiple updates together.
+
+Example:
+
+setCount(count+1)
+setCount(count+1)
+
+Expected: +2
+
+Actual: Often +1
+
+Correct:
+
+setCount(prev=>prev+1)
+setCount(prev=>prev+1)
+
+Now result becomes +2.
+
+=================================================================
+11. EVENT HANDLING
+=================================================================
+
+Events are user actions.
+
+Examples:
+- Click
+- Input
+- Hover
+
+Example:
+
+<button onClick={handleClick}>
+ Click
+</button>
+
+=================================================================
+12. CONDITIONAL RENDERING
+=================================================================
+
+Show UI based on conditions.
+
+Ternary:
+
+{isLogin ? "Welcome" : "Login"}
+
+AND Operator:
+
+{isLogin && <Dashboard />}
+
+=================================================================
+13. LIST RENDERING AND KEYS
+=================================================================
+
+Use map() to display arrays.
+
+users.map(user=>(
+ <h1 key={user.id}>{user.name}</h1>
+))
+
+Why keys?
+
+React uses keys to identify elements.
+
+Avoid:
+
+key={index}
+
+Prefer:
+
+key={user.id}
+
+=================================================================
+14. useEffect
+=================================================================
+
+One of the most important React topics.
+
+What is a Side Effect?
+
+Anything outside rendering.
+
+Examples:
+- API Calls
+- Timers
+- Event Listeners
+
+Run Once:
+
+useEffect(()=>{
+ console.log("Mounted")
+},[])
+
+Run on dependency change:
+
+useEffect(()=>{
+ console.log(count)
+},[count])
+
+No dependency array:
+
+Runs every render.
+
+Cleanup Function:
+
+Used to remove:
+- Timers
+- Event listeners
+
+Common Mistake:
+
+Infinite loops caused by wrong dependencies.
+
+=================================================================
+15. useRef
+=================================================================
+
+Stores values without re-rendering.
+
+Example:
+
+const inputRef = useRef();
+
+inputRef.current.focus();
+
+Use Cases:
+- Focus inputs
+- Store timer IDs
+- Store previous values
+
+=================================================================
+16. useMemo
+=================================================================
+
+Problem:
+
+Expensive calculations run again during re-renders.
+
+Solution:
+
+useMemo remembers previous value.
+
+Think of it like caching.
+
+Example:
+
+const result = useMemo(()=>{
+ return expensiveCalculation(num);
+},[num])
+
+=================================================================
+17. useCallback
+=================================================================
+
+Functions are recreated every render.
+
+useCallback remembers function references.
+
+Example:
+
+const handleClick = useCallback(()=>{
+ console.log("Clicked")
+},[])
+
+Interview:
+
+useMemo -> remembers value
+useCallback -> remembers function
+
+=================================================================
+18. React.memo
+=================================================================
+
+Prevents unnecessary child re-renders.
+
+If props don't change,
+component doesn't re-render.
+
+=================================================================
+19. CONTROLLED VS UNCONTROLLED COMPONENTS
+=================================================================
+
+Controlled Component:
+
+React controls input.
+
+<input value={name}
+ onChange={(e)=>setName(e.target.value)}
+/>
+
+Uncontrolled Component:
+
+DOM controls input.
+
+const ref = useRef();
+
+<input ref={ref} />
+
+Controlled is more common in React.
+
+=================================================================
+20. REACT ROUTER
+=================================================================
+
+Used for navigation.
+
+Install:
+
+npm install react-router-dom
+
+Important Concepts:
+
+- BrowserRouter
+- Routes
+- Route
+- Link
+- useNavigate
+- useParams
+
+=================================================================
+21. CONTEXT API
+=================================================================
+
+Used for sharing data globally.
+
+Think of it as a shared storage box.
+
+Any component can access data without passing props repeatedly.
+
+=================================================================
+22. PROP DRILLING
+=================================================================
+
+Example:
+
+App
+ -> Parent
+   -> Child
+      -> GrandChild
+
+Passing props through multiple levels is called Prop Drilling.
+
+Solution:
+
+Context API
+
+=================================================================
+23. API CALLS
+=================================================================
+
+Used to get data from servers.
+
+Example:
+
+useEffect(()=>{
+ fetch(url)
+ .then(res=>res.json())
+ .then(data=>console.log(data))
+},[])
+
+Common Practice:
+
+Use loading and error states.
+
+=================================================================
+24. AXIOS
+=================================================================
+
+Popular library for API requests.
+
+Example:
+
+axios.get(url)
+.then(res=>console.log(res.data))
+
+Advantages:
+
+- Cleaner syntax
+- Better error handling
+- Interceptors
+
+=================================================================
+25. LIFECYCLE
+=================================================================
+
+Component lifecycle has 3 phases:
+
+1. Mounting
+2. Updating
+3. Unmounting
+
+useEffect mapping:
+
+Mount -> []
+Update -> [dependency]
+Unmount -> Cleanup function
+
+=================================================================
+26. RECONCILIATION
+=================================================================
+
+Process React uses to compare old and new Virtual DOM.
+
+Steps:
+
+1. New Virtual DOM created
+2. Compare with old
+3. Find differences
+4. Update only changed parts
+
+=================================================================
+27. CUSTOM HOOKS
+=================================================================
+
+Reusable hook logic.
+
+Example:
+
+function useCounter(){
+ const [count,setCount] = useState(0);
+ return {count,setCount};
+}
+
+Benefits:
+
+- Reuse logic
+- Cleaner code
+
+=================================================================
+28. useReducer
+=================================================================
+
+Used for complex state.
+
+Think:
+
+useState -> simple
+useReducer -> complex
+
+Main Concepts:
+
+State
+Action
+Reducer
+Dispatch
+
+=================================================================
+29. REDUX BASICS
+=================================================================
+
+Global state management library.
+
+Flow:
+
+Component
+ -> Dispatch
+ -> Reducer
+ -> Store Updated
+ -> UI Updated
+
+=================================================================
+30. PERFORMANCE OPTIMIZATION
+=================================================================
+
+Tools:
+
+- React.memo
+- useMemo
+- useCallback
+- Lazy Loading
+
+Important:
+
+Optimize only when necessary.
+
+=================================================================
+31. LAZY LOADING & CODE SPLITTING
+=================================================================
+
+Problem:
+
+Large bundle size.
+
+Solution:
+
+Load components only when needed.
+
+Example:
+
+const Home = React.lazy(()=>import("./Home"));
+
+Used with Suspense.
+
+Benefit:
+
+Faster initial loading.
+
+=================================================================
+32. LIFTING STATE UP
+=================================================================
+
+When multiple children need same state.
+
+Move state to nearest common parent.
+
+Parent owns state.
+Children receive props.
+
+=================================================================
+33. REACT 18 FEATURES
+=================================================================
+
+1. Automatic Batching
+2. Concurrent Rendering
+3. Improved Performance
+4. Strict Mode Checks
+
+Strict Mode may run effects twice in development.
+
+This is normal.
+
+=================================================================
+34. COMMON INTERVIEW QUESTIONS
+=================================================================
+
+1. What is React?
+2. What is Virtual DOM?
+3. Difference between Props and State?
+4. What causes re-render?
+5. Difference between useMemo and useCallback?
+6. What is Context API?
+7. What is Prop Drilling?
+8. Why use Keys?
+9. What is useEffect?
+10. Why is React fast?
+
+=================================================================
+35. BEST PRACTICES
+=================================================================
+
+1. Keep components small.
+2. Use meaningful names.
+3. Use reusable components.
+4. Avoid unnecessary state.
+5. Use custom hooks for reusable logic.
+6. Separate UI and logic.
+
+=================================================================
+36. COMMON MISTAKES
+=================================================================
+
+1. Updating state directly.
+2. Forgetting keys.
+3. Infinite useEffect loops.
+4. Missing cleanup functions.
+5. Using index as key unnecessarily.
+
+=================================================================
+37. REVISION CHEAT SHEET
+=================================================================
+
+useState -> Store state
+useEffect -> Side effects
+useRef -> Store mutable values
+useMemo -> Cache values
+useCallback -> Cache functions
+React.memo -> Prevent re-renders
+Context API -> Global data
+useReducer -> Complex state
+Redux -> Global state management
+Router -> Navigation
+
+END
