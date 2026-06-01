@@ -3,16 +3,19 @@ import "./App.css";
 import StudentCard from "./components/StudentCard";
 
 function App() {
+  const [name, setName] = useState("");
+  const [age, setAge] = useState(0);
+  const [course, setCourse] = useState("");
   const [showStudents, setShowStudents] = useState(true);
-
-  const students = [
+  const [inp, setInp] = useState("");
+  const [students, setStudents] = useState([
     {
       Name: "Nilesh",
       Age: 22,
       Course: "Information Science",
     },
     {
-      Name: "Laxmi",
+      Name: "Rahul",
       Age: 19,
       Course: "BBA",
     },
@@ -26,25 +29,64 @@ function App() {
       Age: 22,
       Course: "Engineering",
     },
-  ];
+  ]);
 
   function handleClick() {
     setShowStudents(!showStudents);
   }
 
-  const copy = [...students];
-  const [sorted, setSorted] = useState(copy);
+  const filterdStudent = students.filter((item) => {
+    return item.Name.toLowerCase().includes(inp);
+  });
 
-  function sortAge(){
-    sorted.sort(a,b){
-      setSorted(a.Age-b.Age)
-    }
+  function addStudent() {
+    const newStudent = { Name: name, Age: age, Course: course };
+    const addedStudents = [...students, newStudent];
+    setStudents(addedStudents);
+    setName("");
+    setAge("");
+    setCourse("");
   }
 
   return (
     <>
+      <h4>Student Counter = {filterdStudent.length}</h4>
+      <input
+        type="text"
+        placeholder="Search Student"
+        onChange={(e) => {
+          setInp(e.target.value.toLowerCase());
+        }}
+      />
+      <h3>Add Student:</h3>
+      <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
+      <input
+        type="number"
+        placeholder="Age"
+        value={age}
+        onChange={(e) => {
+          setAge(e.target.value);
+        }}
+      />
+      <input
+        type="text"
+        placeholder="Course"
+        value={course}
+        onChange={(e) => {
+          setCourse(e.target.value);
+        }}
+      />
+      <button onClick={addStudent}>Add Student</button>
+
       {showStudents ? (
-        students.map((student) => {
+        filterdStudent.map((student) => {
           return (
             <StudentCard
               key={student.Name}
@@ -57,11 +99,9 @@ function App() {
       ) : (
         <></>
       )}
-
       <button onClick={handleClick}>
         {showStudents ? "Hide Students" : "Show Students"}
       </button>
-      <button onClick={sortAge}>Sort By Age</button>
     </>
   );
 }
