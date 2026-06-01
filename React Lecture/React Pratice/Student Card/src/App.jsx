@@ -31,6 +31,21 @@ function App() {
     },
   ]);
 
+  function editStudent(studentName) {
+    setName(studentName.Name);
+    setAge(studentName.Age);
+    setCourse(studentName.Course);
+  }
+
+  function deleteStudent(studentName) {
+    const updatedStudents = students.filter((item) => {
+      if (item.Name != studentName) {
+        return true;
+      }
+    });
+    setStudents(updatedStudents);
+  }
+
   function handleClick() {
     setShowStudents(!showStudents);
   }
@@ -58,6 +73,7 @@ function App() {
           setInp(e.target.value.toLowerCase());
         }}
       />
+
       <h3>Add Student:</h3>
       <input
         type="text"
@@ -67,6 +83,7 @@ function App() {
           setName(e.target.value);
         }}
       />
+
       <input
         type="number"
         placeholder="Age"
@@ -75,6 +92,7 @@ function App() {
           setAge(e.target.value);
         }}
       />
+
       <input
         type="text"
         placeholder="Course"
@@ -83,6 +101,7 @@ function App() {
           setCourse(e.target.value);
         }}
       />
+
       <button onClick={addStudent}>Add Student</button>
 
       {showStudents ? (
@@ -93,6 +112,12 @@ function App() {
               Name={student.Name}
               Age={student.Age}
               Course={student.Course}
+              deleteStudent={() => {
+                deleteStudent(student.Name);
+              }}
+              editStudent={() => {
+                editStudent(student.Name);
+              }}
             />
           );
         })
