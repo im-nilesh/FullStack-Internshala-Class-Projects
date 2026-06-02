@@ -8,6 +8,7 @@ function App() {
   const [course, setCourse] = useState("");
   const [showStudents, setShowStudents] = useState(true);
   const [inp, setInp] = useState("");
+  const [editingStudent, setEditingStudent] = useState(null);
   const [students, setStudents] = useState([
     {
       Name: "Nilesh",
@@ -15,7 +16,7 @@ function App() {
       Course: "Information Science",
     },
     {
-      Name: "Rahul",
+      Name: "Laxmi",
       Age: 19,
       Course: "BBA",
     },
@@ -32,9 +33,25 @@ function App() {
   ]);
 
   function editStudent(studentName) {
+    setEditingStudent(studentName);
     setName(studentName.Name);
     setAge(studentName.Age);
     setCourse(studentName.Course);
+  }
+
+  function updateStudent() {
+    const editedStudent = students.map((item) => {
+      if (editingStudent === item) {
+        return {
+          Name: name,
+          Age: age,
+          Course: course,
+        };
+      } else {
+        return item;
+      }
+    });
+    setStudents(editedStudent);
   }
 
   function deleteStudent(studentName) {
@@ -75,6 +92,7 @@ function App() {
       />
 
       <h3>Add Student:</h3>
+
       <input
         type="text"
         placeholder="Name"
@@ -102,7 +120,9 @@ function App() {
         }}
       />
 
-      <button onClick={addStudent}>Add Student</button>
+      <button onClick={editingStudent ? updateStudent : addStudent}>
+        {editingStudent ? " Update Student " : "Add Student"}
+      </button>
 
       {showStudents ? (
         filterdStudent.map((student) => {
@@ -116,7 +136,7 @@ function App() {
                 deleteStudent(student.Name);
               }}
               editStudent={() => {
-                editStudent(student.Name);
+                editStudent(student);
               }}
             />
           );
