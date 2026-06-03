@@ -1,0 +1,747 @@
+====================================================
+REACT REDUX - COMPLETE DETAILED NOTES
+====================================================
+
+----------------------------------------------------
+1. WHAT IS REDUX?
+----------------------------------------------------
+
+Redux is a state management library used to manage and share data across
+multiple components in a React application.
+
+Normally, React components manage their own state using useState.
+
+Example:
+
+const [count, setCount] = useState(0);
+
+This works fine for small applications.
+
+However, in large applications, many components may need access to the
+same data.
+
+Example:
+
+App
+├── Navbar
+├── Sidebar
+├── ProductList
+└── Cart
+
+Suppose both Navbar and Cart need cart data.
+
+Without Redux:
+
+App
+ └── Navbar
+      └── Sidebar
+            └── Cart
+
+The data has to be passed through many components.
+
+This is called:
+
+PROP DRILLING
+
+Redux solves this problem by storing all shared data in one central
+location called the STORE.
+
+Components can directly access data from the store.
+
+Benefits:
+
+✓ No prop drilling
+✓ Centralized data management
+✓ Predictable state updates
+✓ Easier debugging
+✓ Better scalability
+
+----------------------------------------------------
+2. REDUX CORE CONCEPTS
+----------------------------------------------------
+
+Redux revolves around four main concepts:
+
+1. Store
+2. State
+3. Actions
+4. Reducers
+
+Redux Data Flow:
+
+Component
+    ↓
+Dispatch Action
+    ↓
+Reducer
+    ↓
+Store Updated
+    ↓
+UI Re-renders
+
+----------------------------------------------------
+3. WHAT IS STATE?
+----------------------------------------------------
+
+State is data that can change over time.
+
+React Example:
+
+const [count, setCount] = useState(0);
+
+count is the state.
+
+Redux State Example:
+
+{
+  counter: 0,
+  user: {},
+  cart: [],
+  theme: "dark"
+}
+
+Redux stores all application state inside the Store.
+
+----------------------------------------------------
+4. WHAT IS STORE?
+----------------------------------------------------
+
+Store is the central place where Redux keeps all application data.
+
+Example Store State:
+
+{
+  counter: 5
+}
+
+Think of the Store as a giant JavaScript object.
+
+Only one Redux Store is usually created for an application.
+
+----------------------------------------------------
+5. WHAT IS AN ACTION?
+----------------------------------------------------
+
+An Action is a JavaScript object that describes what happened.
+
+Example:
+
+{
+  type: "INCREMENT"
+}
+
+Another Example:
+
+{
+  type: "ADD_TODO",
+  payload: "Learn Redux"
+}
+
+Every action must contain:
+
+type
+
+Optional:
+
+payload
+
+Action Structure:
+
+{
+  type: "ACTION_NAME",
+  payload: someData
+}
+
+----------------------------------------------------
+6. WHAT IS DISPATCH?
+----------------------------------------------------
+
+Dispatch sends actions to Redux.
+
+Example:
+
+dispatch({
+  type: "INCREMENT"
+});
+
+Flow:
+
+Button Click
+      ↓
+Dispatch Action
+      ↓
+Reducer Runs
+      ↓
+State Updates
+
+----------------------------------------------------
+7. WHAT IS A REDUCER?
+----------------------------------------------------
+
+A Reducer is a function that decides how state changes.
+
+Syntax:
+
+(state, action) => newState
+
+Example:
+
+function counterReducer(state = 0, action) {
+  switch(action.type) {
+
+    case "INCREMENT":
+      return state + 1;
+
+    case "DECREMENT":
+      return state - 1;
+
+    default:
+      return state;
+  }
+}
+
+Reducer receives:
+
+1. Current State
+2. Action
+
+Reducer returns:
+
+New State
+
+----------------------------------------------------
+8. REDUCER RULES
+----------------------------------------------------
+
+RULE 1:
+Never mutate state.
+
+Wrong:
+
+state.count++;
+return state;
+
+Correct:
+
+return {
+  ...state,
+  count: state.count + 1
+};
+
+RULE 2:
+Always return state.
+
+default:
+  return state;
+
+RULE 3:
+Reducers must be pure functions.
+
+Same input → Same output
+
+----------------------------------------------------
+9. REDUX DATA FLOW
+----------------------------------------------------
+
+User Clicks Button
+        ↓
+dispatch(action)
+        ↓
+Reducer Executes
+        ↓
+New State Created
+        ↓
+Store Updates
+        ↓
+React Re-renders
+
+Example:
+
+dispatch({
+  type: "INCREMENT"
+});
+
+Reducer:
+
+return state + 1;
+
+Store:
+
+count = 5
+
+UI automatically updates.
+
+----------------------------------------------------
+10. REDUX TOOLKIT (RTK)
+----------------------------------------------------
+
+Redux Toolkit is the modern and recommended way to use Redux.
+
+Official Redux team recommends using Redux Toolkit.
+
+Benefits:
+
+✓ Less boilerplate code
+✓ Easier syntax
+✓ Built-in Immer
+✓ Better developer experience
+
+Install:
+
+npm install @reduxjs/toolkit react-redux
+
+----------------------------------------------------
+11. CREATE A REDUX STORE
+----------------------------------------------------
+
+store.js
+
+import { configureStore } from "@reduxjs/toolkit";
+
+export const store = configureStore({
+  reducer: {}
+});
+
+configureStore() creates Redux Store.
+
+----------------------------------------------------
+12. WHAT IS A SLICE?
+----------------------------------------------------
+
+A Slice contains:
+
+1. State
+2. Reducers
+3. Actions
+
+All grouped together.
+
+Example:
+
+counterSlice.js
+
+import { createSlice } from "@reduxjs/toolkit";
+
+const counterSlice = createSlice({
+  name: "counter",
+
+  initialState: {
+    value: 0
+  },
+
+  reducers: {
+
+    increment: (state) => {
+      state.value++;
+    },
+
+    decrement: (state) => {
+      state.value--;
+    }
+
+  }
+});
+
+export const { increment, decrement } =
+counterSlice.actions;
+
+export default counterSlice.reducer;
+
+----------------------------------------------------
+13. createSlice()
+----------------------------------------------------
+
+createSlice automatically creates:
+
+✓ Reducers
+✓ Action Creators
+✓ Action Types
+
+Instead of writing:
+
+INCREMENT
+DECREMENT
+
+Redux Toolkit generates them automatically.
+
+----------------------------------------------------
+14. CONNECT STORE TO REACT
+----------------------------------------------------
+
+main.jsx
+
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./store";
+
+ReactDOM.createRoot(
+  document.getElementById("root")
+).render(
+
+  <Provider store={store}>
+    <App />
+  </Provider>
+
+);
+
+Provider makes Redux Store available to all components.
+
+----------------------------------------------------
+15. ADD SLICE TO STORE
+----------------------------------------------------
+
+store.js
+
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./counterSlice";
+
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer
+  }
+});
+
+Store State:
+
+{
+  counter: {
+    value: 0
+  }
+}
+
+----------------------------------------------------
+16. useSelector()
+----------------------------------------------------
+
+Used to READ data from Redux Store.
+
+Example:
+
+import { useSelector } from "react-redux";
+
+function Counter() {
+
+  const count = useSelector(
+    (state) => state.counter.value
+  );
+
+  return <h1>{count}</h1>;
+}
+
+useSelector subscribes component to store updates.
+
+Whenever store changes:
+
+Component re-renders.
+
+----------------------------------------------------
+17. useDispatch()
+----------------------------------------------------
+
+Used to SEND actions.
+
+Example:
+
+import { useDispatch } from "react-redux";
+import { increment } from "./counterSlice";
+
+function Counter() {
+
+  const dispatch = useDispatch();
+
+  return (
+    <button
+      onClick={() => dispatch(increment())}
+    >
+      Increment
+    </button>
+  );
+}
+
+----------------------------------------------------
+18. COMPLETE COUNTER EXAMPLE
+----------------------------------------------------
+
+Counter.jsx
+
+import { useDispatch, useSelector }
+from "react-redux";
+
+import {
+  increment,
+  decrement
+}
+from "./counterSlice";
+
+function Counter() {
+
+  const count = useSelector(
+    (state) => state.counter.value
+  );
+
+  const dispatch = useDispatch();
+
+  return (
+    <>
+      <h1>{count}</h1>
+
+      <button
+        onClick={() => dispatch(increment())}
+      >
+        +
+      </button>
+
+      <button
+        onClick={() => dispatch(decrement())}
+      >
+        -
+      </button>
+    </>
+  );
+}
+
+----------------------------------------------------
+19. PAYLOAD
+----------------------------------------------------
+
+Payload is extra data sent with an action.
+
+Example:
+
+dispatch(addByAmount(5));
+
+Reducer:
+
+addByAmount: (state, action) => {
+  state.value += action.payload;
+}
+
+Here:
+
+action.payload = 5
+
+----------------------------------------------------
+20. ASYNC OPERATIONS
+----------------------------------------------------
+
+Examples:
+
+✓ API Calls
+✓ Fetching Users
+✓ Login
+✓ Register
+
+Redux Toolkit provides:
+
+createAsyncThunk()
+
+Example:
+
+export const fetchUsers =
+createAsyncThunk(
+  "users/fetchUsers",
+  async () => {
+    const res =
+      await fetch("API_URL");
+
+    return res.json();
+  }
+);
+
+----------------------------------------------------
+21. EXTRA REDUCERS
+----------------------------------------------------
+
+Used with Async Actions.
+
+Example:
+
+extraReducers: (builder) => {
+
+  builder.addCase(
+    fetchUsers.pending,
+    (state) => {
+      state.loading = true;
+    }
+  );
+
+  builder.addCase(
+    fetchUsers.fulfilled,
+    (state, action) => {
+      state.loading = false;
+      state.users = action.payload;
+    }
+  );
+
+  builder.addCase(
+    fetchUsers.rejected,
+    (state) => {
+      state.loading = false;
+    }
+  );
+
+}
+
+----------------------------------------------------
+22. WHY REDUX TOOLKIT USES MUTATION?
+----------------------------------------------------
+
+This works:
+
+state.value++;
+
+Normally Redux forbids mutation.
+
+Redux Toolkit uses Immer internally.
+
+Immer converts:
+
+state.value++;
+
+into
+
+return {
+  ...state,
+  value: state.value + 1
+};
+
+automatically.
+
+----------------------------------------------------
+23. REACT STATE VS REDUX STATE
+----------------------------------------------------
+
+useState
+
+✓ Local Component State
+✓ Small Data
+✓ Simple Components
+
+Redux
+
+✓ Global State
+✓ Shared Data
+✓ Large Applications
+
+Example:
+
+useState:
+
+Input field value
+
+Redux:
+
+Logged-in User
+Theme
+Cart
+Products
+Notifications
+
+----------------------------------------------------
+24. WHEN TO USE REDUX?
+----------------------------------------------------
+
+Use Redux When:
+
+✓ Many components need same data
+✓ Complex state logic
+✓ Large application
+✓ Authentication
+✓ Shopping Cart
+✓ Dashboard
+
+Do NOT Use Redux When:
+
+✓ Small applications
+✓ State used in only one component
+✓ Simple forms
+
+----------------------------------------------------
+25. INTERVIEW QUESTIONS
+----------------------------------------------------
+
+Q1. What is Redux?
+
+Redux is a state management library used to manage global state in React applications.
+
+----------------------------------------------------
+
+Q2. What problem does Redux solve?
+
+Redux solves prop drilling and shared state management problems.
+
+----------------------------------------------------
+
+Q3. What is Store?
+
+Store is the centralized location where Redux keeps application state.
+
+----------------------------------------------------
+
+Q4. What is an Action?
+
+An Action is a JavaScript object describing what happened.
+
+----------------------------------------------------
+
+Q5. What is Dispatch?
+
+Dispatch sends actions to Redux.
+
+----------------------------------------------------
+
+Q6. What is Reducer?
+
+Reducer is a function that updates state based on actions.
+
+----------------------------------------------------
+
+Q7. What is Redux Toolkit?
+
+Redux Toolkit is the official and recommended way to write Redux logic.
+
+----------------------------------------------------
+
+Q8. What is createSlice?
+
+createSlice automatically creates reducers, actions, and action types.
+
+----------------------------------------------------
+
+Q9. What is useSelector?
+
+useSelector reads data from Redux Store.
+
+----------------------------------------------------
+
+Q10. What is useDispatch?
+
+useDispatch dispatches actions to Redux Store.
+
+----------------------------------------------------
+
+Q11. What is Payload?
+
+Payload is additional data sent inside an action.
+
+----------------------------------------------------
+
+Q12. What is createAsyncThunk?
+
+createAsyncThunk handles asynchronous operations such as API calls.
+
+----------------------------------------------------
+
+Q13. What is Provider?
+
+Provider makes Redux Store accessible to all React components.
+
+----------------------------------------------------
+
+Q14. Why is Redux Toolkit preferred?
+
+Because it reduces boilerplate code and provides simpler syntax.
+
+----------------------------------------------------
+END OF REACT REDUX NOTES
+----------------------------------------------------
