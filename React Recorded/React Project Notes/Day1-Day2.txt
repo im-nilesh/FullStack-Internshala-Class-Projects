@@ -1,0 +1,62 @@
+React E-Commerce Project Notes
+
+Day 1 - React Router + Project Setup
+
+-   React Router enables navigation without page refresh.
+-   createBrowserRouter() defines routes.
+-   RouterProvider provides routing to the app.
+-   Link is used instead of anchor tags.
+-   Dynamic routes use parameters like /product/:id.
+-   Layout component holds shared UI.
+-   Outlet renders child routes.
+-   Nested routes avoid repeating layouts.
+-   Props flow from Parent → Child only.
+-   Sibling components cannot directly pass props.
+-   Prop drilling occurs when props are forwarded through many levels.
+
+Day 2 - useEffect + API Fetching
+
+useEffect
+
+-   Used for API calls, timers, and event listeners.
+
+Async in useEffect
+
+useEffect(() => { async function fetchProducts() {} fetchProducts(); },
+[]);
+
+Fetch API
+
+const response = await fetch(url); const data = await response.json();
+
+API States
+
+const [products, setProducts] = useState([]); const [loading,
+setLoading] = useState(true); const [error, setError] = useState(null);
+
+Conditional Rendering
+
+if (loading) return
+Loading…
+; if (error) return
+{error}
+;
+
+map()
+
+products.map((product) => { return ; });
+
+key Prop
+
+key={product.id}
+
+Passing Objects as Props
+
+Progress
+
+Day 1 Complete - Router - Layout - Outlet - Nested Routes - Dynamic
+Routes - Link - Prop Drilling
+
+Day 2 Complete - useEffect - Fetch API - Async/Await - Loading State -
+Error State - Conditional Rendering - map() - key Prop - Reusable
+Components - Props with Objects
