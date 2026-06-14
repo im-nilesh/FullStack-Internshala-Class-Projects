@@ -1,0 +1,11 @@
+Node js is a JavaScript runtime environment that lets developers to create servers
+Node was basically introduced to make development life easy as we were able to only learn Js and code both frontend and backend.
+
+Node Js => C++ wrapper + V8 engine(js code)
+
+--------------------------------------------------------------------------------------------
+
+No blocking IO:
+HTTP server : Blocking Server (synchronous manner)
+Non blocking server : node => async -> single threaded -> less computer resources.
+
