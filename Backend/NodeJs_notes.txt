@@ -9,3 +9,25 @@ No blocking IO:
 HTTP server : Blocking Server (synchronous manner)
 Non blocking server : node => async -> single threaded -> less computer resources.
 
+----------------------------------------------------------------------------------------------
+
+Node REPL:
+
+Node REPL => Read Evaluate Print Load
+basically terimal of the node, write node in the terminal and it comes a script mode just like we inspect in the browser 
+
+----------------------------------------------------------------------------------------------
+
+Common JS module : 
+It is basically for code reusability and storing files in differnet areas and importing them in one.
+we can use the export and import in the following way:
+To export:
+we need a module.export{key: value to be exported}
+const x = "Nilesh"
+module.export = {x:x}
+
+To Import:
+we need require function to import for example:
+const content = require("path")
+or 
+const {x} = require("path")
