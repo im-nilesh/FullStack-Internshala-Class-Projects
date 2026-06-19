@@ -1,4 +1,13 @@
 Prop Drlling: 
 
 Drlling the props from higher hierarchy to lower hierarchy.
-            
+
+-------------------------------------------
+
+Context API:
+
+Role of context is to """teleport the data directly""".
+
+1. create a context => context.jsx
+2. wrap the component inside the provider
+3. 

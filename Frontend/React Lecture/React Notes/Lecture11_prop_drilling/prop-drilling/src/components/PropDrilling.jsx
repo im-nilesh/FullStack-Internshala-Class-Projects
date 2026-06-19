@@ -1,42 +1,39 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CountContext } from "./context";
 
 function PropDrillinng() {
   const [count, setCount] = useState(0);
+
   return (
-    <div>
-      <Count count={count} setCount={setCount} />
-    </div>
+    <CountContext.Provider value={{ count, setCount }}>
+      <Count />
+    </CountContext.Provider>
   );
 }
 
-function Count({ count, setCount }) {
+function Count() {
   return (
     <>
-      <CountRenderrer count={count} />
-      <Button count={count} setCount={setCount} />
+      <CountRenderer />
+      <Button />
     </>
   );
 }
-function CountRenderrer({ count }) {
-  return <h1>Count:{count}</h1>;
+
+function CountRenderer() {
+  const { count } = useContext(CountContext);
+
+  return <h1>Count: {count}</h1>;
 }
-function Button({ count, setCount }) {
+
+function Button() {
+  const { count, setCount } = useContext(CountContext);
+
   return (
     <>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Increment
-      </button>
-      <button
-        onClick={() => {
-          setCount(count - 1);
-        }}
-      >
-        Decrement
-      </button>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
     </>
   );
 }

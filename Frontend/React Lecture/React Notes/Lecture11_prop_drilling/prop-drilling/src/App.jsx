@@ -1,5 +1,11 @@
+import PropDrillinng from "./components/PropDrilling";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <PropDrillinng />
+    </>
+  );
 }
 
 export default App;
