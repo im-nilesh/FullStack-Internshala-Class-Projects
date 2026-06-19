@@ -1,0 +1,4 @@
+Prop Drlling: 
+
+Drlling the props from higher hierarchy to lower hierarchy.
+            
