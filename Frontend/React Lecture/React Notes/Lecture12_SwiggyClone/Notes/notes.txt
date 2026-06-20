@@ -1,0 +1,27 @@
+Redux
+Redux is not a part of React its a Javscript library
+it is a state management tool
+
+=> redux works with the Data layer not with the UI layer
+
+
+
+
+
+React - redux(Older way)
+Redux-toolkit(newer)
+
+Store = singel source of trust
+central space - data is globally stored
+
+Slices = Avoid data at one place we haabve Slices
+
+We cannot directly modify our cart/slice 
+we need to dispatch the action
+
+1 install
+2 craete stored
+3 Add store to the App
+4 create slice
+5 dispatch action
+6 selector
