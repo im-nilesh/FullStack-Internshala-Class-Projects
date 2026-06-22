@@ -1,4 +1,4 @@
-Express is built on top of NodeJs for making things easier
+ExpressJs is a backend web application and is built on top of NodeJs for making things easier
 To create a Express Server: 
 1. step up a node project by doing npm init.
 2. install Express
@@ -16,7 +16,7 @@ app.listen(5100, ()=>{
 
 ---------------------------------------------------------------
 
-What is an API
+What is an API (Application Processing Interface)
 
 API basically takes requests, and based on those request they give response.
 Types of API : 
@@ -46,3 +46,77 @@ HTTP is a protocol for transferring data on the web
 5. Patch: 
     Update somthing partially, somthing like quick edit
 
+------------------------------------------------------------------------------
+
+Creating and Testing API
+
+API to get the books:
+
+app.get("/", (req,res)=>{
+    res.send("learning APIs")
+})
+
+books example: 
+app.get("/books", (req, res)=>{
+    res.send(books) //assuming books array is already present
+})
+
+basically the app.get take 2 parameters,
+1. path : when the user comes to this path show them what the callback function wants to render
+2. callback function : this function takes 2 paramteres one is request and another is response,
+res.send(data);
+sends the data 
+
+when the APi is successful the status code is 200
+
+------------------------------------------------------------------------------
+
+API for creating new data : 
+
+app.post("/books", (req, res)=>{
+    const {title, author, price} = req.body;
+
+    const newBook = {
+        id: Math.random() * 10
+        title: title
+        author: author
+        price: price
+    }
+
+    books.push(newBook);
+    res.send(books)
+})
+
+For now as we are not having a database, she added the new books deatils in thunderclient and into the body, from there you can 
+see in the code that the values are being passed to the res function and then sent, 
+but if we run the APi we were getting a error se she said to use 
+
+app.use(express) //middleware
+
+in the file so that parse Json and request is executed
+
+-----------------------------------------------------------------------------------
+
+Put method: 
+
+Upadte a book by id
+
+code: 
+app.put("/book':id", (req, res)=>{
+    const bookId = req.params.id
+
+    const book = books.find(book=>book.id === bookId)
+
+    if(!book){
+        return res.status(404).json{message: "Book does not exist}
+    }
+
+    const keys = Object.keys(req.body)
+    keys.forEach((key)=>{
+        book[key] = req.body[key]
+    })
+
+    res.send(books)
+})
+
+As we dont have a backend the edited deatils have been added into the body using thunderclient
