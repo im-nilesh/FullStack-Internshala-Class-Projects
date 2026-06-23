@@ -4,6 +4,40 @@ document = row
 
 basically document gets added in the collection 
 
-db.collectionName.insertOne{key:value} // adds one document(row) in the database
+db.collectionName.insertOne({key:value}) // adds one document(row) in the database
 ///ly 
-db.collectionName.insertMany[{key:value},{key:value},{key:value}] adds multiple document in the collection
+db.collectionName.insertMany([{key:value},{key:value},{key:value}]) adds multiple document in the collection
+
+----------------------------------------------------------------------------
+
+Query Commands: 
+
+db.collectionName.find({}) // return everything that is present in the database
+
+db.collectionName.find({"size.no": "in"}) // return the documents where size.no is "in" just like sql's select
+
+db.collectionName.find({"size": {$lt: 15}}) // returns the size less than 15
+
+-------------------------------------------------------------------------------
+
+Update and Delete: 
+
+db.collectionName.updateOne({item: "paper"},{
+    $set{"size.no" : "cm", status: "P"},
+    $currentDate: {lastModified: true}
+})
+
+updates the collection on basis on key value pair entires
+
+for many: 
+db.collectionName.findMany({"qty" : {$lt: 15},
+{
+    $set: {"size.no": "in", status: "P"},
+    $currentDate: {lastModified: true}
+}
+})
+
+we can replace as well
+
+---------------------------------------------------------------------
+
