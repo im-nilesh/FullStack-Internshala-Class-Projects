@@ -68,3 +68,14 @@ npm init -y (default yes to everything)
 
 ----------------------------------------------------------------------
 
+When we require a file the other file which is required executed first
+
+----------------------------------------------------------------------
+
+2 types of module: (Interview question)
+
+Commonjs = default require("path")
+Esmodule = react(deafult export, named export)
+
+we can use Esmodule by going into package.json
+change type : "common" to type : "module"
