@@ -1,3 +1,59 @@
 Node : 
 
-To be continued
+To be continued....
+
+The next day
+
+NodeJs is a runtime environment => you need to run JS but now even without browser
+
+Badmintion
+Street + net => car stop
+Park + net => wind
+Playing badmintion(task is same but jagha is different) => runtime environment
+
+=> Js engine
+Chrome: v8
+firefox: spidermonkey
+safari: javascriptCore or nitro
+
+Ryan dahl copied the code of v8 engine code and pasted in one place,
+today known as NodeJs
+
+Advantages:
+1. run Js without browser => imp
+2. create servers => imp
+3. create native applications
+4. create our own terminal command line tool
+
+---------------------------------------------------------------
+
+Npm => node package manager
+
+central package manager => pip, yarn, npm, conda
+
+LTS => Long term support stable for future as well => even number
+
+---------------------------------------------------------------
+
+if you go to terminal then write node(press enter)
+if gives node REPL = where you write code
+
+process = object that contains the entire information about what is node doing
+
+What is the difference between NodeJs and browser(VVVVVVVimp): 
+Interview question
+
+Node=>
+Global object = global
+Filesystem => yes
+Document API => No
+
+
+
+Browser=>
+Global object = window
+Filesystem => No
+Document API => yes
+
+--------------------------------------------------------------------
+
