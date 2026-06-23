@@ -1,4 +1,6 @@
-ExpressJs is a backend web application and is built on top of NodeJs for making things easier
+Express.js is a backend web application framework built on top of Node.js.
+It makes it easier to create servers, APIs, routes, and handle requests/responses.
+
 To create a Express Server: 
 1. step up a node project by doing npm init.
 2. install Express
@@ -120,3 +122,75 @@ app.put("/book':id", (req, res)=>{
 })
 
 As we dont have a backend the edited deatils have been added into the body using thunderclient
+
+------------------------------------------------------------------------------
+
+Middlewares : 
+Functions that have access to request and response objects as well as have the power to initiate the next middleware/steps
+
+So when we are sending a API request from the client to the server,
+the request might need some Processing in it, this processing cannot be directly done so we use middlewares. 
+
+There can be multiple middlewares between the client and server and we use the next() method to pass one middleware to other.
+
+-----------------------------------------------------------------------------------
+
+Application Level Middlewares: 
+
+Middlewares that are executed at the app level, are application level middleware. It runs on every request
+
+for ex: 
+app.use(req, res, next)=>{
+    console.log(req.method)
+    next()
+},
+(req, res, next)=>{
+    console.log("Coming to next middleware")
+    next()
+}
+
+------------------------------------------------------------------------
+
+Router Level Middlewares
+
+Middlewares that are applied on Router level is know as router level Middlewares
+
+for ex:
+
+const router = express.Router()
+app.use("/", router)
+
+router.use((req,res,next)=>{
+    console.log("request", req.method)
+    next()
+}) //middleware
+
+router.get("/user", (req, res)=>{
+    console.log("User path on router insatnce")
+}) //router get method
+
+function logger(req,res,next){
+    console.log("logging request)
+    next()
+}
+
+router.get( "/users:id", logger (req,res)=>{
+    console.log("user with some id")
+})
+
+What is happening in this example is basically the first middleware is going to run for both the router get method
+but the 2nd middleware is only going to run for 2nd function as it is defined in the function and function is passed to the
+2nd router method
+
+------------------------------------------------------------------------------
+
+Builtin Middlewares and third party Middlewares
+
+Builtin middleware are basically middlewares that are given by express
+ex: express.json()
+
+Thirdparty middleware are something which we install from extrenal sources for our functions
+ex: bodyParser.json()
+
+---------------------------------------------------------------------------------
+

@@ -1,0 +1,9 @@
+in mongodb 
+collection = Table
+document = row
+
+basically document gets added in the collection 
+
+db.collectionName.insertOne{key:value} // adds one document(row) in the database
+///ly 
+db.collectionName.insertMany[{key:value},{key:value},{key:value}] adds multiple document in the collection
