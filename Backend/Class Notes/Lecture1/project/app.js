@@ -9,8 +9,10 @@ let obj = {
 
 let arr = [10, 20, 30, 40, 50];
 
-module.exports = {
-  a,
-  obj,
-  arr,
-};
+export { a, obj, arr };
+
+// module.exports = {
+//   a,
+//   obj,
+//   arr,
+// };

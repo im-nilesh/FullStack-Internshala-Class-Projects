@@ -1,4 +1,4 @@
-const { a, obj, arr } = require("./app");
+import { a, obj, arr } from "./app.js";
 
 console.log(a);
 obj.fn();
