@@ -57,3 +57,14 @@ Document API => yes
 
 --------------------------------------------------------------------
 
+whenever you need to start a backend project
+
+use 
+npm init (initialize)
+
+or
+
+npm init -y (default yes to everything)
+
+----------------------------------------------------------------------
+
