@@ -41,3 +41,70 @@ we can replace as well
 
 ---------------------------------------------------------------------
 
+Mongoose : 
+
+Mongoose acts as a ODM (Object Data module) it helps us connect with mongodb
+to use mongoose
+1. create nodejs project
+2. install mongoose npm i mongoose
+3. install nodemon (to make sure automatically saves nodejs file) npm i --save-dev nodemon
+4. write in package.json inside scripts => "start" : "nodemon script.js(filename where you will write the code)"
+5. Go to compass, click connections, new connections humko dega ek URI for connection 
+6. mongoose.connect("URI")
+
+
+code example: 
+const mongoose = require("mongoose")
+mongoose.connect("URI LINK")
+
+const db = mongoose.connection
+
+db.on("open", ()=>{
+    console.log("Connected to Database)
+})
+db.on("error", ()=>{
+    console..log("Connection failed")
+})
+
+----------------------------------------------------------------------------
+
+Modal and Schemas
+
+as Mongodb is flexible and can have different amount of docuemnt, 
+we use schemas to structure the document with some rigid schema
+
+example: 
+const mongoose = require("mongoose")
+const userSchema = mongoose.Schema({
+    name: String,
+    age: Number,
+    isAdult: Boolean,
+    hobbies: Array,
+})
+
+Above example is for schema
+
+Modal helps to apply each schema to the collection
+
+example:
+modules.exports = mongoose.modal("user", userSchema)
+
+it creates a collection by name users and applies the userSchema to that document in that collection
+
+to use the modal
+code: 
+
+const User = require("./User")
+
+const newUser = newUser({
+    name: "Nilesh"
+    age: 23
+    isAdult: true,
+    hobbies: ["Gaming"],
+})
+
+newUser.save().then(data=>{
+    console.log(data)
+})
+
+save() is a async function that returns a promise
