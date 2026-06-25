@@ -96,7 +96,7 @@ code:
 
 const User = require("./User")
 
-const newUser = newUser({
+const newUser = User({
     name: "Nilesh"
     age: 23
     isAdult: true,
@@ -108,3 +108,35 @@ newUser.save().then(data=>{
 })
 
 save() is a async function that returns a promise
+
+-------------------------------------------------------------------------------------
+
+Insert Update Delete data:
+
+Insert mehtods 2nd way
+const user2 = await User.create({
+    name: "Nilesh"
+    age: 23,
+    isAdult: true,
+    hobbies: ["NA"]
+})
+
+user2.save().then(data) =>{
+    console.log("data")
+}
+
+const users = await User.find()
+console.log(users) //gives all the documents in users. can also use findOne with key value pair
+
+
+Update:
+
+user2.name = "Laxmi"
+
+const updatedUser = await user2.save()
+
+console.log(youngUser)
+
+Delete: 
+
+const deletedUser = await User.deleteOne({name: "Nilesh"})
