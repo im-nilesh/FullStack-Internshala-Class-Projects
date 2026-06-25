@@ -31,3 +31,77 @@ we need require function to import for example:
 const content = require("path")
 or 
 const {x} = require("path")
+
+------------------------------------------------------------------------------------
+
+When creating the backend, 
+create 2 folders : 
+1. Controllers
+2. Routes
+3. Model 
+
+normal APi : 
+app.post("/books", (req, res)=>{
+    const {title, author, coverImage, desc} = req.body
+    const newBook = {
+        id: Math.random() *10
+        title: titlem
+        author: author
+        coverImage: coverImage
+        desc: desc
+    }
+})
+---------------------------------------------------------
+but we define the routes in the routes folder, 
+inside books.routes.js 
+
+we need the controller so 
+we've created the controller folder and written the post function there
+but now we call the function here something like this: 
+
+export function routes(app){
+    app.post("/book", createBook) //import createBook function from the controller
+
+}
+-------------------------------------------------------------
+Inside modal folder : 
+create books.modal.js
+
+const bookSchema = new mongoose.Schema({
+    "title" : String
+    "author" : String
+    "coverImage" : Image 
+    "desc" : String
+}) //schema created for books 
+
+const bookModal = mongoose.modal("books", bookSchema) //modal created
+
+export default bookModal
+--------------------------------------------------------------
+inside Controllers
+create books.controller.js 
+
+then write the function there
+
+export function createBook(req,res){
+    const {title, author, coverImage, desc} = req.body
+        const newBook = new bookModal( {
+            title: title
+            author: author
+            coverImage: coverImage
+            desc: desc
+    })
+    newBook.save().then(data =>{
+        if(!data){
+            return res.status(400).json({message: "No data added"})
+        }
+        res.send(data)
+    })
+}
+
+---------------------------------------------------------------
+
+then in server.js: 
+
+call routes function 
+routes(app)
