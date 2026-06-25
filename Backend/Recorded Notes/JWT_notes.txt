@@ -1,0 +1,88 @@
+Authentication : Verifying if the data is being used by correct person or not.
+
+Two types of Authentication: 
+1. Session based Authentication
+2. Token based Authentication
+
+1 Session Based : Stateful interaction
+
+Auth Request => Auth Verification => Store Session info into the database => Cookie with session ID from server to client
+Request=> Session token => User info comes from database to server => saved processed data => Success
+
+This involves database interaction, basically to store the session info into the database and to get the session token from the database
+To avoid this interaction token based Authentication came into pitcure
+
+2. Token based Authentication: Statless Authentication
+
+Auth Request => Auth Verification Servers sends a JWT Token to the client => Cookie with JWT Token 
+
+Request => server verifyies JWT Token => Saves processed data => Success
+
+--------------------------------------------------------------------------------
+
+JWT : Json Web Token
+These web token are used in industry standards for representing claims securely between two parties
+
+When a user logs in successfully, the server creates a JWT token and sends it to the client. This token acts like a temporary proof of identity. 
+Whenever the user makes a protected request, the token is sent along with it, 
+and the server verifies it to know which user is making the request and whether they are authenticated.
+
+JWT Token has 3 parts : 
+
+Header: contains the algorithm that is used to create the token
+Payload: Data
+verify signature : contains secret key to decode the token
+
+-----------------------------------------------------------------------------------------
+
+How to use JWT: 
+1. install using npm install jsonwebtoken
+
+code: 
+const jwt = require("jsonwebtoken")
+or
+import jwt from "jsonwebtoken"
+
+app.post("/login", (req, res)=>{
+    const user = req.body.username //username comes from the request body
+    const accessToken = jwt.sign(user, "secretKey",{})
+    res.send({token:accessToken})
+})
+
+-----------------------------------------------------------------------------------------------
+
+Allow Data access to only those with JWT tokens: 
+
+basically the JWT Token needs to be sent in the header (see in thunderclient)
+
+code: 
+function authenticateUser(req, res, next){
+    const authHeader = req.header["authorization"]
+    const token = authHeader && authHeader.split(" ")[1]
+
+    jwt.verify(token, "secretKey", (err, user)=>{
+        if(err){
+            return res.status(403).json({message: "Invalid JWT Token"})
+        }
+        req.user = user
+        next()
+    })
+}
+
+then in the API 
+
+app.get("/books", authenticateUser, (req, res)=>{
+    res.send(books)
+})
+
+------------------------------------------------------------------------------
+
+To avoid the misuse of the data, JWT Token needs to be expired
+
+const accessToken = jwt.sign(user, "secretKey",{})
+in this line the user is the payload, the secretKey is secretKey and the 
+empty Object is to give the time duration of the JWT Token 
+
+so...
+const accessToken = jwt.sign({user : user}, "secretKey",{expiresIn: "1m",}) //token expires in 1min
+
