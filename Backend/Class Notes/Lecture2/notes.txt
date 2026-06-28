@@ -1,0 +1,57 @@
+Create server
+HTTP methods 
+thunderclient 
+File system
+
+----------------------------------
+
+file system => Alternative for database (phle database ke jagha yea use hua hota tha)
+
+for CRUD Operations 
+
+-----------------------------------
+
+we need to require filesystem module 
+const fd = require("fs")
+
+//create 
+let data = "Some data"
+fs.createFileSync('sam.txt', data, {flag : 'w', })
+
+//read
+fs.readFileSync()
+
+//update
+fs.appendFileSync()
+
+//delete
+fs.unlinkFilesync()
+
+---------------------------------------
+
+HTTP Methods: 
+
+GET : to fetch/retrieval
+POST : to add new data
+PUT : to update/edit something => edit enitre data
+PATCH : to update a minor thing => partial data
+DELETE : to delete
+
+---------------------------------------
+
+HTTP contains 
+
+https:// meet.google.com/ gkw-oeuc-gse   ?asdfasdfasdf
+Protocol Domain          path parameter  query parameter
+
+request paramters can be accessed by = req.parameter
+query parameter can be accessed by = req.query
+POST method data = req.body
+
+----------------------------------------------
+
+inside script 
+
+"start" : "nodemon index.js"
+
+-----------------------------------------------

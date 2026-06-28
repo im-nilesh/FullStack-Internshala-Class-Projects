@@ -1,0 +1,108 @@
+Database: 
+
+Storage unit to store data 
+
+Data? => raw facts
+
+Information => Useful data
+
+-------------------------------------------------
+
+why database were introduced: 
+
+file system => data redundancy
+
+types of db : 
+Non relational: (MongoDB)
+Data is stored in document/object format
+Flexible Schema
+
+Relational : (SQL)
+Data is stored in Table format
+Strict Schema
+
+SQL => Structured query lang.
+Lang which is understood by database to perform aby task
+
+Db which accpets SQL and works accordingly are sql dbs 
+
+others are NoSQL
+--------------------------------------------------
+
+NoSQL : mongodb 
+
+mongodb : flexible schema 
+
+1 row can have 3 columns
+other can have 5 columns without problem
+
+shell => env where we can write DB commands
+
+mongosh = mongo shell
+
+1. install mongodb
+2. install mongosh
+show dbs => list of dbs 
+
+2. enter inside one of the database : 
+use dbname
+test is deafult db dont use it 
+
+3. create new db and enter created nilesh and enters into it
+use nilesh
+
+why is nilesh not inside show dbs because db nilesh is not having collection in it 
+
+4. how to create a new collection: 
+db.createCollection("nameofCollection")
+
+5. list of collections: 
+show collections
+
+6. delete a collection :
+db.aws.drop()
+
+7. to delete database: 
+db.dropDatabase()
+
+-------------------------------------------------------
+
+Create :
+
+use master
+
+db.createCollection("movies") 
+
+db.movies.insertOne({
+    name: "Nilesh"
+    imbd: 9.5
+    isWatched: true
+})
+
+db.movies.insertMany([{
+    name: "Laxmi"
+    imdb: 10
+    isWatched: true
+},
+{
+    name: "Nikhil"
+    imdb: 10
+    isWatched: true
+},{
+    name: "Akshata"
+    imdb: 9
+    isWatched: true
+}])
+
+Read: 
+
+db.movie.find({}) //all
+db.movie.find({name: "Nilesh"})
+db.movie.find({isWatched: false})
+same findOne but it finds the first value
+
+Update: 
+
+
+
+Delete: 
