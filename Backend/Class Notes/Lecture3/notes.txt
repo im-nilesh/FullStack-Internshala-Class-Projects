@@ -103,6 +103,36 @@ same findOne but it finds the first value
 
 Update: 
 
+db.movies.updateOne({
+name: "Nilesh"
+}//kisko find karu?,{
+ $set:{
+    isWatched: true, imdb: 8.2
+ }   
+}//jo find hua hai usko kya set karu?)
 
+updateOne: changes first occurance, updateMany: changes all occurances
 
 Delete: 
+
+db.movie.deleteOne({}) //first occurance
+
+-------------------------------------------------------------------------------------------------
+
+class cmds
+
+Create:
+db.movies.insertOne({name:"Sam",imdb: 9.5,isWatched:true})
+db.movies.insertMany([{name:"Mav",imdb: 7,isWatched:false},{name:"Tom" , imdb:7.4 , isWatched:false}])
+
+Read:
+db.movies.find({isWatched: false})
+db.movies.findOne({isWatched: false})
+
+Update:
+db.movies.updateOne( {name:"Mav"} , {$set:{isWatched: true , imdb:8.2}} )
+db.movies.updateMany( {name:"Mav"} , {$set:{isWatched: true , imdb:8.2}} )
+
+Delete:
+db.movies.deleteOne({isWatched: true})
+db.movies.deleteMany({isWatched: true})
