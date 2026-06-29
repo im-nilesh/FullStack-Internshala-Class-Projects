@@ -24,3 +24,5 @@ db(mongodb atlas) - deployed database
 
 ----------------------------------------------------------------                    
 
+Mongoose is a ODM/mediator between mongodb and vscode
+
