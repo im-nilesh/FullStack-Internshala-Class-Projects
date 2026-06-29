@@ -2,7 +2,7 @@
 
 const mongoose = require("mongoose");
 
-const restaurantSchema = new mongoose.model({
+const restaurantSchema = new mongoose.Schema({
   name: String,
   imgUrl: String,
   cuisines: String,
