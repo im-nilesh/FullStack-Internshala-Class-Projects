@@ -1,0 +1,16 @@
+refer lecture 4 for project
+
+Middleware : 
+
+property dealer
+
+req ------ middleware middleware ------ res
+
+Middleware = middleman
+
+no limits for middleware
+app.use runs on every incoming request doesnt matter path or get/post etc
+app.use((req,res,next)=>{}) // free for all the routes
+
+app.use('/api', (req, res, next)=>{}) //runs only on the path mentioned
+

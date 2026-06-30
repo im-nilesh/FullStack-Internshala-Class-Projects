@@ -10,7 +10,7 @@ async function createRestaurant(req, res) {
       cuisines,
       deliveryTime,
     });
-    return res.status(200).json(data);
+    return res.status(200).json(newRestaurant);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -28,8 +28,36 @@ async function fetchRestaurant(req, res) {
     return res.status(500).json({ message: error.message });
   }
 }
+async function updateRestaurant(req, res) {
+  try {
+    let { id } = req.params;
+    const updatedRestaurant = await RestaurantModel.findByIdAndUpdate(
+      id,
+      req.body,
+      { new: true },
+    );
+    if (!updateRestaurant) {
+      return res.status(404).json({ msg: "Restaurant not found" });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+}
+async function deleteRestaurant(req, res) {
+  try {
+    let { id } = req.params;
+    const deletedRestaurant = await RestaurantModel.findByIdAndDelete(id);
+    if (!deletedRestaurant) {
+      return res.status(404).json({ msg: "Restaurant not found" });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+}
 
 module.exports = {
   createRestaurant,
   fetchRestaurant,
+  updateRestaurant,
+  deleteRestaurant,
 };
