@@ -14,3 +14,18 @@ app.use((req,res,next)=>{}) // free for all the routes
 
 app.use('/api', (req, res, next)=>{}) //runs only on the path mentioned
 
+recall the Login function,
+check the user is valid or not... 
+if yes, next() and the access is granted
+if no then not
+
+-----------------------------------------------------------------------
+
+authentication vs authorization
+
+signup and login/clg ki fees bharke paperwork = authentication
+token/i-card = authorization
+
+middleware does the authorization
+-----------------------------------------------------------------------
+
