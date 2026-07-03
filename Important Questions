@@ -1,0 +1,85 @@
+overall imp topics :
+
+HTML :
+
+iframe
+inline vs block 
+img inline or block why?
+symantic elements and example
+form: get and post
+
+2 question
+role of meta tag
+name 2 api of html - svg and cavas
+
+CSS: 
+
+inline vs block vs internal
+important word importance
+sari positions
+sari display property
+box model property sure box sizing
+flex gird - pakka
+css variables - pakka
+media query - pakka
+
+Git:
+
+sari cmds 
+difference btw git and github
+git fetch vs git pull
+stashing
+
+JS
+do while vs while
+let var const difference
+for in vs for of
+hositing TDZ
+Scope
+closure
+HOF map filter reduce
+callback function
+const function vs classes
+prototype se related
+call bind apply
+this keyword in arrow and call bind apply me
+
+basically async JS :
+callback hell
+promise
+async await
+setTimeout
+setInterval
+clearTimeout
+clearInterval
+fetch (axios)
+eventloop
+
+React :
+
+virtual dom
+adv dis of react
+bundlers
+babel 
+state props
+hooks
+all hooks 
+usestate
+useffect -imp
+usecallback -imp
+usememo -imp
+memo
+contextapi -imp
+react life cycle class based component samjhana isme
+error boundary - routing me error ka page
+lazy loading
+redux - theory
+
+Node : 
+
+File system
+Database
+REST api/HTTP Methods
+middleware
+express server
+authentication vs authorization bcrypt and JWT
