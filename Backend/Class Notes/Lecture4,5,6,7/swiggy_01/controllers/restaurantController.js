@@ -1,8 +1,8 @@
-const RestaurantModel = require("../models/Restaurant.model");
+const RestaurantModel = require("../model/Restaurant.model");
 
 async function createRestaurant(req, res) {
   try {
-    let { name, imgUrl, rating, cuisines, deliveryTime } = req.body;
+    let { name, imgUrl, rating, cuisines, deliveryTime } = req.body; //by default = undefined
     let newRestaurant = await RestaurantModel.create({
       name,
       imgUrl,
@@ -10,24 +10,27 @@ async function createRestaurant(req, res) {
       cuisines,
       deliveryTime,
     });
-    return res.status(200).json(newRestaurant);
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(201).json(newRestaurant);
+  } catch (err) {
+    return res
+      .status(500)
+      .json({ "error while creating restaurant": err.message });
   }
 }
 async function fetchRestaurant(req, res) {
   try {
     let data = await RestaurantModel.find({});
     if (!data) {
-      return res.status(404).json({
-        msg: "No Restaurants Found",
-      });
+      return res.status(404).json({ msg: "Restaurnts are not found" });
     }
     return res.status(200).json(data);
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
+  } catch (err) {
+    return res
+      .status(500)
+      .json({ "error while fetching restaurant": err.message });
   }
 }
+
 async function updateRestaurant(req, res) {
   try {
     let { id } = req.params;
@@ -36,13 +39,15 @@ async function updateRestaurant(req, res) {
       req.body,
       { new: true },
     );
-    if (!updateRestaurant) {
+    if (!updatedRestaurant) {
       return res.status(404).json({ msg: "Restaurant not found" });
     }
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(200).json(updatedRestaurant);
+  } catch (err) {
+    return res.status(500).json({ msg: err.message });
   }
 }
+
 async function deleteRestaurant(req, res) {
   try {
     let { id } = req.params;
@@ -50,8 +55,9 @@ async function deleteRestaurant(req, res) {
     if (!deletedRestaurant) {
       return res.status(404).json({ msg: "Restaurant not found" });
     }
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
+    return res.status(200).json(deletedRestaurant);
+  } catch (err) {
+    return res.status(500).json({ msg: err.message });
   }
 }
 
