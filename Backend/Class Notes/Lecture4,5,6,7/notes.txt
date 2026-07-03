@@ -57,4 +57,9 @@ token/i-card = authorization
 middleware does the authorization
 -----------------------------------------------------------------------
 
+authentication bcrypt
+authorization jwt
 
+------------------------------------------------------------------------
+
+jwt.sign() to create token

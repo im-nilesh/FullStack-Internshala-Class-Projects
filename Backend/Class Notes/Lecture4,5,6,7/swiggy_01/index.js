@@ -2,6 +2,7 @@ const express = require("express");
 const restaurantRoutes = require("./routes/restaurant.routes");
 const app = new express();
 const mongoose = require("mongoose");
+const userRoutes = require("./routes/user.routes");
 
 app.use(express.json());
 
@@ -12,8 +13,9 @@ mongoose
   .then(() => {
     console.log("DB Connected");
   })
-  .catch(() => {
+  .catch((err) => {
     console.log("Connection Failed");
+    console.log(err);
   });
 
 app.get("/", (req, res) => {
@@ -21,6 +23,7 @@ app.get("/", (req, res) => {
 });
 
 restaurantRoutes(app);
+userRoutes(app);
 
 app.listen(8080, () => {
   console.log("SERVER IS RUNNING");
