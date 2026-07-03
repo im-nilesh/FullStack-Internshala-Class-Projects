@@ -1,0 +1,59 @@
+MVC => architecture
+Model 
+View
+Controller
+
+SOC principle => seperation of concern
+
+Model = DB(schema, model/collection)
+
+dont need view as frontend is in react.
+
+controller = logical part (business layer)
+
+Logical part = inside api calling
+
+Routes = paths ('/login' etc)
+
+---------------------------------------------------------------
+
+backend application
+express server
+mvc architecture
+db(mongodb atlas) - deployed database
+
+----------------------------------------------------------------                    
+
+Mongoose is a ODM/mediator between mongodb and vscode
+
+refer lecture 4 for project
+
+Middleware : 
+
+property dealer
+
+req ------ middleware middleware ------ res
+
+Middleware = middleman
+
+no limits for middleware
+app.use runs on every incoming request doesnt matter path or get/post etc
+app.use((req,res,next)=>{}) // free for all the routes
+
+app.use('/api', (req, res, next)=>{}) //runs only on the path mentioned
+
+recall the Login function,
+check the user is valid or not... 
+if yes, next() and the access is granted
+if no then not
+
+-----------------------------------------------------------------------
+
+authentication vs authorization
+
+signup and login/clg ki fees bharke paperwork = authentication
+token/i-card = authorization
+
+middleware does the authorization
+-----------------------------------------------------------------------
+
