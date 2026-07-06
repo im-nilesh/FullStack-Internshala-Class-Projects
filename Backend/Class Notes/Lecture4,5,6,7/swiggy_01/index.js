@@ -3,8 +3,10 @@ const restaurantRoutes = require("./routes/restaurant.routes");
 const app = new express();
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/user.routes");
+const cors = require("cors");
 
 app.use(express.json());
+app.use(cors());
 
 mongoose
   .connect(
