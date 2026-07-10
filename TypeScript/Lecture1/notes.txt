@@ -34,3 +34,12 @@ Imp Point : "Inference is automatically assigning the types"
 
 let num = 10 //inference 
 let nums:number = 10 //manually declaring the type
+
+target is basically the js version we want to transpile
+
+to make ts target the src 
+change :
+rootdir to "/src"
+
+outdir to "/dist"
+removeComments: true
