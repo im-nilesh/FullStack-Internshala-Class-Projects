@@ -1,0 +1,28 @@
+Typescript: 
+
+types of lang: 
+strongly type lang : code likhne ka tarika strict
+weakly typed lang : code likhne ka tarika thoda lose
+
+strongly me we need to define the datatype for ex: C++ java
+weaky me easy no datatype not needed 
+
+what  is Typescript?
+=> programming lang developed by microsoft 
+
+Strict Syntactical superset of js 
+
+java features + apne khudke features 
+
+Browser <-- understands js and we write in Ts but the browser cannot 
+undersntand Ts so we need to convert in Js 
+
+Js is a runtime lang => nodejs/browser 
+Ts compiles down itself into Js (transpiling)
+
+ts ko js me convert karke run krte hai
+
+Project setup : 
+1. npx tsc --init
+2. file bannao
+3. npx tsc -b
