@@ -23,6 +23,14 @@ Ts compiles down itself into Js (transpiling)
 ts ko js me convert karke run krte hai
 
 Project setup : 
-1. npx tsc --init
+1. npx tsc --init, tsc -v
 2. file bannao
 3. npx tsc -b
+
+to run a ts we nneed to connvert it into js, 
+we ddo that by npx tsc -b, this makes a js file of the ts file
+
+Imp Point : "Inference is automatically assigning the types"
+
+let num = 10 //inference 
+let nums:number = 10 //manually declaring the type
