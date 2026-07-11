@@ -39,7 +39,7 @@ target is basically the js version we want to transpile
 
 to make ts target the src 
 change :
-rootdir to "/src"
+rootdir to "/src" ts file here
 
 outdir to "/dist"
-removeComments: true
+removeComments: true js file here
