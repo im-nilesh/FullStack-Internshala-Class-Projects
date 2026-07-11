@@ -1,0 +1,29 @@
+interface, = object typess
+
+interface Nilesh{
+    name: String,
+    age: number
+}
+
+function isLegal(obj:Nilesh):boolean{
+    return obj.age ?true:false
+}
+
+user optional parameter to use same interface for different functions 
+
+when we are using a interface in class... we write 
+class abc extends interfaceName{}
+
+type same as intersection
+type has union, and interface 
+
+we can assign multiple datatypes to same variable 
+a variable can be a number/string 
+
+type jab hame or / and ke liye kaam aata hai
+interface me or and allowed nnhi h
+
+interiew me interface and type aur config files me se zada questions aate hein
+
+explore enums, enumerations
+generics 
