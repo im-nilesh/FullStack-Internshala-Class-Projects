@@ -64,15 +64,16 @@ babel - done
 state - done props
 hooks
 all hooks 
-usestate
-useffect -imp
-usecallback -imp
-usememo -imp
-memo
-contextapi -imp
-react life cycle class based component samjhana isme
+usestate - done
+useffect -imp - done
+usecallback -imp - done
+usememo -imp - done
+memo - done 
+contextapi -imp - done 
+react life cycle class based component samjhana isme - done
 error boundary - routing me error ka page
 lazy loading
+HOC
 redux - theory
 
 Node : 
