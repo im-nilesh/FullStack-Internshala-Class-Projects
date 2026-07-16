@@ -58,7 +58,7 @@ eventloop
 React :
 
 virtual dom - done
-adv dis of react - 
+adv dis of react - done 
 bundlers - done
 babel - done
 state - done props
@@ -71,9 +71,9 @@ usememo -imp - done
 memo - done 
 contextapi -imp - done 
 react life cycle class based component samjhana isme - done
-error boundary - routing me error ka page
-lazy loading
-HOC
+error boundary - routing me error ka page - done 
+lazy loading - done 
+HOC - done 
 redux - theory
 
 Node : 
