@@ -31,18 +31,18 @@ git fetch vs git pull
 stashing
 
 JS
-do while vs while
-let var const difference
-for in vs for of
-hositing TDZ
-Scope
-closure
-HOF map filter reduce
-callback function
-const function vs classes
-prototype se related
+do while vs while - done 
+let var const difference - done 
+for in vs for of - done
+hositing TDZ - done
+Scope - done 
+closure - done
+HOF map filter reduce - done
+callback function - done 
+const function vs classes - done
+prototype se related - done 
 call bind apply
-this keyword in arrow and call bind apply me
+this keyword in arrow and call bind apply me - 
 
 basically async JS :
 callback hell
