@@ -41,8 +41,8 @@ HOF map filter reduce - done
 callback function - done 
 const function vs classes - done
 prototype se related - done 
-call bind apply
-this keyword in arrow and call bind apply me - 
+call bind apply - done
+this keyword in arrow and call bind apply me - done 
 
 basically async JS :
 callback hell
