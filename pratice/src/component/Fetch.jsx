@@ -1,15 +1,17 @@
 // import { useEffect, useState } from "react";
 
-import {
-  Children,
-  memo,
-  use,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useState } from "react";
+
+// import {
+//   Children,
+//   memo,
+//   use,
+//   useCallback,
+//   useEffect,
+//   useMemo,
+//   useRef,
+//   useState,
+// } from "react";
 
 // import { useMemo, useState } from "react";
 
@@ -220,38 +222,91 @@ import {
 //   );
 // }
 
-export default function Fetch() {
-  const [user, setUser] = useState([]);
-  const [loading, setLoading] = useState(true);
+// export default function Fetch() {
+//   const [user, setUser] = useState([]);
+//   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchUser() {
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/users",
-      );
-      const data = await response.json();
-      setUser(data);
-      setLoading(false);
-    }
-    fetchUser();
-  }, []);
+//   useEffect(() => {
+//     async function fetchUser() {
+//       const response = await fetch(
+//         "https://jsonplaceholder.typicode.com/users",
+//       );
+//       const data = await response.json();
+//       setUser(data);
+//       setLoading(false);
+//     }
+//     fetchUser();
+//   }, []);
 
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-  return (
-    <div>
-      <h3>Users</h3>
-      {user.map((item) => {
-        return (
-          <div key={item.id}>
-            <li>{item.name}</li>
-            <li>{item.email}</li>
-            <li>{item.phone}</li>
-            <br />
-          </div>
-        );
-      })}
-    </div>
-  );
-}
+//   if (loading) {
+//     return <h1>Loading...</h1>;
+//   }
+//   return (
+//     <div>
+//       <h3>Users</h3>
+//       {user.map((item) => {
+//         return (
+//           <div key={item.id}>
+//             <li>{item.name}</li>
+//             <li>{item.email}</li>
+//             <li>{item.phone}</li>
+//             <br />
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// }
+
+// export default function Fetch() {
+//   const [displayTask, setDisplayTask] = useState([]);
+//   const [task, setTask] = useState("");
+//   return (
+//     <div>
+//       <input
+//         placeholder="Enter You Task"
+//         type="text"
+//         value={task}
+//         onChange={(e) => {
+//           setTask(e.target.value);
+//         }}
+//       />
+//       <button
+//         onClick={() => {
+//           setDisplayTask([...displayTask, task]);
+//           setTask("");
+//         }}
+//       >
+//         Add Task
+//       </button>
+//       <ul>
+//         {displayTask.map((item, index) => {
+//           return <li key={index}>{item}</li>;
+//         })}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default function Fetch() {
+//   const [dark, setDark] = useState(false);
+//   return (
+//     <div
+//       style={{
+//         backgroundColor: dark ? "black" : "white",
+//         color: dark ? "white" : "black",
+//         minHeight: "100vh",
+//       }}
+//     >
+//       <button
+//         onClick={() => {
+//           setDark(!dark);
+//         }}
+//       >
+//         {dark ? "Switch to light" : "Switch to dark"}
+//       </button>
+//       <h1>Hello React</h1>
+//       <p>This is a theme toggler</p>
+//     </div>
+//   );
+// }

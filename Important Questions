@@ -45,15 +45,15 @@ call bind apply - done
 this keyword in arrow and call bind apply me - done 
 
 basically async JS :
-callback hell
-promise
-async await
-setTimeout
-setInterval
-clearTimeout
-clearInterval
-fetch (axios)
-eventloop
+callback hell - done
+promise - done
+async await - done
+setTimeout - done
+setInterval - done
+clearTimeout - done
+clearInterval - done
+fetch (axios) - done
+eventloop - done
 
 React :
 
@@ -78,9 +78,9 @@ redux - theory
 
 Node : 
 
-File system
-Database
-REST api/HTTP Methods
-middleware
-express server
-authentication vs authorization bcrypt and JWT
+File system - theory done
+Database - done 
+REST api/HTTP Methods - done 
+middleware - done 
+express server - done 
+authentication vs authorization bcrypt and JWT - done
